@@ -1,0 +1,132 @@
+run:
+  label: 04_probe_tc_kinetics
+  output_dir: manuscript_pipeline
+  backend: local
+  threads: 4
+  time: "00:39:00"
+
+# Demonstrates the migrated probe timecourse fitting engine.
+probe_timecourse:
+  engine: python_baseline
+  rounds:
+    - round1_free
+    - round2_global
+    - round3_constrained
+
+  # Reaction groups pulled from examples/nerd.sqlite
+  rg_ids:
+    - 3
+    - 10
+    - 11
+    - 16
+    - 17
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 32
+    - 33
+    - 43
+    - 44
+    - 45
+    - 47
+    - 48
+    - 49
+    - 50
+    - 51
+    - 52
+    - 53
+    - 54
+    - 55
+    - 56
+    - 75
+    - 76
+    - 77
+    - 78
+    - 79
+    - 80
+    - 81
+    - 82
+    # - 12 tofix
+    # - 13 tofix
+    # - 14 tofix
+    # - 15 tofix
+    # - 18 tofix
+    # - 19 tofix
+    # - 20 tofix
+
+  outliers:
+    - 3:RRRY-022-EKC-fourUnew-WT-II-37C-dms-MaP-90:19_G:modrate # 0tp too high
+    - 3:YYYR-017-EKC-fourUnew-WT-II-37C-dms-MaP-0-30:19_G:modrate
+    - 3:YYYR-018-EKC-fourUnew-WT-II-37C-dms-MaP-1:19_G:modrate
+    - 3:YYYR-019-EKC-fourUnew-WT-II-37C-dms-MaP-20:19_G:modrate
+    - 3:YYYR-020-EKC-fourUnew-WT-II-37C-dms-MaP-40:19_G:modrate
+    - 3:YYYR-021-EKC-fourUnew-WT-II-37C-dms-MaP-60:19_G:modrate
+    - 3:YYYR-022-EKC-fourUnew-WT-II-37C-dms-MaP-90:19_G:modrate
+    - 3:YYYR-023-EKC-fourUnew-WT-II-37C-dms-MaP-120:19_G:modrate
+    - 3:YYYR-024-EKC-fourUnew-WT-II-37C-dms-MaP-150:19_G:modrate
+    - 10:RRRY-001-EKC-fourUnew-WT-25C-dms-MaP-6:19_G:modrate
+    - 10:YYYR-001-EKC-fourUnew-WT-25C-dms-MaP-6:19_G:modrate
+    - 10:YYYR-006-EKC-fourUnew-WT-25C-dms-MaP-240:19_G:modrate
+    - 16:003-EKC-WT-60c-a-3-p:19_G:GAmodrate # too high tp3
+    - 17:009-EKC-WT-60c-b-3-p:19_G:GAmodrate # too high tp3
+    - 25:035-EKC-WT-52c-b-6-m:19_G:modrate # 0tp too high
+    - 25:038-EKC-WT-52c-b-6-m:19_G:modrate # 0tp too high
+    - 78:068_fourU_WT20c_b_6_m:19_G:modrate # 0tp too high
+    - 78:022_fourU_WT_20c_b_4_p:19_G:modrate # tp4 too high
+    - 43:054_fourU_WT65c_a_6_m:19_G:modrate # 0tp too high
+    - 44:060_fourU_WT65c_b_6_m:19_G:modrate # 0tp too high
+    - 45:066_fourU_WT70c_a_6_m:19_G:modrate # 0tp too high
+    - 45:014-fourU-WT-70c-a-2-p:19_G:modrate # tp2 too high
+    - 47:078_fourU_WT75c_a_6_m:19_G:modrate # 0tp too high
+    - 48:084_fourU_WT75c_b_6_m:19_G:modrate # 0tp too high
+    - 49:090_fourU_WT80c_a_6_m:19_G:modrate # 0tp too high
+    - 52:059_fourU_WT10c_b_6_m:19_G:modrate # 0tp too high
+    - 52:056-fourU-WT-10c-b-2-p:19_G:modrate # tp2 too low
+    - 52:056-fourU-WT-10c-b-2-p:19_G:GAmodrate # tp2 too high
+    - 55:077_fourU_WT30c_a_6_m:19_G:modrate # 0tp too high
+    - 56:083_fourU_WT30c_b_6_m:19_G:modrate # 0tp too high
+    - 56:083_fourU_WT30c_b_6_m:10_U:modrate # 0tp too high
+    - 75:002_fourU_WT_18c_a_2_p:19_G:modrate # tp2 too high
+    - 75:002_fourU_WT_18c_a_2_p:19_G:GAmodrate # tp2 too high
+    - 75:003_fourU_WT_18c_a_3_p:19_G:modrate # tp3 too high
+    - 75:003_fourU_WT_18c_a_3_p:19_G:GAmodrate # tp3 too high
+    - 77:017_fourU_WT_20c_a_5_p:19_G:GAmodrate # tp5 too high
+    - 79:029_fourU_WT_25c_a_5_p:19_G:GAmodrate # tp5 too high
+    - 79:028_fourU_WT_25c_a_4_p:19_G:modrate # tp4 too high
+    - 80:080_fourU_WT25c_b_6_m:19_G:modrate # 0tp too high
+    - 80:032_fourU_WT_25c_b_2_p:19_G:modrate # tp2 too high
+    - 80:035_fourU_WT_25c_b_5_p:19_G:GAmodrate # tp5 too high
+    - 81:037_fourU_WT_37c_b_1_p:19_G:modrate # tp1 too high
+    - 81:041_fourU_WT_37c_b_5_p:19_G:modrate # tp5 too high
+    - 81:041_fourU_WT_37c_b_5_p:19_G:GAmodrate # tp5 too high
+    - 82:044_fourU_WT_37c_b_2_p:19_G:modrate # tp2 too high
+    - 82:047_fourU_WT_37c_b_5_p:19_G:GAmodrate # tp5 too high
+
+  # The example database stores probing timecourse amplitudes under multiple value types.
+  valtype:
+    - modrate
+    - GAmodrate
+
+  # Specify experimenter (only 1 currently supported).
+  done_by: EKC
+  
+  min_points: 3
+  overwrite: true
+
+  # Optional nucleotide filter. Uncomment to focus on specific sites.
+  # nt_ids:
+  #   - 390  # site indexing comes from meta_nucleotides.id
+
+  # Forward knobs into the engine to tune selection and initial guesses.
+  engine_options:
+    global_selection: ac_only  # acceptable values: ac_only, acg_only, all
+    global_filters:
+      r2_threshold: 0.7
+    initialize_kdeg_arrhenius: nmr:deg:dms:Schwalbe_bistris 
+
+  # Metadata mirrored into result artifacts for provenance.
+  global_metadata:
+    experiment_id: ekc.01.0xx
+    notes: "Baseline python engine demo using examples/nerd.sqlite"

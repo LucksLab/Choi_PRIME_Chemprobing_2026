@@ -1,0 +1,13 @@
+2025-10-18 06:34:08,552 - nerd.db.api - INFO - Database schema initialized successfully.
+2025-10-18 06:34:08,553 - nerd.utils.paths - INFO - Created run directory: manuscript_pipeline/XX_mark_samples_to_drop/drop/drop___cfg-6b9fcfc
+2025-10-18 06:34:08,553 - nerd.pipeline.tasks.base - INFO - Executing task 'drop' in run directory: manuscript_pipeline/XX_mark_samples_to_drop/drop/drop___cfg-6b9fcfc
+2025-10-18 06:34:08,554 - nerd.cli - ERROR - Failed to execute task 'drop': Configuration must contain a 'drop' section.
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/cli.py", line 132, in run
+    task.exec(conn, cfg, verbose=state["verbose"])
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/base.py", line 144, in exec
+    inputs, params = self.prepare(cfg)
+                     ^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/drop.py", line 33, in prepare
+    raise ValueError("Configuration must contain a 'drop' section.")
+ValueError: Configuration must contain a 'drop' section.

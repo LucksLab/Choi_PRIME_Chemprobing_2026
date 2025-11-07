@@ -1,0 +1,5130 @@
+{
+  "artifacts": {},
+  "engine": "python_baseline",
+  "engine_version": "0.1.0",
+  "metadata": {
+    "analyst": "demo_user",
+    "buffer_pH": 6.5,
+    "fmod_run_id": 242,
+    "notes": "Baseline python engine demo using examples/nerd.sqlite",
+    "rg_id": 78,
+    "rg_label": "20_2",
+    "rounds_requested": [
+      "round1_free",
+      "round2_global",
+      "round3_constrained"
+    ],
+    "temperature_c": 20.0,
+    "valtypes": [
+      "modrate",
+      "GAmodrate"
+    ]
+  },
+  "rounds": [
+    {
+      "global_params": {},
+      "notes": null,
+      "per_nt": [
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 390,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 391,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 392,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 393,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.6795971428571436e-07,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": -2.220446049250313e-16,
+            "reduced_chisq": 1.1698992857142859e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 394,
+          "params": {
+            "fmod0": 0.00206842857142889,
+            "kdeg": 0.0,
+            "kobs": 0.0008114891067410439,
+            "log_fmod0": -6.180966104238012,
+            "log_kdeg": -2269.792280037306,
+            "log_kobs": -7.116639594709037,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 5,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 1.4951371428571434e-07,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": -2.220446049250313e-16,
+            "reduced_chisq": 3.7378428571428586e-08,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 395,
+          "params": {
+            "fmod0": 0.001043428571466486,
+            "kdeg": 1.5372340747405096e-32,
+            "kobs": 0.0006094679804946649,
+            "log_fmod0": -6.865243284708447,
+            "log_kdeg": -73.25273822958852,
+            "log_kobs": -7.4029241444759615,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 6,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 7.674765513786864e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.00396826332819626,
+                  0.0008327746427759412,
+                  -0.03579975607347514
+                ],
+                [
+                  0.0008327746427759412,
+                  0.02491905750958431,
+                  -0.050112162536789996
+                ],
+                [
+                  -0.03579975607347514,
+                  -0.050112162536789996,
+                  0.4704835959203752
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.9848684057788768,
+            "reduced_chisq": 1.918691378446716e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 396,
+          "params": {
+            "fmod0": 0.0019222040109730086,
+            "kdeg": 0.00014796614793318095,
+            "kobs": 0.024001543408214303,
+            "log_fmod0": -6.254282828919787,
+            "log_fmod0_err": 0.6859180679355044,
+            "log_kdeg": -8.818527040544106,
+            "log_kdeg_err": 0.15785771286061479,
+            "log_kobs": -3.7296371420263097,
+            "log_kobs_err": 0.06299415312706616,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 7,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.173729531895997e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.0019491708531209073,
+                  0.00037941480268668677,
+                  -0.01257074713363492
+                ],
+                [
+                  0.00037941480268668677,
+                  0.012325174457701928,
+                  -0.017951939952196072
+                ],
+                [
+                  -0.01257074713363492,
+                  -0.017951939952196072,
+                  0.11969291814894056
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.9925119296772358,
+            "reduced_chisq": 1.0434323829739994e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 397,
+          "params": {
+            "fmod0": 0.002800989922250829,
+            "kdeg": 0.00014303838592076183,
+            "kobs": 0.025247125391070463,
+            "log_fmod0": -5.877782380621802,
+            "log_fmod0_err": 0.345966643115981,
+            "log_kdeg": -8.852397530713741,
+            "log_kdeg_err": 0.11101880227106545,
+            "log_kobs": -3.679042975639904,
+            "log_kobs_err": 0.044149415093757555,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 8,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 9.753507675060097e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.0010963842350228308,
+                  0.00017633760095182513,
+                  -0.0032156799600994526
+                ],
+                [
+                  0.00017633760095182513,
+                  0.007128121966611758,
+                  -0.004838025098976874
+                ],
+                [
+                  -0.0032156799600994526,
+                  -0.004838025098976874,
+                  0.01437964931573628
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.995724143085404,
+            "reduced_chisq": 2.438376918765024e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 398,
+          "params": {
+            "fmod0": 0.0038760188841582286,
+            "kdeg": 0.00013348583130309575,
+            "kobs": 0.01606701229190446,
+            "log_fmod0": -5.552946712891639,
+            "log_fmod0_err": 0.1199151755022536,
+            "log_kdeg": -8.92151521831751,
+            "log_kdeg_err": 0.08442820598953739,
+            "log_kobs": -4.1309870348808095,
+            "log_kobs_err": 0.03311169332762719,
+            "metadata": {
+              "base": "C",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 9,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 7.19058000000721e-07,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": -1.0029754804463664e-12,
+            "reduced_chisq": 1.7976450000018024e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 399,
+          "params": {
+            "fmod0": 0.0028600000002101792,
+            "kdeg": 0.7985465736097059,
+            "kobs": 8.312989558985445e-16,
+            "log_fmod0": -5.856933654076887,
+            "log_kdeg": -0.224961986653903,
+            "log_kobs": -34.72354218934292,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 10,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.6408142857142855e-07,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 1.1102230246251565e-16,
+            "reduced_chisq": 1.1602035714285714e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 400,
+          "params": {
+            "fmod0": 0.0013782857142862787,
+            "kdeg": 9.092002601540562e+41,
+            "kobs": 1.4385499669946617e-23,
+            "log_fmod0": -6.586914788052211,
+            "log_kdeg": 96.61338400488125,
+            "log_kobs": -52.5958214999722,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 11,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 5.651319999999999e-07,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.0008016977604493603,
+            "reduced_chisq": 1.4128299999999998e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 401,
+          "params": {
+            "fmod0": 0.0011759999999999995,
+            "kdeg": 4.7183916060013303e+55,
+            "kobs": 2.3000264668947823e-05,
+            "log_fmod0": -6.745636429505702,
+            "log_kdeg": 128.1936480947572,
+            "log_kobs": -10.680004834755776,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 12,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 6.05556e-06,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.0,
+            "reduced_chisq": 1.51389e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 402,
+          "params": {
+            "fmod0": 0.004856000000000302,
+            "kdeg": 2.944678448031705e-41,
+            "kobs": 0.001846752626363298,
+            "log_fmod0": -5.327540225224878,
+            "log_kdeg": -93.32598918734129,
+            "log_kobs": -6.294326519402222,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 13,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 1.1212000000809355e-08,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": -7.218647901652275e-11,
+            "reduced_chisq": 2.8030000002023387e-09,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 403,
+          "params": {
+            "fmod0": 0.000746999999994883,
+            "kdeg": 1104063341.6171176,
+            "kobs": 8.998859501730259e-15,
+            "log_fmod0": -7.199445372838307,
+            "log_kdeg": 20.82226315780864,
+            "log_kobs": -32.34167854763435,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 14,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 1.1800300965507612e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.004611760273862706,
+                  0.0007260073085452291,
+                  -0.06798565543807401
+                ],
+                [
+                  0.0007260073085452291,
+                  0.03028352752591591,
+                  -0.10356642871744819
+                ],
+                [
+                  -0.06798565543807401,
+                  -0.10356642871744819,
+                  1.5365699623443567
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.9821137611997635,
+            "reduced_chisq": 2.950075241376903e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 404,
+          "params": {
+            "fmod0": 0.00041180481907017485,
+            "kdeg": 0.0001322200402507446,
+            "kobs": 0.008545328529409616,
+            "log_fmod0": -7.794961060985987,
+            "log_fmod0_err": 1.2395845926536666,
+            "log_kdeg": -8.931043051636376,
+            "log_kdeg_err": 0.17402162947724603,
+            "log_kobs": -4.762370516177684,
+            "log_kobs_err": 0.06790994237858479,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 15,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 7.884204087932099e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.005195788009950525,
+                  0.0007591292775263275,
+                  -0.01433815499081927
+                ],
+                [
+                  0.0007591292775263275,
+                  0.03437887340329069,
+                  -0.022145269336017393
+                ],
+                [
+                  -0.01433815499081927,
+                  -0.022145269336017393,
+                  0.06124572883756187
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.9798412425288641,
+            "reduced_chisq": 1.9710510219830247e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 405,
+          "params": {
+            "fmod0": 0.0016824910620913513,
+            "kdeg": 0.00012985652490723012,
+            "kobs": 0.006562219791323611,
+            "log_fmod0": -6.387479808738044,
+            "log_fmod0_err": 0.24747874421364327,
+            "log_kdeg": -8.949080371543628,
+            "log_kdeg_err": 0.18541540767501144,
+            "log_kobs": -5.026426350440974,
+            "log_kobs_err": 0.0720818146965691,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 16,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.886333333333333e-08,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.018008551621707558,
+            "reduced_chisq": 1.2215833333333332e-08,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 406,
+          "params": {
+            "fmod0": 0.0005209999999999998,
+            "kdeg": 5.572210523697409e+32,
+            "kobs": 3.2333856087653665e-05,
+            "log_fmod0": -7.559760516210908,
+            "log_kdeg": 75.40051481344283,
+            "log_kobs": -10.339395700600305,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 17,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 9.682496341634226e-05,
+            "covariance": {
+              "matrix": [
+                [
+                  0.005006701916351716,
+                  0.0006372623937936362,
+                  -0.2919202981569658
+                ],
+                [
+                  0.0006372623937936362,
+                  0.030822232646270382,
+                  -0.42171950970491556
+                ],
+                [
+                  -0.2919202981569658,
+                  -0.42171950970491556,
+                  26.00943371977646
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.9819990812542623,
+            "reduced_chisq": 2.4206240854085565e-05,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 407,
+          "params": {
+            "fmod0": 0.0009097390234288463,
+            "kdeg": 0.0001310670065210126,
+            "kobs": 0.08009516791394682,
+            "log_fmod0": -7.002352787025589,
+            "log_fmod0_err": 5.099944482028844,
+            "log_kdeg": -8.939801865374337,
+            "log_kdeg_err": 0.17556261745106896,
+            "log_kobs": -2.524539752396069,
+            "log_kobs_err": 0.07075805195418905,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 18,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 1.6416337142857142e-06,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.0,
+            "reduced_chisq": 4.1040842857142854e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 408,
+          "params": {
+            "fmod0": 0.0015484285719469504,
+            "kdeg": 1.2166162868337907e-62,
+            "kobs": 0.0008535650159837199,
+            "log_fmod0": -6.47051468686906,
+            "log_kdeg": -142.5642022956437,
+            "log_kobs": -7.066088842903152,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 19,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 2.405968333333334e-07,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.4221434863393452,
+            "reduced_chisq": 6.014920833333334e-08,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 409,
+          "params": {
+            "fmod0": 0.001046,
+            "kdeg": 249644046957.21515,
+            "kobs": 0.00045293589571470956,
+            "log_fmod0": -6.862781913339406,
+            "log_kdeg": 26.243301928053803,
+            "log_kobs": -7.69975995305836,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 20,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 7.364368571428573e-07,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 1.1102230246251565e-16,
+            "reduced_chisq": 1.8410921428571433e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 410,
+          "params": {
+            "fmod0": 0.0016161428576791715,
+            "kdeg": 2.9795375775214563e-49,
+            "kobs": 0.0010986910321161532,
+            "log_fmod0": -6.427712920761272,
+            "log_kdeg": -111.73490144356023,
+            "log_kobs": -6.813635778558746,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 21,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 6.506161455078145e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.008855833072596684,
+                  0.0020083206483570743,
+                  -0.047774255512486354
+                ],
+                [
+                  0.0020083206483570743,
+                  0.05567807440684593,
+                  -0.06599171482963267
+                ],
+                [
+                  -0.047774255512486354,
+                  -0.06599171482963267,
+                  0.37096833071351265
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.9665677863105903,
+            "reduced_chisq": 1.6265403637695362e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 411,
+          "params": {
+            "fmod0": 0.001998867652837089,
+            "kdeg": 0.0001531718154643745,
+            "kobs": 0.014673458176729062,
+            "log_fmod0": -6.215174432340431,
+            "log_fmod0_err": 0.6090716958729183,
+            "log_kdeg": -8.783950289747395,
+            "log_kdeg_err": 0.23596201899213765,
+            "log_kobs": -4.221714983405772,
+            "log_kobs_err": 0.09410543593542663,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 22,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 3.047491428571429e-06,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": -2.220446049250313e-16,
+            "reduced_chisq": 7.618728571428573e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 412,
+          "params": {
+            "fmod0": 0.0034667142881858438,
+            "kdeg": 0.0,
+            "kobs": 0.0023019924322609884,
+            "log_fmod0": -5.6645480246205855,
+            "log_kdeg": -1356.2612794105532,
+            "log_kobs": -6.073980256150496,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 23,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 6.418354294128067e-07,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": -1.3108938379247093e-09,
+            "reduced_chisq": 1.6045885735320168e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 413,
+          "params": {
+            "fmod0": 0.0014787142883538862,
+            "kdeg": 2.2720452626632737,
+            "kobs": 1.174116937291285e-12,
+            "log_fmod0": -6.516582292850773,
+            "log_kdeg": 0.820680422607329,
+            "log_kobs": -27.47050479361306,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 24,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.94818e-07,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 2.220446049250313e-16,
+            "reduced_chisq": 1.237045e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 414,
+          "params": {
+            "fmod0": 0.0019430000000001083,
+            "kdeg": 6.78067497656673e-45,
+            "kobs": 0.0009927842435398153,
+            "log_fmod0": -6.243522108586778,
+            "log_kdeg": -101.70225253366904,
+            "log_kobs": -6.914997194929255,
+            "metadata": {
+              "base": "C",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 25,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 5.629692434939708e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.007098654274743559,
+                  0.00028290408159768824,
+                  -0.018671754008210195
+                ],
+                [
+                  0.00028290408159768824,
+                  0.04926265759101878,
+                  -0.03164515418611806
+                ],
+                [
+                  -0.018671754008210195,
+                  -0.03164515418611806,
+                  0.08225936580132187
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.9725287155822655,
+            "reduced_chisq": 1.407423108734927e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 415,
+          "params": {
+            "fmod0": 0.0012088078930467092,
+            "kdeg": 0.00011462464645071336,
+            "kobs": 0.004719079489236856,
+            "log_fmod0": -6.718120617372273,
+            "log_fmod0_err": 0.28680893605555924,
+            "log_kdeg": -9.07384771179185,
+            "log_kdeg_err": 0.22195192630616833,
+            "log_kobs": -5.35614152187099,
+            "log_kobs_err": 0.08425351194308495,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 26,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 2.473988571428571e-07,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 2.220446049250313e-16,
+            "reduced_chisq": 6.184971428571428e-08,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 416,
+          "params": {
+            "fmod0": 0.0010308571430620427,
+            "kdeg": 8.15496269618999e-31,
+            "kobs": 0.0006445743656959129,
+            "log_fmod0": -6.877364645078361,
+            "log_kdeg": -69.28151122110116,
+            "log_kobs": -7.34692035714299,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 27,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "math range error",
+            "status": "failed"
+          },
+          "nt_id": 417,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 6.672321265597301e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.007463692280749901,
+                  0.0013072888011461572,
+                  -0.06024567082971301
+                ],
+                [
+                  0.0013072888011461572,
+                  0.048772880063535896,
+                  -0.09041170441330663
+                ],
+                [
+                  -0.06024567082971301,
+                  -0.09041170441330663,
+                  0.7360572636744617
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.9712915926038566,
+            "reduced_chisq": 1.6680803163993252e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 418,
+          "params": {
+            "fmod0": 0.00044860328926015077,
+            "kdeg": 0.0001358244308130582,
+            "kobs": 0.005037995353816214,
+            "log_fmod0": -7.709371603626512,
+            "log_fmod0_err": 0.8579377970893121,
+            "log_kdeg": -8.904147456125873,
+            "log_kdeg_err": 0.2208458287211599,
+            "log_kobs": -5.29074702327997,
+            "log_kobs_err": 0.08639266335025157,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 29,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 3.1521548571426815e-06,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 5.6288307348495437e-14,
+            "reduced_chisq": 7.880387142856704e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 419,
+          "params": {
+            "fmod0": 0.008201142857897194,
+            "kdeg": 1.6081427133396181e-18,
+            "kobs": 0.003794325539229993,
+            "log_fmod0": -4.80348176150914,
+            "log_kdeg": -40.9714517549974,
+            "log_kobs": -5.574248607452299,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 30,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.7434342857142854e-07,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.0,
+            "reduced_chisq": 1.1858585714285713e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 420,
+          "params": {
+            "fmod0": 0.0010687142857143833,
+            "kdeg": 2.2247136066079258e-58,
+            "kobs": 0.0007760721861407309,
+            "log_fmod0": -6.841298955147091,
+            "log_kdeg": -132.75030720245235,
+            "log_kobs": -7.161265018730231,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 31,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 5.4734600000000025e-06,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": -2.220446049250313e-16,
+            "reduced_chisq": 1.3683650000000006e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 421,
+          "params": {
+            "fmod0": 0.003844000019442471,
+            "kdeg": 0.0,
+            "kobs": 0.001418383508899295,
+            "log_fmod0": -5.561241782816216,
+            "log_kdeg": -2863.29266591578,
+            "log_kobs": -6.558237429823405,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 32,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 6.320701714285713e-06,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 1.1102230246251565e-16,
+            "reduced_chisq": 1.5801754285714283e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 422,
+          "params": {
+            "fmod0": 0.0024855714285735887,
+            "kdeg": 5.629597639937478e-30,
+            "kobs": 0.003310144972350007,
+            "log_fmod0": -5.997252694732002,
+            "log_kdeg": -67.3495148173751,
+            "log_kobs": -5.710763292259229,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 33,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 3.793490987269462e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.002175964124572549,
+                  4.776518656222369e-05,
+                  -0.023878970077078263
+                ],
+                [
+                  4.776518656222369e-05,
+                  0.015169958297450867,
+                  -0.040927068854817845
+                ],
+                [
+                  -0.023878970077078263,
+                  -0.040927068854817845,
+                  0.44423939252481015
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.9914348706068781,
+            "reduced_chisq": 9.483727468173655e-08,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 423,
+          "params": {
+            "fmod0": 0.00042620537853163955,
+            "kdeg": 0.00011275948601901608,
+            "kobs": 0.0070126615513513915,
+            "log_fmod0": -7.760589218643019,
+            "log_fmod0_err": 0.6665128599845693,
+            "log_kdeg": -9.090253449914135,
+            "log_kdeg_err": 0.12316638460818304,
+            "log_kobs": -4.9600379707728175,
+            "log_kobs_err": 0.046647230620611865,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 34,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.034516857827886e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.01287864541421794,
+                  0.0007206287903281394,
+                  -0.19173069892204817
+                ],
+                [
+                  0.0007206287903281394,
+                  0.0883727398659876,
+                  -0.31946254226688786
+                ],
+                [
+                  -0.19173069892204817,
+                  -0.31946254226688786,
+                  4.719028280129289
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.9514928844605627,
+            "reduced_chisq": 1.0086292144569716e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 424,
+          "params": {
+            "fmod0": 0.00042823264065244317,
+            "kdeg": 0.00011659026621124193,
+            "kobs": 0.00942834626992799,
+            "log_fmod0": -7.755843957127591,
+            "log_fmod0_err": 2.172332451566585,
+            "log_kdeg": -9.056844767710574,
+            "log_kdeg_err": 0.29727552853537675,
+            "log_kobs": -4.6640345667583505,
+            "log_kobs_err": 0.11348411965653142,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 35,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.648375428571428e-06,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 2.220446049250313e-16,
+            "reduced_chisq": 1.162093857142857e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 425,
+          "params": {
+            "fmod0": 0.002803714286146431,
+            "kdeg": 1.3828251382806765e-30,
+            "kobs": 0.00250029181956115,
+            "log_fmod0": -5.876810210099015,
+            "log_kdeg": -68.75342418166132,
+            "log_kobs": -5.9913478260956845,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 36,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 2.306557714285714e-06,
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.0,
+            "reduced_chisq": 5.766394285714285e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 426,
+          "params": {
+            "fmod0": 0.001748571428618223,
+            "kdeg": 1.7208757583501346e-48,
+            "kobs": 0.0015646109685875983,
+            "log_fmod0": -6.348956150926509,
+            "log_kdeg": -109.98125114063626,
+            "log_kobs": -6.460118068263881,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 61,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 427,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 428,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 429,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 430,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 390,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 391,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 392,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 393,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 394,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 1.1727773477151043e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.1015065764571998,
+                  9.818556532308298e-05,
+                  -0.596793037329949
+                ],
+                [
+                  9.818556532308298e-05,
+                  0.9023218078288385,
+                  -0.3928169074006184
+                ],
+                [
+                  -0.596793037329949,
+                  -0.3928169074006184,
+                  4.293156275501073
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.7115976737239619,
+            "reduced_chisq": 2.9319433692877607e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 395,
+          "params": {
+            "fmod0": 0.0002611915341182927,
+            "kdeg": 0.00046559057782800305,
+            "kobs": 0.0018711119403315964,
+            "log_fmod0": -8.25025657257925,
+            "log_fmod0_err": 2.0719933097143612,
+            "log_kdeg": -7.672203898375514,
+            "log_kdeg_err": 0.9499062100169883,
+            "log_kobs": -6.281222404334181,
+            "log_kobs_err": 0.31860096744548627,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 6,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 396,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 397,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 398,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 399,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 400,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 401,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 402,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 2.2523692414185943e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.10739495449676714,
+                  0.00557333359723815,
+                  -0.865676412475209
+                ],
+                [
+                  0.00557333359723815,
+                  0.8750313730902685,
+                  -0.6156647648274305
+                ],
+                [
+                  -0.865676412475209,
+                  -0.6156647648274305,
+                  8.577905361719417
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.7000972015398721,
+            "reduced_chisq": 5.630923103546486e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 403,
+          "params": {
+            "fmod0": 0.0002559483152696421,
+            "kdeg": 0.00042651862910226195,
+            "kobs": 0.0025223301347641657,
+            "log_fmod0": -8.270535027345904,
+            "log_fmod0_err": 2.9288061324914314,
+            "log_kdeg": -7.759854512965897,
+            "log_kdeg_err": 0.935431116165305,
+            "log_kobs": -5.982572148037979,
+            "log_kobs_err": 0.3277116941715189,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 14,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 404,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 405,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 406,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 407,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 2.477667521066417e-05,
+            "covariance": {
+              "matrix": [
+                [
+                  0.1433818623254922,
+                  0.008706647297487732,
+                  -1.3919045358022342
+                ],
+                [
+                  0.008706647297487732,
+                  1.1446599659308285,
+                  -1.0029755589184748
+                ],
+                [
+                  -1.3919045358022342,
+                  -1.0029755589184748,
+                  16.629906104065345
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.6373141823800533,
+            "reduced_chisq": 6.194168802666042e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 408,
+          "params": {
+            "fmod0": 0.0006096746925087423,
+            "kdeg": 0.00041780361552022416,
+            "kobs": 0.007274465211072658,
+            "log_fmod0": -7.402585034016397,
+            "log_fmod0_err": 4.077978188277292,
+            "log_kdeg": -7.780499055168806,
+            "log_kdeg_err": 1.0698878286674862,
+            "log_kobs": -4.923384979132087,
+            "log_kobs_err": 0.3786579753887302,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 19,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 409,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 9.426266874662431e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.11580797488886482,
+                  -0.003094264420025756,
+                  -0.5735820578808144
+                ],
+                [
+                  -0.003094264420025756,
+                  1.0828157077868927,
+                  -0.36273199898508995
+                ],
+                [
+                  -0.5735820578808144,
+                  -0.36273199898508995,
+                  3.4687607945539556
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.6837620916399851,
+            "reduced_chisq": 2.3565667186656076e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 410,
+          "params": {
+            "fmod0": 0.0002605534226218245,
+            "kdeg": 0.0004864207780847855,
+            "kobs": 0.001569995449449353,
+            "log_fmod0": -8.252702640553228,
+            "log_fmod0_err": 1.862460951148763,
+            "log_kdeg": -7.628436510122765,
+            "log_kdeg_err": 1.0405843107537671,
+            "log_kobs": -6.456682558066023,
+            "log_kobs_err": 0.34030570798748705,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 21,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 411,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 412,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 413,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 414,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 415,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 1.945442396699346e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.13756924513043534,
+                  -0.008002511141605655,
+                  -0.3197474104593611
+                ],
+                [
+                  -0.008002511141605655,
+                  1.3642094088720045,
+                  -0.19350857549703435
+                ],
+                [
+                  -0.3197474104593611,
+                  -0.19350857549703435,
+                  0.9056004657660728
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.6455833151009109,
+            "reduced_chisq": 4.863605991748365e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 416,
+          "params": {
+            "fmod0": 0.0007326250998846257,
+            "kdeg": 0.0005096493490352534,
+            "kobs": 0.002070301090400917,
+            "log_fmod0": -7.218876446829692,
+            "log_fmod0_err": 0.9516304249896977,
+            "log_kdeg": -7.581787619628695,
+            "log_kdeg_err": 1.1679937537812455,
+            "log_kobs": -6.180061227982351,
+            "log_kobs_err": 0.3709032827172541,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 27,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.286212797024399e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  2630195139855.984,
+                  -2629970695132.7104,
+                  487491.0896189531
+                ],
+                [
+                  -2629970695132.7104,
+                  2629746269562.7295,
+                  -487449.7238140993
+                ],
+                [
+                  487491.0896189531,
+                  -487449.7238140993,
+                  0.2630443138087766
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.3105071820440277,
+            "reduced_chisq": 1.0715531992560998e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 417,
+          "params": {
+            "fmod0": 0.0014339123827223615,
+            "kdeg": 4.6520621241748834e-11,
+            "kobs": 626.8705954414701,
+            "log_fmod0": -6.5473486385860555,
+            "log_fmod0_err": 0.5128784590999865,
+            "log_kdeg": -23.791125434073425,
+            "log_kdeg_err": 1621649.243690734,
+            "log_kobs": 6.440740132476513,
+            "log_kobs_err": 1621787.637101721,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 28,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 418,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 1.6371653505388547e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.05943044382752238,
+                  0.016183415722820796,
+                  -0.21317974466672635
+                ],
+                [
+                  0.016183415722820796,
+                  0.36870603774796923,
+                  -0.24299947076618766
+                ],
+                [
+                  -0.21317974466672635,
+                  -0.24299947076618766,
+                  1.0083064588199948
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.8102444241144434,
+            "reduced_chisq": 4.0929133763471367e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 419,
+          "params": {
+            "fmod0": 0.0006249095510059892,
+            "kdeg": 0.00021803623632922928,
+            "kobs": 0.0028537486365345648,
+            "log_fmod0": -7.3779036370910065,
+            "log_fmod0_err": 1.0041446403880243,
+            "log_kdeg": -8.430849287294768,
+            "log_kdeg_err": 0.6072116910501388,
+            "log_kobs": -5.859121837900649,
+            "log_kobs_err": 0.2437836004072513,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 30,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.703632119322865e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.13973882443313063,
+                  0.015247993372749907,
+                  -0.7996620702808331
+                ],
+                [
+                  0.015247993372749907,
+                  1.043004386333947,
+                  -0.6242646745908547
+                ],
+                [
+                  -0.7996620702808331,
+                  -0.6242646745908547,
+                  5.665221075985616
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.6425534876899719,
+            "reduced_chisq": 1.1759080298307162e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 420,
+          "params": {
+            "fmod0": 0.0004547237378202378,
+            "kdeg": 0.00038150328590560404,
+            "kobs": 0.0031959096778122298,
+            "log_fmod0": -7.695820493041298,
+            "log_fmod0_err": 2.380172488704467,
+            "log_kdeg": -7.871391094156006,
+            "log_kdeg_err": 1.0212758620147384,
+            "log_kobs": -5.745883512487399,
+            "log_kobs_err": 0.37381656522033724,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 31,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 421,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 422,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 423,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 424,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 425,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.745123841195331e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.028503736218747588,
+                  0.006921341187500673,
+                  -0.09993434458299921
+                ],
+                [
+                  0.006921341187500673,
+                  0.1817043346286696,
+                  -0.10181418588254516
+                ],
+                [
+                  -0.09993434458299921,
+                  -0.10181418588254516,
+                  0.4492900305677443
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_kdeg",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 4,
+            "r2": 0.8987100455228224,
+            "reduced_chisq": 1.1862809602988327e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 426,
+          "params": {
+            "fmod0": 0.0005085866687748811,
+            "kdeg": 0.00026318456978221335,
+            "kobs": 0.002231294982081177,
+            "log_fmod0": -7.583874916930322,
+            "log_fmod0_err": 0.6702910043911855,
+            "log_kdeg": -8.242654985679168,
+            "log_kdeg_err": 0.42626791414399184,
+            "log_kobs": -6.105173152603154,
+            "log_kobs_err": 0.16883049552360968,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 61,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 427,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 428,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 429,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 430,
+          "params": {},
+          "valtype": "GAmodrate"
+        }
+      ],
+      "qc_metrics": {
+        "n_success": 41,
+        "n_total": 82,
+        "success_rate": 0.5
+      },
+      "round_id": "round1_free",
+      "status": "completed"
+    },
+    {
+      "global_params": {
+        "kdeg": 0.0001341969583634578,
+        "log_kdeg": -8.916201998635426
+      },
+      "notes": null,
+      "per_nt": [],
+      "qc_metrics": {
+        "chisq": 5.972462273768288,
+        "n_sites": 21,
+        "ndata": 147,
+        "nfree": 43,
+        "r2": -219.40652124108126
+      },
+      "round_id": "round2_global",
+      "status": "completed"
+    },
+    {
+      "global_params": {},
+      "notes": null,
+      "per_nt": [
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 390,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 391,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 392,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 393,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.6795971428571436e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  3.87483490303663e+17,
+                  -30135153.53466143
+                ],
+                [
+                  -30135153.53466143,
+                  0.005468527484806775
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": -2.220446049250313e-16,
+            "reduced_chisq": 9.359194285714288e-08,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 394,
+          "params": {
+            "fmod0": 0.002068428573449305,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 2.9234673013067855e-19,
+            "log_fmod0": -6.180966103261224,
+            "log_fmod0_err": 0.0739494927961428,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -42.67634642309203,
+            "log_kobs_err": 622481718.850974,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 5,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 2.027617404513127e-08,
+            "covariance": {
+              "matrix": [
+                [
+                  0.03138733090437832,
+                  -0.01062628637891241
+                ],
+                [
+                  -0.01062628637891241,
+                  0.004550944603380455
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.8643858582338182,
+            "reduced_chisq": 4.055234809026254e-09,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 395,
+          "params": {
+            "fmod0": 0.0007794899360234375,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.0003801328290273332,
+            "log_fmod0": -7.156870780360003,
+            "log_fmod0_err": 0.06746068931889486,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -7.874989816250307,
+            "log_kobs_err": 0.17716469993872458,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 6,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 8.427563521264546e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.00346559513797219,
+                  -0.02435809857219923
+                ],
+                [
+                  -0.02435809857219923,
+                  0.21617892631462424
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.9833841866246681,
+            "reduced_chisq": 1.6855127042529091e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 396,
+          "params": {
+            "fmod0": 0.002313711329882354,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.02391441117715745,
+            "log_fmod0": -6.068902407395119,
+            "log_fmod0_err": 0.4649504557634332,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -3.733274023639194,
+            "log_kobs_err": 0.05886930556726646,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 7,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.522047616881976e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.0016800261485662204,
+                  -0.009373105513417199
+                ],
+                [
+                  -0.009373105513417199,
+                  0.06602563626988696
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.9918870136889971,
+            "reduced_chisq": 9.044095233763951e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 397,
+          "params": {
+            "fmod0": 0.0030673132669743267,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.025194042960494798,
+            "log_fmod0": -5.786953257894141,
+            "log_fmod0_err": 0.2569545412517299,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -3.681147702865943,
+            "log_kobs_err": 0.040988122042443224,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 8,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 9.763173236687737e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.0008744970644527069,
+                  -0.0024913721254606735
+                ],
+                [
+                  -0.0024913721254606735,
+                  0.008967797391230926
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.9957199057833076,
+            "reduced_chisq": 1.9526346473375474e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 398,
+          "params": {
+            "fmod0": 0.0038620650653212966,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.01606911271693021,
+            "log_fmod0": -5.556553247546191,
+            "log_fmod0_err": 0.09469845506253481,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -4.130856314389265,
+            "log_kobs_err": 0.029571896531211974,
+            "metadata": {
+              "base": "C",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 9,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 7.190580000215472e-07,
+            "ndata": 7,
+            "nfree": 5,
+            "r2": -2.99660296576576e-11,
+            "reduced_chisq": 1.4381160000430943e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 399,
+          "params": {
+            "fmod0": 0.0028599999999860634,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 2.275223771303149e-14,
+            "log_fmod0": -5.856933654155249,
+            "log_kdeg": -8.916201998635426,
+            "log_kobs": -31.41411289333848,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 10,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.64081428745069e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  2.1295542271756844e+16,
+                  -23758394.652295783
+                ],
+                [
+                  -23758394.652295783,
+                  0.03348548977972211
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": -3.7415937015339296e-10,
+            "reduced_chisq": 9.28162857490138e-08,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 400,
+          "params": {
+            "fmod0": 0.001378285716037834,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 2.627770545923332e-13,
+            "log_fmod0": -6.5869147867813895,
+            "log_fmod0_err": 0.18299040898288113,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -28.967470423404574,
+            "log_kobs_err": 145929922.46882352,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 11,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 5.655854285761526e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  4.386570478032705e+17,
+                  -81302699.43147375
+                ],
+                [
+                  -81302699.43147375,
+                  0.026370773463933687
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": -8.352651903464903e-12,
+            "reduced_chisq": 1.1311708571523051e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 401,
+          "params": {
+            "fmod0": 0.0011957142863135636,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 7.809154203148468e-15,
+            "log_fmod0": -6.729011543034878,
+            "log_fmod0_err": 0.16239080473947312,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -32.48347973357552,
+            "log_kobs_err": 662311896.1662024,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 12,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 6.055560000000001e-06,
+            "ndata": 7,
+            "nfree": 5,
+            "r2": -2.220446049250313e-16,
+            "reduced_chisq": 1.211112e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 402,
+          "params": {
+            "fmod0": 0.00485600000000738,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 1.9490068944611986e-24,
+            "log_fmod0": -5.32754022522342,
+            "log_kdeg": -8.916201998635426,
+            "log_kobs": -54.59472227390273,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 13,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 1.121200000101652e-08,
+            "ndata": 7,
+            "nfree": 5,
+            "r2": -9.066369877075431e-11,
+            "reduced_chisq": 2.242400000203304e-09,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 403,
+          "params": {
+            "fmod0": 0.000746999999995173,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 9.509071966080586e-15,
+            "log_fmod0": -7.199445372837919,
+            "log_kdeg": -8.916201998635426,
+            "log_kobs": -32.28653010817499,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 14,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 1.182215325884053e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.003682478516053006,
+                  -0.05548944832923709
+                ],
+                [
+                  -0.05548944832923709,
+                  1.0570596740357614
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.9820806387109364,
+            "reduced_chisq": 2.364430651768106e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 404,
+          "params": {
+            "fmod0": 0.00039100566001617663,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.008548320909437341,
+            "log_fmod0": -7.846788522338984,
+            "log_fmod0_err": 1.0281340739591123,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -4.76202040018063,
+            "log_kobs_err": 0.0606834286774652,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 15,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 7.943931886398934e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.004175367365800336,
+                  -0.011493046037072756
+                ],
+                [
+                  -0.011493046037072756,
+                  0.04000008801748074
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.9796885272781997,
+            "reduced_chisq": 1.588786377279787e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 405,
+          "params": {
+            "fmod0": 0.001647211006432789,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.0065668584193825956,
+            "log_fmod0": -6.4086717203687025,
+            "log_fmod0_err": 0.2000002200435808,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -5.025719731411435,
+            "log_kobs_err": 0.06461708261597962,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 16,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.975942857142856e-08,
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 1.1102230246251565e-16,
+            "reduced_chisq": 9.951885714285712e-09,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 406,
+          "params": {
+            "fmod0": 0.000548714285772666,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 5.8220502269133216e-18,
+            "log_fmod0": -7.507932678567288,
+            "log_kdeg": -8.916201998635426,
+            "log_kobs": -39.684879201517404,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 17,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 9.730849594743484e-05,
+            "covariance": {
+              "matrix": [
+                [
+                  0.004016214649795725,
+                  -0.33657329669948965
+                ],
+                [
+                  -0.33657329669948965,
+                  35.46301139426346
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.9819091867735827,
+            "reduced_chisq": 1.9461699189486967e-05,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 407,
+          "params": {
+            "fmod0": 0.0006189389655759135,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.08013217148104335,
+            "log_fmod0": -7.3875038917955616,
+            "log_fmod0_err": 5.955082820101116,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -2.5240778640829493,
+            "log_kobs_err": 0.06337361162026135,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 18,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 1.4446610852815907e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  1.467880028151075,
+                  -0.39107920144206965
+                ],
+                [
+                  -0.39107920144206965,
+                  0.13180406063791658
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.11998573572779458,
+            "reduced_chisq": 2.8893221705631814e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 408,
+          "params": {
+            "fmod0": 0.0012226255614732231,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.00046925023851224294,
+            "log_fmod0": -6.706754633117879,
+            "log_fmod0_err": 0.36304828967771846,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -7.664374374213836,
+            "log_kobs_err": 1.2115609882094567,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 19,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 3.560995800893316e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  1.1819641148137543,
+                  -0.16987744016025225
+                ],
+                [
+                  -0.16987744016025225,
+                  0.030886171245020598
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.14473329089350329,
+            "reduced_chisq": 7.121991601786632e-08,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 409,
+          "params": {
+            "fmod0": 0.0012539071620706625,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.0002595674423638919,
+            "log_fmod0": -6.681490872948491,
+            "log_fmod0_err": 0.1757446193913788,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -8.256493995622323,
+            "log_kobs_err": 1.087181730353189,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 20,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 1.2122962024489314e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.039443324033622856,
+                  -0.021827667498648336
+                ],
+                [
+                  -0.021827667498648336,
+                  0.015279845769703903
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.8353835511231393,
+            "reduced_chisq": 2.4245924048978628e-08,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 410,
+          "params": {
+            "fmod0": 0.001040260838780808,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.0008295673605386167,
+            "log_fmod0": -6.868283790755545,
+            "log_fmod0_err": 0.12361167327442786,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -7.094606245435983,
+            "log_kobs_err": 0.19860343409322725,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 21,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 7.066759103241302e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.007652648712607065,
+                  -0.03286744799912079
+                ],
+                [
+                  -0.03286744799912079,
+                  0.17837608055541973
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.9636871291832539,
+            "reduced_chisq": 1.4133518206482604e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 411,
+          "params": {
+            "fmod0": 0.00232923828269062,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.01459141868170598,
+            "log_fmod0": -6.062213982153801,
+            "log_fmod0_err": 0.42234592522648984,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -4.2273216845943535,
+            "log_kobs_err": 0.08747941879440595,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 22,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 3.0474914289498546e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  6.4478085639571464e+16,
+                  -43469397.18136085
+                ],
+                [
+                  -43469397.18136085,
+                  0.0365504911555096
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": -1.241762248582745e-10,
+            "reduced_chisq": 6.09498285789971e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 412,
+          "params": {
+            "fmod0": 0.003466714289982722,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 1.992759079394524e-13,
+            "log_fmod0": -5.664548024102262,
+            "log_fmod0_err": 0.19118182747193732,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -29.244086058393542,
+            "log_kobs_err": 253925354.46380982,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 23,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 6.418354316480966e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  1667506449054068.8,
+                  -7104744.404831898
+                ],
+                [
+                  -7104744.404831898,
+                  0.03865725932616646
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": -4.79354644866703e-09,
+            "reduced_chisq": 1.2836708632961932e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 413,
+          "params": {
+            "fmod0": 0.0014787142858116047,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 3.2865174214654065e-12,
+            "log_fmod0": -6.516582294570024,
+            "log_fmod0_err": 0.19661449419146712,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -26.44119264630359,
+            "log_kobs_err": 40835112.942834735,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 24,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 1.6430756881396283e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.09949235632544066,
+                  -0.02760306580555053
+                ],
+                [
+                  -0.02760306580555053,
+                  0.009687465791006815
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.6679434280604933,
+            "reduced_chisq": 3.286151376279257e-08,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 414,
+          "params": {
+            "fmod0": 0.0015209251761831698,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.0006079464334812146,
+            "log_fmod0": -6.488436460745958,
+            "log_fmod0_err": 0.09842492464313506,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -7.405423782706339,
+            "log_kobs_err": 0.3154240896403454,
+            "metadata": {
+              "base": "C",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 25,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 6.496669145302437e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.006581274583991431,
+                  -0.01965962789104087
+                ],
+                [
+                  -0.01965962789104087,
+                  0.07426562355427845
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.968298117895239,
+            "reduced_chisq": 1.2993338290604874e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 415,
+          "params": {
+            "fmod0": 0.0010929376189275808,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.0047209000268308415,
+            "log_fmod0": -6.81888614467578,
+            "log_fmod0_err": 0.2725171986394225,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -5.3557558139118875,
+            "log_kobs_err": 0.08112505521718572,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 26,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 3.353296012169294e-08,
+            "covariance": {
+              "matrix": [
+                [
+                  0.0313735275285216,
+                  -0.015405067384224603
+                ],
+                [
+                  -0.015405067384224603,
+                  0.009568703578429743
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.8644579020737765,
+            "reduced_chisq": 6.7065920243385875e-09,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 416,
+          "params": {
+            "fmod0": 0.0006913282437861563,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.000489023722067167,
+            "log_fmod0": -7.276895819799389,
+            "log_fmod0_err": 0.09781975045168406,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -7.6230995582812415,
+            "log_kobs_err": 0.17712573931679607,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 27,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 5.300937443544411e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  1.507637819435418,
+                  -0.15174599489385895
+                ],
+                [
+                  -0.15174599489385895,
+                  0.019321182475044597
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.11714314015881777,
+            "reduced_chisq": 1.0601874887088823e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 417,
+          "params": {
+            "fmod0": 0.0019342979703190187,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.00028040378207500104,
+            "log_fmod0": -6.248010824367108,
+            "log_fmod0_err": 0.13900065638350273,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -8.17927991475286,
+            "log_kobs_err": 1.2278590389109891,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 28,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 6.677760400681261e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.005947856917440122,
+                  -0.04515312083040568
+                ],
+                [
+                  -0.04515312083040568,
+                  0.43346267634906654
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.9712681901177266,
+            "reduced_chisq": 1.3355520801362523e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 418,
+          "params": {
+            "fmod0": 0.0004586714434613517,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.005036344720357462,
+            "log_fmod0": -7.68717641367003,
+            "log_fmod0_err": 0.6583788243474015,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -5.291074713920025,
+            "log_kobs_err": 0.07712235031065977,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 29,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 2.84141921398041e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  1.8294811066488172,
+                  -0.09608058802967392
+                ],
+                [
+                  -0.09608058802967392,
+                  0.006383064754562721
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.09857879997815289,
+            "reduced_chisq": 5.68283842796082e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 419,
+          "params": {
+            "fmod0": 0.007791831941863238,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.000589556842743713,
+            "log_fmod0": -4.854679280910529,
+            "log_fmod0_err": 0.07989408460307135,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -7.436139417285664,
+            "log_kobs_err": 1.35258312374834,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 30,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 9.287489170740914e-08,
+            "covariance": {
+              "matrix": [
+                [
+                  0.04872398377352144,
+                  -0.03590161952931381
+                ],
+                [
+                  -0.03590161952931381,
+                  0.03346332020979989
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.804203271062237,
+            "reduced_chisq": 1.8574978341481828e-08,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 420,
+          "params": {
+            "fmod0": 0.0006152472765192349,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.0006531759561475835,
+            "log_fmod0": -7.393486295327474,
+            "log_fmod0_err": 0.18292982318309908,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -7.333664006872475,
+            "log_kobs_err": 0.22073509864432853,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 31,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 5.473460000297872e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  1.7856399070596182e+17,
+                  -82812109.32976358
+                ],
+                [
+                  -82812109.32976358,
+                  0.04898839251073454
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": -5.4420912221075923e-11,
+            "reduced_chisq": 1.0946920000595744e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 421,
+          "params": {
+            "fmod0": 0.0038440000032567575,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 1.521041178128849e-13,
+            "log_fmod0": -5.56124178702686,
+            "log_fmod0_err": 0.22133321601317443,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -29.51421112294889,
+            "log_kobs_err": 422568326.6715122,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 32,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 6.3207017190848036e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  5726312963829169.0,
+                  -25270418.644528992
+                ],
+                [
+                  -25270418.644528992,
+                  0.14074855698042912
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": -7.59265317284985e-10,
+            "reduced_chisq": 1.2641403438169608e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 422,
+          "params": {
+            "fmod0": 0.002485571435780437,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 3.0120224539930946e-12,
+            "log_fmod0": -5.997252691832529,
+            "log_fmod0_err": 0.37516470646961064,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -26.528409351173703,
+            "log_kobs_err": 75672405.56391193,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 33,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 5.948659503862741e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.002743441867995274,
+                  -0.056078709330806595
+                ],
+                [
+                  -0.056078709330806595,
+                  1.4493411269236784
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.9865688257762586,
+            "reduced_chisq": 1.1897319007725482e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 423,
+          "params": {
+            "fmod0": 0.00023679759963725122,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.007013834879839539,
+            "log_fmod0": -8.348304791672813,
+            "log_fmod0_err": 1.2038858446396312,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -4.959870669052585,
+            "log_kobs_err": 0.052377875749167926,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 34,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.287225555071446e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.010980219545049625,
+                  -0.32412446209027546
+                ],
+                [
+                  -0.32412446209027546,
+                  12.09488508071499
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.94845456031743,
+            "reduced_chisq": 8.574451110142892e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 424,
+          "params": {
+            "fmod0": 0.0002201541534816846,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.009436161007248112,
+            "log_fmod0": -8.42118255934187,
+            "log_fmod0_err": 3.4777701305168214,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -4.663206054499607,
+            "log_kobs_err": 0.10478654276694896,
+            "metadata": {
+              "base": "A",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 35,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 4.648375428603977e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  7.211363751180965e+17,
+                  -206496535.47953406
+                ],
+                [
+                  -206496535.47953406,
+                  0.07602433082936176
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": -7.001954571705937e-12,
+            "reduced_chisq": 9.296750857207955e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 425,
+          "params": {
+            "fmod0": 0.002803714288136107,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 2.0611703704366644e-14,
+            "log_fmod0": -5.876810209389358,
+            "log_fmod0_err": 0.2757251001076285,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -31.512917339457466,
+            "log_kobs_err": 849197488.8788217,
+            "metadata": {
+              "base": "U",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 36,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 9.952087550449176e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.15196146512256686,
+                  -0.14068663147922555
+                ],
+                [
+                  -0.14068663147922555,
+                  0.16475446496498464
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.568530737869219,
+            "reduced_chisq": 1.9904175100898354e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 426,
+          "params": {
+            "fmod0": 0.0009077364302819034,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.0012114395656956766,
+            "log_fmod0": -7.004556496520859,
+            "log_fmod0_err": 0.4058995749751219,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -6.715945902818484,
+            "log_kobs_err": 0.3898223507221807,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 61,
+              "valtype": "modrate"
+            }
+          },
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 427,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 428,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 429,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 430,
+          "params": {},
+          "valtype": "modrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 390,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 391,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 392,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 393,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 394,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 1.7146788357547329e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.14603183472162734,
+                  -0.24455376961218625
+                ],
+                [
+                  -0.24455376961218625,
+                  0.5180269790408838
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.578336530790426,
+            "reduced_chisq": 3.429357671509466e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 395,
+          "params": {
+            "fmod0": 0.0006719892397300385,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.0016228077217637841,
+            "log_fmod0": -7.305268229875813,
+            "log_fmod0_err": 0.7197409110512503,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -6.423597468346665,
+            "log_kobs_err": 0.3821411188574547,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 6,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 396,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 397,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 398,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 399,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 400,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 401,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 402,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 2.914988775952645e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.12713960981412556,
+                  -0.2706309965819022
+                ],
+                [
+                  -0.2706309965819022,
+                  0.7286243905793333
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.6118694593620622,
+            "reduced_chisq": 5.82997755190529e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 403,
+          "params": {
+            "fmod0": 0.0007388465786425832,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.002269233428128378,
+            "log_fmod0": -7.210420265277605,
+            "log_fmod0_err": 0.8535949804089369,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -6.088313201380996,
+            "log_kobs_err": 0.3565664171148561,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 14,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 404,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 405,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 406,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 407,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 3.145849334858774e-05,
+            "covariance": {
+              "matrix": [
+                [
+                  0.1717581423984272,
+                  -0.37125929562057886
+                ],
+                [
+                  -0.37125929562057886,
+                  1.0146747714336586
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.5395044216298481,
+            "reduced_chisq": 6.291698669717548e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 408,
+          "params": {
+            "fmod0": 0.0020579428826011416,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.006442284102485293,
+            "log_fmod0": -6.186048395793548,
+            "log_fmod0_err": 1.0073106628213853,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -5.044872127448977,
+            "log_kobs_err": 0.4144371392605002,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 19,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 409,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 1.3750922403118724e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.17148355425618972,
+                  -0.25557847702474734
+                ],
+                [
+                  -0.25557847702474734,
+                  0.48182213175511696
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.5386760213131709,
+            "reduced_chisq": 2.7501844806237447e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 410,
+          "params": {
+            "fmod0": 0.0006239413514066369,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.0013406827948630466,
+            "log_fmod0": -7.379454182142397,
+            "log_fmod0_err": 0.6941340877345795,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -6.614576246389764,
+            "log_kobs_err": 0.4141057283547159,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 21,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 411,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 412,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 413,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 414,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 415,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 2.453241918914159e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.16189475813293186,
+                  -0.17776540386076478
+                ],
+                [
+                  -0.17776540386076478,
+                  0.24689112331998037
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.5530734450774868,
+            "reduced_chisq": 4.906483837828317e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 416,
+          "params": {
+            "fmod0": 0.0011643386532442497,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.0018439884783716836,
+            "log_fmod0": -6.755602032774224,
+            "log_fmod0_err": 0.4968813976392962,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -6.295824402038793,
+            "log_kobs_err": 0.4023614769494364,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 27,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 3.9366387031067075e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.34582387345194676,
+                  -0.4128266204455034
+                ],
+                [
+                  -0.4128266204455034,
+                  0.623350703649888
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.3667407006567862,
+            "reduced_chisq": 7.873277406213416e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 417,
+          "params": {
+            "fmod0": 0.0009281802600388363,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.0015978117536017626,
+            "log_fmod0": -6.982284598309828,
+            "log_fmod0_err": 0.78952561937526,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -6.439120239827628,
+            "log_kobs_err": 0.588067915679768,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 28,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 418,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 1.7794738723175647e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.052110876035024956,
+                  -0.11617510238431607
+                ],
+                [
+                  -0.11617510238431607,
+                  0.3275747573717624
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.7937501613360054,
+            "reduced_chisq": 3.5589477446351294e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 419,
+          "params": {
+            "fmod0": 0.0008610053560323601,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.002770819527907058,
+            "log_fmod0": -7.057409832844672,
+            "log_fmod0_err": 0.5723414692050214,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -5.888612144090169,
+            "log_kobs_err": 0.22827806735432327,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 30,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 5.788406663460098e-06,
+            "covariance": {
+              "matrix": [
+                [
+                  0.1574960949733786,
+                  -0.3011131013755001
+                ],
+                [
+                  -0.3011131013755001,
+                  0.7281128518649853
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.5601174324016227,
+            "reduced_chisq": 1.1576813326920196e-06,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 420,
+          "params": {
+            "fmod0": 0.001041605627832334,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.0028749209143470894,
+            "log_fmod0": -6.866991883459729,
+            "log_fmod0_err": 0.8532952899582801,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -5.851730113164363,
+            "log_kobs_err": 0.3968577767580958,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 31,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 421,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 422,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 423,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 424,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 425,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "chisq": 6.937456378085062e-07,
+            "covariance": {
+              "matrix": [
+                [
+                  0.03483694054034971,
+                  -0.06603211723784126
+                ],
+                [
+                  -0.06603211723784126,
+                  0.1583088286591996
+                ]
+              ],
+              "params": [
+                "log_kappa",
+                "log_fmod_0"
+              ]
+            },
+            "ndata": 7,
+            "nfree": 5,
+            "r2": 0.8519122652557309,
+            "reduced_chisq": 1.3874912756170122e-07,
+            "status": "completed",
+            "success": true,
+            "time_max": 52500.0,
+            "time_min": 0.0
+          },
+          "nt_id": 426,
+          "params": {
+            "fmod0": 0.000773241992513495,
+            "kdeg": 0.0001341969583634578,
+            "kobs": 0.0021144930072378373,
+            "log_fmod0": -7.164918502077034,
+            "log_fmod0_err": 0.3978804200500442,
+            "log_kdeg": -8.916201998635426,
+            "log_kdeg_err": 0.0,
+            "log_kobs": -6.158940208109534,
+            "log_kobs_err": 0.18664656584129727,
+            "metadata": {
+              "base": "G",
+              "fmod_run_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242
+              ],
+              "site": 61,
+              "valtype": "GAmodrate"
+            }
+          },
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 427,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 428,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 429,
+          "params": {},
+          "valtype": "GAmodrate"
+        },
+        {
+          "diagnostics": {
+            "reason": "Non-zero fmod values are required for a fit.",
+            "status": "failed"
+          },
+          "nt_id": 430,
+          "params": {},
+          "valtype": "GAmodrate"
+        }
+      ],
+      "qc_metrics": {
+        "n_success": 42,
+        "n_total": 82,
+        "success_rate": 0.5121951219512195
+      },
+      "round_id": "round3_constrained",
+      "status": "completed"
+    }
+  ]
+}

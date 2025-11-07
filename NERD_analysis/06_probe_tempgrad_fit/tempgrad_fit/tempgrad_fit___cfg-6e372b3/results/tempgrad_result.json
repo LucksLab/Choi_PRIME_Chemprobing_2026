@@ -1,0 +1,414 @@
+{
+  "artifacts": {},
+  "engine": "arrhenius_python",
+  "engine_version": "0.1.0",
+  "global_params": {},
+  "metadata": {
+    "description": "Melt fit (4U both WT and A8C), C-base nucleotides above melt threshold",
+    "mode": "arrhenius"
+  },
+  "series_results": [
+    {
+      "artifacts": {
+        "covariance_matrix": [
+          [
+            27917.640316838966,
+            -80.78564032276769
+          ],
+          [
+            -80.78564032276769,
+            0.23382291474604605
+          ]
+        ],
+        "parameter_stderr": {
+          "intercept": 0.48355239090097163,
+          "slope": 167.0857274480348
+        }
+      },
+      "diagnostics": {
+        "buffer_disp_name": "pH6.5_A",
+        "buffer_id": 1,
+        "buffer_name": "Schwalbe_bistris",
+        "chisq": 1639.3568329112472,
+        "construct": [
+          "4U_a8c",
+          "4U_wt"
+        ],
+        "construct_disp_names": [
+          "4U_a8c",
+          "4U_wt"
+        ],
+        "construct_ids": [
+          6,
+          7
+        ],
+        "construct_names": [
+          "A8C",
+          "WT"
+        ],
+        "construct_version": "2",
+        "constructs_included": [
+          "4U_a8c",
+          "4U_wt"
+        ],
+        "done_by": [
+          "EKC"
+        ],
+        "group_by": [
+          "buffer",
+          "base"
+        ],
+        "group_labels": {
+          "base": "C",
+          "buffer": "pH6.5_A"
+        },
+        "group_values": {
+          "base": "C",
+          "buffer": 1
+        },
+        "ndata": 30,
+        "nfree": 28,
+        "nt_base": "C",
+        "nt_bases": [
+          "C"
+        ],
+        "nt_ids": [
+          398,
+          414,
+          477,
+          478,
+          494
+        ],
+        "nt_sites": [
+          8,
+          9,
+          25
+        ],
+        "outliers_removed": {
+          "rg_ids": [
+            20,
+            47
+          ]
+        },
+        "probe": "dms",
+        "probe_conc": 0.015852692,
+        "r2": 0.306074487397096,
+        "replicates": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "rg_ids": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          43,
+          44,
+          45,
+          48,
+          49,
+          50
+        ],
+        "rmse_log_k": 0.4432724973622821,
+        "rt_protocol": "MRT",
+        "source": "probe_tc",
+        "src_kobs_data": [
+          {
+            "kobs2": 0.00046959378067238614,
+            "log_kdeg": -4.283552178864662,
+            "log_kobs2": -7.663642533421423,
+            "log_kobs2_err": 0.03794263559592284,
+            "nt_id": 398,
+            "rg_id": 43,
+            "temperature_c": 65.0
+          },
+          {
+            "kobs2": 0.0005334994104756468,
+            "log_kdeg": -4.283552178864662,
+            "log_kobs2": -7.536052592235922,
+            "log_kobs2_err": 0.03434976289768784,
+            "nt_id": 414,
+            "rg_id": 43,
+            "temperature_c": 65.0
+          },
+          {
+            "kobs2": 0.00042106995880249323,
+            "log_kdeg": -4.423406528489963,
+            "log_kobs2": -7.772711565159547,
+            "log_kobs2_err": 0.03075065985447548,
+            "nt_id": 398,
+            "rg_id": 44,
+            "temperature_c": 65.0
+          },
+          {
+            "kobs2": 0.00048184571474293216,
+            "log_kdeg": -4.423406528489963,
+            "log_kobs2": -7.637886589048991,
+            "log_kobs2_err": 0.02813594599305329,
+            "nt_id": 414,
+            "rg_id": 44,
+            "temperature_c": 65.0
+          },
+          {
+            "kobs2": 0.0016443861497949543,
+            "log_kdeg": -3.6551791343784794,
+            "log_kobs2": -6.410388125625648,
+            "log_kobs2_err": 0.10527459634536296,
+            "nt_id": 477,
+            "rg_id": 26,
+            "temperature_c": 70.0
+          },
+          {
+            "kobs2": 0.0007149814600617138,
+            "log_kdeg": -3.6551791343784794,
+            "log_kobs2": -7.243253945590071,
+            "log_kobs2_err": 0.026030476126898985,
+            "nt_id": 478,
+            "rg_id": 26,
+            "temperature_c": 70.0
+          },
+          {
+            "kobs2": 0.001157221282988771,
+            "log_kdeg": -3.6551791343784794,
+            "log_kobs2": -6.761733593233313,
+            "log_kobs2_err": 0.02130396837731773,
+            "nt_id": 494,
+            "rg_id": 26,
+            "temperature_c": 70.0
+          },
+          {
+            "kobs2": 0.0021759885582432314,
+            "log_kdeg": -3.290684886694323,
+            "log_kobs2": -6.130272208162545,
+            "log_kobs2_err": 0.10976563371082142,
+            "nt_id": 477,
+            "rg_id": 27,
+            "temperature_c": 70.0
+          },
+          {
+            "kobs2": 0.0009150412327228615,
+            "log_kdeg": -3.290684886694323,
+            "log_kobs2": -6.996541430618969,
+            "log_kobs2_err": 0.10174916527793405,
+            "nt_id": 478,
+            "rg_id": 27,
+            "temperature_c": 70.0
+          },
+          {
+            "kobs2": 0.0014875690909730073,
+            "log_kdeg": -3.290684886694323,
+            "log_kobs2": -6.510611973910205,
+            "log_kobs2_err": 0.06638825825665906,
+            "nt_id": 494,
+            "rg_id": 27,
+            "temperature_c": 70.0
+          },
+          {
+            "kobs2": 0.0005527708606414563,
+            "log_kdeg": -3.957310080966062,
+            "log_kobs2": -7.500566999198535,
+            "log_kobs2_err": 0.04921281756783321,
+            "nt_id": 398,
+            "rg_id": 45,
+            "temperature_c": 70.0
+          },
+          {
+            "kobs2": 0.0006643193427489503,
+            "log_kdeg": -3.957310080966062,
+            "log_kobs2": -7.316747586226468,
+            "log_kobs2_err": 0.029166195553388848,
+            "nt_id": 414,
+            "rg_id": 45,
+            "temperature_c": 70.0
+          },
+          {
+            "kobs2": 0.0015621954299101068,
+            "log_kdeg": -3.587673781787733,
+            "log_kobs2": -6.461663120211568,
+            "log_kobs2_err": 0.10664267951972468,
+            "nt_id": 477,
+            "rg_id": 28,
+            "temperature_c": 75.0
+          },
+          {
+            "kobs2": 0.0006755220498746488,
+            "log_kdeg": -3.587673781787733,
+            "log_kobs2": -7.30002475879529,
+            "log_kobs2_err": 0.04116263643983526,
+            "nt_id": 478,
+            "rg_id": 28,
+            "temperature_c": 75.0
+          },
+          {
+            "kobs2": 0.0010582906981047753,
+            "log_kdeg": -3.587673781787733,
+            "log_kobs2": -6.851100221372395,
+            "log_kobs2_err": 0.02734986010193301,
+            "nt_id": 494,
+            "rg_id": 28,
+            "temperature_c": 75.0
+          },
+          {
+            "kobs2": 0.002082141642254616,
+            "log_kdeg": -3.405371458740687,
+            "log_kobs2": -6.174358279280837,
+            "log_kobs2_err": 0.06859104692991744,
+            "nt_id": 477,
+            "rg_id": 29,
+            "temperature_c": 75.0
+          },
+          {
+            "kobs2": 0.0008638925811980849,
+            "log_kdeg": -3.405371458740687,
+            "log_kobs2": -7.054062124206531,
+            "log_kobs2_err": 0.02951134783429734,
+            "nt_id": 478,
+            "rg_id": 29,
+            "temperature_c": 75.0
+          },
+          {
+            "kobs2": 0.0013749601216479482,
+            "log_kdeg": -3.405371458740687,
+            "log_kobs2": -6.589330550722037,
+            "log_kobs2_err": 0.03135207493320489,
+            "nt_id": 494,
+            "rg_id": 29,
+            "temperature_c": 75.0
+          },
+          {
+            "kobs2": 0.000724717028866188,
+            "log_kdeg": -3.6994387541041354,
+            "log_kobs2": -7.22972928431058,
+            "log_kobs2_err": 0.05043313259340219,
+            "nt_id": 398,
+            "rg_id": 48,
+            "temperature_c": 75.0
+          },
+          {
+            "kobs2": 0.0008715869311528469,
+            "log_kdeg": -3.6994387541041354,
+            "log_kobs2": -7.045194949094282,
+            "log_kobs2_err": 0.03842302858367914,
+            "nt_id": 414,
+            "rg_id": 48,
+            "temperature_c": 75.0
+          },
+          {
+            "kobs2": 0.004366447888567059,
+            "log_kdeg": -2.2843225178676363,
+            "log_kobs2": -5.433805440553153,
+            "log_kobs2_err": 0.12593548653689748,
+            "nt_id": 477,
+            "rg_id": 30,
+            "temperature_c": 80.0
+          },
+          {
+            "kobs2": 0.0015266180951856567,
+            "log_kdeg": -2.2843225178676363,
+            "log_kobs2": -6.484700385410847,
+            "log_kobs2_err": 0.06377741114449603,
+            "nt_id": 478,
+            "rg_id": 30,
+            "temperature_c": 80.0
+          },
+          {
+            "kobs2": 0.002407090179362773,
+            "log_kdeg": -2.2843225178676363,
+            "log_kobs2": -6.029336655422785,
+            "log_kobs2_err": 0.058244513076715285,
+            "nt_id": 494,
+            "rg_id": 30,
+            "temperature_c": 80.0
+          },
+          {
+            "kobs2": 0.0013050692322999088,
+            "log_kdeg": -2.934246394012576,
+            "log_kobs2": -6.641499188043854,
+            "log_kobs2_err": 0.1200487233567102,
+            "nt_id": 477,
+            "rg_id": 31,
+            "temperature_c": 80.0
+          },
+          {
+            "kobs2": 0.0010590446084977935,
+            "log_kdeg": -2.934246394012576,
+            "log_kobs2": -6.850388090022648,
+            "log_kobs2_err": 0.040104125429381784,
+            "nt_id": 478,
+            "rg_id": 31,
+            "temperature_c": 80.0
+          },
+          {
+            "kobs2": 0.0017274384835378842,
+            "log_kdeg": -2.934246394012576,
+            "log_kobs2": -6.36111561306482,
+            "log_kobs2_err": 0.02432173220172081,
+            "nt_id": 494,
+            "rg_id": 31,
+            "temperature_c": 80.0
+          },
+          {
+            "kobs2": 0.0008934025739156102,
+            "log_kdeg": -3.4120233230827512,
+            "log_kobs2": -7.020473268016591,
+            "log_kobs2_err": 0.09177467119831634,
+            "nt_id": 398,
+            "rg_id": 49,
+            "temperature_c": 80.0
+          },
+          {
+            "kobs2": 0.0010160587290776305,
+            "log_kdeg": -3.4120233230827512,
+            "log_kobs2": -6.8918241272861795,
+            "log_kobs2_err": 0.10386538011204183,
+            "nt_id": 414,
+            "rg_id": 49,
+            "temperature_c": 80.0
+          },
+          {
+            "kobs2": 0.000976317715064138,
+            "log_kdeg": -3.548863764812739,
+            "log_kobs2": -6.931722496794188,
+            "log_kobs2_err": 0.04323874810256556,
+            "nt_id": 398,
+            "rg_id": 50,
+            "temperature_c": 80.0
+          },
+          {
+            "kobs2": 0.0011341827235956366,
+            "log_kdeg": -3.548863764812739,
+            "log_kobs2": -6.781842954738379,
+            "log_kobs2_err": 0.06422133511604276,
+            "nt_id": 414,
+            "rg_id": 50,
+            "temperature_c": 80.0
+          }
+        ],
+        "temperature_threshold_c": 60.0,
+        "temperatures_used_c": [
+          65.0,
+          70.0,
+          75.0,
+          80.0
+        ],
+        "valtype": "modrate",
+        "valtypes": [
+          "modrate"
+        ]
+      },
+      "params": {
+        "activation_energy_cal_per_mol": 15937.992860743578,
+        "activation_energy_err_cal_per_mol": 332.03346914283577,
+        "intercept": 16.186000729019465,
+        "intercept_err": 0.48355239090097163,
+        "slope": -8020.3093322900495,
+        "slope_err": 167.0857274480348
+      },
+      "series_id": "pH6.5_A|C"
+    }
+  ]
+}

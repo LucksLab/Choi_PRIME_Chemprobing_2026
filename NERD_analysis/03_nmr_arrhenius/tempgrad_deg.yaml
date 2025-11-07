@@ -1,0 +1,20 @@
+run:
+  label: 03_nmr_arrhenius
+  output_dir: manuscript_pipeline
+  backend: local
+
+tempgrad_fit:
+  mode: arrhenius
+  engine: arrhenius_python
+  data_source: nmr
+  overwrite: true
+  metadata:
+    description: "Arrhenius test on NMR degradation rates"
+
+  filters:
+    reaction_type: deg
+    buffer: Schwalbe_bistris
+    species: dms
+
+  engine_options:
+    temperature_unit: c

@@ -1,0 +1,33 @@
+
+################################################################################
+Started ShapeMapper v2.3.0 at 2025-10-14 17:00:25
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-71d0799
+args:  --name 090-EKC-WT-50c-b-6-p --target artifacts/090-EKC-WT-50c-b-6-p/target.fa --out artifacts/090-EKC-WT-50c-b-6-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230607_M05164_0144_000000000-L3FLD/090-EKC-WT-50c-b-6-p_S90... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230607_M05164_0144_000000000-L3FLD/090-EKC-WT-50c-b-6-p_S90... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 17:00:25
+Running PrimerLocator at 2025-10-14 17:00:25 . . .
+. . . done at 2025-10-14 17:00:25
+Running FastaFormatChecker at 2025-10-14 17:00:25 . . .
+. . . done at 2025-10-14 17:00:25
+Running BowtieIndexBuilder at 2025-10-14 17:00:25 . . .
+. . . done at 2025-10-14 17:00:26
+Running process group 4 at 2025-10-14 17:00:26 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 17:00:26
+    QualityTrimmer1 . . . started at 2025-10-14 17:00:26
+    QualityTrimmer2 . . . started at 2025-10-14 17:00:26
+    Interleaver . . . started at 2025-10-14 17:00:26
+    Merger . . . started at 2025-10-14 17:00:26
+    Tab6Interleaver . . . started at 2025-10-14 17:00:26
+    BowtieAligner . . . started at 2025-10-14 17:00:26
+    MutationParser_Modified . . . started at 2025-10-14 17:00:26
+    MutationParserGA_Modified . . . started at 2025-10-14 17:00:26
+    MutationCounter_Modified . . . started at 2025-10-14 17:00:26
+    MutationCounterGA_Modified . . . started at 2025-10-14 17:00:26
+
+ERROR: Component "QualityTrimmer1" (sample:Modified) failed, giving the following error message:
+ERROR: Input file shapemapper_temp/090-EKC-WT-50c-b-6-p/Modified/ProgressMonitor/090-EKC-WT-50c-b-6-p_Modified_ProgressMonitor_output.fastq.gz contains no reads.
+================================================================================
+ShapeMapper run failed at 2025-10-14 17:00:27.

@@ -1,0 +1,59 @@
+{
+  "artifacts": {},
+  "engine": "python_baseline",
+  "engine_version": "0.1.0",
+  "metadata": {
+    "buffer_pH": 6.5,
+    "done_by": [
+      "EKC"
+    ],
+    "experiment_id": "ekc.01.0xx",
+    "fmod_run_id": 1005,
+    "initial_kdeg": 0.046628528165773286,
+    "initial_kdeg_source": "arrhenius:nmr:deg:dms:Schwalbe_bistris",
+    "initial_log_kdeg": -3.065542732765291,
+    "notes": "Baseline python engine demo using examples/nerd.sqlite",
+    "rg_id": 51,
+    "rg_label": "80_3",
+    "rounds_requested": [
+      "round1_free",
+      "round2_global",
+      "round3_constrained"
+    ],
+    "temperature_c": 80.0,
+    "valtypes": [
+      "modrate",
+      "GAmodrate"
+    ]
+  },
+  "rounds": [
+    {
+      "global_params": {},
+      "notes": null,
+      "per_nt": [],
+      "qc_metrics": {
+        "n_success": 0,
+        "n_total": 0,
+        "success_rate": 0.0
+      },
+      "round_id": "round1_free",
+      "status": "failed"
+    },
+    {
+      "global_params": {},
+      "notes": "No nucleotides satisfied the selection criteria for global fitting.",
+      "per_nt": [],
+      "qc_metrics": {},
+      "round_id": "round2_global",
+      "status": "skipped"
+    },
+    {
+      "global_params": {},
+      "notes": "No constrained kdeg value supplied or produced by round 2.",
+      "per_nt": [],
+      "qc_metrics": {},
+      "round_id": "round3_constrained",
+      "status": "skipped"
+    }
+  ]
+}
