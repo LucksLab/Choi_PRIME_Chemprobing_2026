@@ -1,0 +1,2496 @@
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-r--r-- 1 ekc5108 b1044 4.9M Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/073-HIV-A35G-75c-a-1-p_S73_L001_R1_001.fastq.gz
+-rw-r--r-- 1 ekc5108 b1044 5.3M Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/073-HIV-A35G-75c-a-1-p_S73_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>073-HIV-A35G-75c-a-1-p
+ggcacctcataacataacTAAGGCAGATCTGAGCCTGGGGGCTCTCTGCCAATCCactaacctcactcacaatc
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 073-HIV-A35G-75c-a-1-p --target artifacts/073-HIV-A35G-75c-a-1-p/target.fa --out artifacts/073-HIV-A35G-75c-a-1-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/073-HIV-A35G-75c-a-1-p_S73_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/073-HIV-A35G-75c-a-1-p_S73_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 17:42:22
+Output will be logged to 073-HIV-A35G-75c-a-1-p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-4ff5515
+args:  --name 073-HIV-A35G-75c-a-1-p --target artifacts/073-HIV-A35G-75c-a-1-p/target.fa --out artifacts/073-HIV-A35G-75c-a-1-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/073-HIV-A35G-75c-a-1-p_S... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/073-HIV-A35G-75c-a-1-p_S... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 17:42:22
+Running PrimerLocator at 2025-10-14 17:42:22 . . .
+. . . done at 2025-10-14 17:42:22
+Running FastaFormatChecker at 2025-10-14 17:42:22 . . .
+. . . done at 2025-10-14 17:42:23
+Running BowtieIndexBuilder at 2025-10-14 17:42:23 . . .
+. . . done at 2025-10-14 17:42:23
+Running process group 4 at 2025-10-14 17:42:23 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 17:42:23
+    QualityTrimmer1 . . . started at 2025-10-14 17:42:23
+    QualityTrimmer2 . . . started at 2025-10-14 17:42:23
+    Interleaver . . . started at 2025-10-14 17:42:23
+    Merger . . . started at 2025-10-14 17:42:23
+    Tab6Interleaver . . . started at 2025-10-14 17:42:23
+    BowtieAligner . . . started at 2025-10-14 17:42:23
+    MutationParser_Modified . . . started at 2025-10-14 17:42:23
+    MutationParserGA_Modified . . . started at 2025-10-14 17:42:23
+    MutationCounter_Modified . . . started at 2025-10-14 17:42:23
+    MutationCounterGA_Modified . . . started at 2025-10-14 17:42:23
+  604KiB [====>                                           ] 12% ETA 0:00:07       852KiB [=======>                                        ] 17% ETA 0:00:09       1.10MiB [=========>                                      ] 22% ETA 0:00:10      1.35MiB [===========>                                    ] 27% ETA 0:00:10      1.63MiB [==============>                                 ] 33% ETA 0:00:091.68MiB [===============>                                ] 34% ETA 0:00:11  1.86MiB [=================>                              ] 38% ETA 0:00:11      2.11MiB [===================>                            ] 43% ETA 0:00:10      2.36MiB [======================>                         ] 48% ETA 0:00:102.37MiB [======================>                         ] 48% ETA 0:00:10  2.61MiB [========================>                       ] 53% ETA 0:00:09      2.91MiB [===========================>                    ] 59% ETA 0:00:08      3.06MiB [============================>                   ] 62% ETA 0:00:07      3.18MiB [==============================>                 ] 65% ETA 0:00:07      3.44MiB [================================>               ] 70% ETA 0:00:06      3.71MiB [===================================>            ] 76% ETA 0:00:05      3.97MiB [=====================================>          ] 81% ETA 0:00:03      4.24MiB [========================================>       ] 86% ETA 0:00:024.25MiB [========================================>       ] 87% ETA 0:00:02  4.69MiB [=============================================>  ] 96% ETA 0:00:00      4.77MiB [=============================================>  ] 97% ETA 0:00:00      4.87MiB [==============================================>] 100%                  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 23.826 seconds.
+  | 
+  | Pairs:               	188099
+  | Joined:              	182089   	96.805%
+  | Ambiguous:           	5985       	3.182%
+  | No Solution:         	25       	0.013%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	100.0
+  | Standard Deviation:  	0.8
+  | Mode:                	100
+  | 
+  | Insert range:        	56 - 134
+  | 90th percentile:     	100
+  | 75th percentile:     	100
+  | 50th percentile:     	100
+  | 25th percentile:     	100
+  | 10th percentile:     	100
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 188099 reads; of these:
+  |   6010 (3.20%) were paired; of these:
+  |     1919 (31.93%) aligned concordantly 0 times
+  |     4091 (68.07%) aligned concordantly exactly 1 time
+  |     0 (0.00%) aligned concordantly >1 times
+  |     ----
+  |     1919 pairs aligned concordantly 0 times; of these:
+  |       5 (0.26%) aligned discordantly 1 time
+  |     ----
+  |     1914 pairs aligned 0 times concordantly or discordantly; of these:
+  |       3828 mates make up the pairs; of these:
+  |         2227 (58.18%) aligned 0 times
+  |         1601 (41.82%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   182089 (96.80%) were unpaired; of these:
+  |     105 (0.06%) aligned 0 times
+  |     181978 (99.94%) aligned exactly 1 time
+  |     6 (0.00%) aligned >1 times
+  | 98.80% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 073-HIV-A35G-75c-a-1-p) (sample: Modified) output message: 
+  |----------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000597
+  | [50,99]	0.999403
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.847463
+  | 1	0.143927
+  | 2	0.008397
+  | 3	0.000202
+  | 4	0.000011
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 073-HIV-A35G-75c-a-1-p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000597
+  | [50,99]	0.999403
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.929941
+  | 1	0.068348
+  | 2	0.001662
+  | 3	0.000043
+  | 4	0.000005
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 17:42:47
+Running CalcProfile at 2025-10-14 17:42:47 . . .
+. . . done at 2025-10-14 17:42:47
+Running NormProfile at 2025-10-14 17:42:47 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 073-HIV-A35G-75c-a-1-p) output message: 
+|--------------------------------------------------------- 
+| 
+| Signal for G = 0.001 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.00781025, 'C': 0.015148, 'U': 0.0044642499999999995, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:42:48
+Running CalcProfile at 2025-10-14 17:42:48 . . .
+. . . done at 2025-10-14 17:42:48
+Running NormProfile at 2025-10-14 17:42:48 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 073-HIV-A35G-75c-a-1-p) output message: 
+|--------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.008617, 'GPUR': 0.006612, 'GPYR': 0.010172307692307692}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:42:48
+Running TabToShape at 2025-10-14 17:42:48 . . .
+. . . done at 2025-10-14 17:42:49
+Running RenderFigures at 2025-10-14 17:42:49 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 073-HIV-A35G-75c-a-1-p) output message: 
+|----------------------------------------------------------- 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 71.4% (5/7) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 90.0% (9/10) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 75.0% (6/8) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (11/11) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: True
+|         U: False
+|         G: False
+| 
+| 
+|       G and/or U FAILURE, but other reactivities may be usable
+|       Possible causes:
+|        - improper pH control during DMS reaction
+|        - use of a different RT enzyme than MarathonRT
+|        - poor reverse transcription conditions, resulting
+|          in low adduct adduct read-through or detection
+|        - very highly structured or protein bound RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:42:51
+Running RenderMappedDepths at 2025-10-14 17:42:51 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 073-HIV-A35G-75c-a-1-p) output message: 
+|---------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGCACCTCATAACATAAC            0       17      GATTGTGAGTGAGGTTAGT           55      73      188k   
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:42:53
+ShapeMapper run completed at 2025-10-14 17:42:53.
+WARNING: This RNA has a possible poor quality reactivity profile: 073-HIV-A35G-75c-a-1-p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-r--r-- 1 ekc5108 b1044 5.6M Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/074-HIV-A35G-75c-a-2-p_S74_L001_R1_001.fastq.gz
+-rw-r--r-- 1 ekc5108 b1044 6.4M Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/074-HIV-A35G-75c-a-2-p_S74_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>074-HIV-A35G-75c-a-2-p
+ggcacctcataacataacTAAGGCAGATCTGAGCCTGGGGGCTCTCTGCCAATCCactaacctcactcacaatc
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 074-HIV-A35G-75c-a-2-p --target artifacts/074-HIV-A35G-75c-a-2-p/target.fa --out artifacts/074-HIV-A35G-75c-a-2-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/074-HIV-A35G-75c-a-2-p_S74_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/074-HIV-A35G-75c-a-2-p_S74_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 17:42:54
+Output will be logged to 074-HIV-A35G-75c-a-2-p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-4ff5515
+args:  --name 074-HIV-A35G-75c-a-2-p --target artifacts/074-HIV-A35G-75c-a-2-p/target.fa --out artifacts/074-HIV-A35G-75c-a-2-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/074-HIV-A35G-75c-a-2-p_S... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/074-HIV-A35G-75c-a-2-p_S... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 17:42:54
+Running PrimerLocator at 2025-10-14 17:42:54 . . .
+. . . done at 2025-10-14 17:42:54
+Running FastaFormatChecker at 2025-10-14 17:42:54 . . .
+. . . done at 2025-10-14 17:42:54
+Running BowtieIndexBuilder at 2025-10-14 17:42:54 . . .
+. . . done at 2025-10-14 17:42:54
+Running process group 4 at 2025-10-14 17:42:54 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 17:42:54
+    QualityTrimmer1 . . . started at 2025-10-14 17:42:54
+    QualityTrimmer2 . . . started at 2025-10-14 17:42:54
+    Interleaver . . . started at 2025-10-14 17:42:54
+    Merger . . . started at 2025-10-14 17:42:54
+    Tab6Interleaver . . . started at 2025-10-14 17:42:54
+    BowtieAligner . . . started at 2025-10-14 17:42:54
+    MutationParser_Modified . . . started at 2025-10-14 17:42:54
+    MutationParserGA_Modified . . . started at 2025-10-14 17:42:54
+    MutationCounter_Modified . . . started at 2025-10-14 17:42:54
+    MutationCounterGA_Modified . . . started at 2025-10-14 17:42:54
+  604KiB [===>                                            ] 10% ETA 0:00:08       876KiB [======>                                         ] 15% ETA 0:00:10       1.10MiB [========>                                       ] 19% ETA 0:00:12      1.37MiB [==========>                                     ] 24% ETA 0:00:151.38MiB [==========>                                     ] 24% ETA 0:00:15  1.63MiB [============>                                   ] 29% ETA 0:00:14      1.86MiB [==============>                                 ] 33% ETA 0:00:13      2.13MiB [=================>                              ] 38% ETA 0:00:142.14MiB [=================>                              ] 38% ETA 0:00:14  2.66MiB [======================>                         ] 48% ETA 0:00:11      2.89MiB [=======================>                        ] 52% ETA 0:00:112.90MiB [=======================>                        ] 52% ETA 0:00:11  3.19MiB [==========================>                     ] 57% ETA 0:00:10      3.46MiB [============================>                   ] 62% ETA 0:00:093.47MiB [============================>                   ] 62% ETA 0:00:09  4.00MiB [=================================>              ] 72% ETA 0:00:064.01MiB [=================================>              ] 72% ETA 0:00:06  4.27MiB [===================================>            ] 77% ETA 0:00:05      4.37MiB [====================================>           ] 79% ETA 0:00:05      4.56MiB [======================================>         ] 82% ETA 0:00:04      4.81MiB [========================================>       ] 86% ETA 0:00:03      5.08MiB [==========================================>     ] 91% ETA 0:00:02      5.34MiB [=============================================>  ] 96% ETA 0:00:005.46MiB [==============================================> ] 98% ETA 0:00:00  5.53MiB [==============================================>] 100%                  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 28.220 seconds.
+  | 
+  | Pairs:               	211773
+  | Joined:              	202262   	95.509%
+  | Ambiguous:           	9476       	4.475%
+  | No Solution:         	35       	0.017%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	100.0
+  | Standard Deviation:  	0.8
+  | Mode:                	100
+  | 
+  | Insert range:        	57 - 129
+  | 90th percentile:     	100
+  | 75th percentile:     	100
+  | 50th percentile:     	100
+  | 25th percentile:     	100
+  | 10th percentile:     	100
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 211773 reads; of these:
+  |   9511 (4.49%) were paired; of these:
+  |     2764 (29.06%) aligned concordantly 0 times
+  |     6747 (70.94%) aligned concordantly exactly 1 time
+  |     0 (0.00%) aligned concordantly >1 times
+  |     ----
+  |     2764 pairs aligned concordantly 0 times; of these:
+  |       0 (0.00%) aligned discordantly 1 time
+  |     ----
+  |     2764 pairs aligned 0 times concordantly or discordantly; of these:
+  |       5528 mates make up the pairs; of these:
+  |         3259 (58.95%) aligned 0 times
+  |         2269 (41.05%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   202262 (95.51%) were unpaired; of these:
+  |     171 (0.08%) aligned 0 times
+  |     202090 (99.91%) aligned exactly 1 time
+  |     1 (0.00%) aligned >1 times
+  | 98.45% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 074-HIV-A35G-75c-a-2-p) (sample: Modified) output message: 
+  |----------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000872
+  | [50,99]	0.999128
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.799429
+  | 1	0.186507
+  | 2	0.013799
+  | 3	0.000256
+  | 4	0.000005
+  | 5	0.000000
+  | 6	0.000005
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 074-HIV-A35G-75c-a-2-p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000872
+  | [50,99]	0.999128
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.920746
+  | 1	0.076994
+  | 2	0.002236
+  | 3	0.000019
+  | 4	0.000000
+  | 5	0.000000
+  | 6	0.000005
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 17:43:23
+Running CalcProfile at 2025-10-14 17:43:23 . . .
+. . . done at 2025-10-14 17:43:23
+Running NormProfile at 2025-10-14 17:43:23 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 074-HIV-A35G-75c-a-2-p) output message: 
+|--------------------------------------------------------- 
+| 
+| Signal for G = 0.001 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.01177075, 'C': 0.02059, 'U': 0.004522, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:43:24
+Running CalcProfile at 2025-10-14 17:43:24 . . .
+. . . done at 2025-10-14 17:43:24
+Running NormProfile at 2025-10-14 17:43:24 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 074-HIV-A35G-75c-a-2-p) output message: 
+|--------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.0100335, 'GPUR': 0.0073925, 'GPYR': 0.011373076923076922}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:43:24
+Running TabToShape at 2025-10-14 17:43:24 . . .
+. . . done at 2025-10-14 17:43:24
+Running RenderFigures at 2025-10-14 17:43:24 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 074-HIV-A35G-75c-a-2-p) output message: 
+|----------------------------------------------------------- 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 71.4% (5/7) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 90.0% (9/10) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 75.0% (6/8) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (11/11) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: True
+|         U: False
+|         G: False
+| 
+| 
+|       G and/or U FAILURE, but other reactivities may be usable
+|       Possible causes:
+|        - improper pH control during DMS reaction
+|        - use of a different RT enzyme than MarathonRT
+|        - poor reverse transcription conditions, resulting
+|          in low adduct adduct read-through or detection
+|        - very highly structured or protein bound RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:43:27
+Running RenderMappedDepths at 2025-10-14 17:43:27 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 074-HIV-A35G-75c-a-2-p) output message: 
+|---------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGCACCTCATAACATAAC            0       17      GATTGTGAGTGAGGTTAGT           55      73      211k   
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:43:28
+ShapeMapper run completed at 2025-10-14 17:43:28.
+WARNING: This RNA has a possible poor quality reactivity profile: 074-HIV-A35G-75c-a-2-p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-r--r-- 1 ekc5108 b1044 6.0M Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/075-HIV-A35G-75c-a-3-p_S75_L001_R1_001.fastq.gz
+-rw-r--r-- 1 ekc5108 b1044 6.6M Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/075-HIV-A35G-75c-a-3-p_S75_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>075-HIV-A35G-75c-a-3-p
+ggcacctcataacataacTAAGGCAGATCTGAGCCTGGGGGCTCTCTGCCAATCCactaacctcactcacaatc
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 075-HIV-A35G-75c-a-3-p --target artifacts/075-HIV-A35G-75c-a-3-p/target.fa --out artifacts/075-HIV-A35G-75c-a-3-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/075-HIV-A35G-75c-a-3-p_S75_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/075-HIV-A35G-75c-a-3-p_S75_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 17:43:29
+Output will be logged to 075-HIV-A35G-75c-a-3-p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-4ff5515
+args:  --name 075-HIV-A35G-75c-a-3-p --target artifacts/075-HIV-A35G-75c-a-3-p/target.fa --out artifacts/075-HIV-A35G-75c-a-3-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/075-HIV-A35G-75c-a-3-p_S... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/075-HIV-A35G-75c-a-3-p_S... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 17:43:29
+Running PrimerLocator at 2025-10-14 17:43:29 . . .
+. . . done at 2025-10-14 17:43:30
+Running FastaFormatChecker at 2025-10-14 17:43:30 . . .
+. . . done at 2025-10-14 17:43:30
+Running BowtieIndexBuilder at 2025-10-14 17:43:30 . . .
+. . . done at 2025-10-14 17:43:30
+Running process group 4 at 2025-10-14 17:43:30 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 17:43:30
+    QualityTrimmer1 . . . started at 2025-10-14 17:43:30
+    QualityTrimmer2 . . . started at 2025-10-14 17:43:30
+    Interleaver . . . started at 2025-10-14 17:43:30
+    Merger . . . started at 2025-10-14 17:43:30
+    Tab6Interleaver . . . started at 2025-10-14 17:43:30
+    BowtieAligner . . . started at 2025-10-14 17:43:30
+    MutationParser_Modified . . . started at 2025-10-14 17:43:30
+    MutationParserGA_Modified . . . started at 2025-10-14 17:43:30
+    MutationCounter_Modified . . . started at 2025-10-14 17:43:30
+    MutationCounterGA_Modified . . . started at 2025-10-14 17:43:30
+  612KiB [===>                                            ] 10% ETA 0:00:08       860KiB [=====>                                          ] 14% ETA 0:00:18 868KiB [=====>                                          ] 14% ETA 0:00:17  1.09MiB [=======>                                        ] 18% ETA 0:00:17      1.37MiB [==========>                                     ] 23% ETA 0:00:16      1.61MiB [===========>                                    ] 27% ETA 0:00:15      1.86MiB [=============>                                  ] 31% ETA 0:00:15      2.12MiB [===============>                                ] 35% ETA 0:00:14      2.38MiB [==================>                             ] 40% ETA 0:00:13      2.39MiB [==================>                             ] 40% ETA 0:00:14      2.64MiB [====================>                           ] 44% ETA 0:00:13      2.89MiB [======================>                         ] 48% ETA 0:00:12      3.17MiB [========================>                       ] 53% ETA 0:00:113.45MiB [==========================>                     ] 58% ETA 0:00:09  3.46MiB [==========================>                     ] 58% ETA 0:00:10      3.73MiB [=============================>                  ] 63% ETA 0:00:09      4.00MiB [===============================>                ] 67% ETA 0:00:08      4.27MiB [=================================>              ] 72% ETA 0:00:06      4.54MiB [===================================>            ] 76% ETA 0:00:064.54MiB [===================================>            ] 76% ETA 0:00:06  4.80MiB [=====================================>          ] 81% ETA 0:00:04      5.07MiB [=======================================>        ] 85% ETA 0:00:03      5.34MiB [==========================================>     ] 90% ETA 0:00:025.35MiB [==========================================>     ] 90% ETA 0:00:02  5.89MiB [==============================================> ] 99% ETA 0:00:005.91MiB [==============================================>] 100%  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 28.026 seconds.
+  | 
+  | Pairs:               	225839
+  | Joined:              	217196   	96.173%
+  | Ambiguous:           	8611       	3.813%
+  | No Solution:         	32       	0.014%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	100.0
+  | Standard Deviation:  	1.0
+  | Mode:                	100
+  | 
+  | Insert range:        	56 - 135
+  | 90th percentile:     	100
+  | 75th percentile:     	100
+  | 50th percentile:     	100
+  | 25th percentile:     	100
+  | 10th percentile:     	100
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 225839 reads; of these:
+  |   8643 (3.83%) were paired; of these:
+  |     2409 (27.87%) aligned concordantly 0 times
+  |     6234 (72.13%) aligned concordantly exactly 1 time
+  |     0 (0.00%) aligned concordantly >1 times
+  |     ----
+  |     2409 pairs aligned concordantly 0 times; of these:
+  |       6 (0.25%) aligned discordantly 1 time
+  |     ----
+  |     2403 pairs aligned 0 times concordantly or discordantly; of these:
+  |       4806 mates make up the pairs; of these:
+  |         2907 (60.49%) aligned 0 times
+  |         1899 (39.51%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   217196 (96.17%) were unpaired; of these:
+  |     354 (0.16%) aligned 0 times
+  |     216837 (99.83%) aligned exactly 1 time
+  |     5 (0.00%) aligned >1 times
+  | 98.61% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 075-HIV-A35G-75c-a-3-p) (sample: Modified) output message: 
+  |----------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000729
+  | [50,99]	0.999271
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.734940
+  | 1	0.239485
+  | 2	0.024926
+  | 3	0.000631
+  | 4	0.000018
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 075-HIV-A35G-75c-a-3-p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000729
+  | [50,99]	0.999271
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.902132
+  | 1	0.094494
+  | 2	0.003294
+  | 3	0.000076
+  | 4	0.000004
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 17:43:58
+Running CalcProfile at 2025-10-14 17:43:58 . . .
+. . . done at 2025-10-14 17:43:59
+Running NormProfile at 2025-10-14 17:43:59 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 075-HIV-A35G-75c-a-3-p) output message: 
+|--------------------------------------------------------- 
+| 
+| Signal for G = 0.001 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.01605175, 'C': 0.028771, 'U': 0.0045485000000000005, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:43:59
+Running CalcProfile at 2025-10-14 17:43:59 . . .
+. . . done at 2025-10-14 17:43:59
+Running NormProfile at 2025-10-14 17:43:59 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 075-HIV-A35G-75c-a-3-p) output message: 
+|--------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.0126935, 'GPUR': 0.0088235, 'GPYR': 0.013574615384615385}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:43:59
+Running TabToShape at 2025-10-14 17:43:59 . . .
+. . . done at 2025-10-14 17:44:00
+Running RenderFigures at 2025-10-14 17:44:00 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 075-HIV-A35G-75c-a-3-p) output message: 
+|----------------------------------------------------------- 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 71.4% (5/7) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 90.0% (9/10) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 75.0% (6/8) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (11/11) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: True
+|         U: False
+|         G: False
+| 
+| 
+|       G and/or U FAILURE, but other reactivities may be usable
+|       Possible causes:
+|        - improper pH control during DMS reaction
+|        - use of a different RT enzyme than MarathonRT
+|        - poor reverse transcription conditions, resulting
+|          in low adduct adduct read-through or detection
+|        - very highly structured or protein bound RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:44:02
+Running RenderMappedDepths at 2025-10-14 17:44:02 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 075-HIV-A35G-75c-a-3-p) output message: 
+|---------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGCACCTCATAACATAAC            0       17      GATTGTGAGTGAGGTTAGT           55      73      225k   
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:44:03
+ShapeMapper run completed at 2025-10-14 17:44:03.
+WARNING: This RNA has a possible poor quality reactivity profile: 075-HIV-A35G-75c-a-3-p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-r--r-- 1 ekc5108 b1044 5.2M Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/076-HIV-A35G-75c-a-4-p_S76_L001_R1_001.fastq.gz
+-rw-r--r-- 1 ekc5108 b1044 5.7M Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/076-HIV-A35G-75c-a-4-p_S76_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>076-HIV-A35G-75c-a-4-p
+ggcacctcataacataacTAAGGCAGATCTGAGCCTGGGGGCTCTCTGCCAATCCactaacctcactcacaatc
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 076-HIV-A35G-75c-a-4-p --target artifacts/076-HIV-A35G-75c-a-4-p/target.fa --out artifacts/076-HIV-A35G-75c-a-4-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/076-HIV-A35G-75c-a-4-p_S76_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/076-HIV-A35G-75c-a-4-p_S76_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 17:44:05
+Output will be logged to 076-HIV-A35G-75c-a-4-p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-4ff5515
+args:  --name 076-HIV-A35G-75c-a-4-p --target artifacts/076-HIV-A35G-75c-a-4-p/target.fa --out artifacts/076-HIV-A35G-75c-a-4-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/076-HIV-A35G-75c-a-4-p_S... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/076-HIV-A35G-75c-a-4-p_S... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 17:44:05
+Running PrimerLocator at 2025-10-14 17:44:05 . . .
+. . . done at 2025-10-14 17:44:05
+Running FastaFormatChecker at 2025-10-14 17:44:05 . . .
+. . . done at 2025-10-14 17:44:05
+Running BowtieIndexBuilder at 2025-10-14 17:44:05 . . .
+. . . done at 2025-10-14 17:44:05
+Running process group 4 at 2025-10-14 17:44:05 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 17:44:05
+    QualityTrimmer1 . . . started at 2025-10-14 17:44:05
+    QualityTrimmer2 . . . started at 2025-10-14 17:44:05
+    Interleaver . . . started at 2025-10-14 17:44:05
+    Merger . . . started at 2025-10-14 17:44:05
+    Tab6Interleaver . . . started at 2025-10-14 17:44:05
+    BowtieAligner . . . started at 2025-10-14 17:44:05
+    MutationParser_Modified . . . started at 2025-10-14 17:44:05
+    MutationParserGA_Modified . . . started at 2025-10-14 17:44:05
+    MutationCounter_Modified . . . started at 2025-10-14 17:44:05
+    MutationCounterGA_Modified . . . started at 2025-10-14 17:44:05
+  636KiB [====>                                           ] 12% ETA 0:00:07       908KiB [=======>                                        ] 17% ETA 0:00:09       1.16MiB [=========>                                      ] 22% ETA 0:00:10      1.43MiB [===========>                                    ] 27% ETA 0:00:131.44MiB [===========>                                    ] 27% ETA 0:00:12  1.99MiB [=================>                              ] 38% ETA 0:00:112.00MiB [=================>                              ] 38% ETA 0:00:11  2.25MiB [===================>                            ] 43% ETA 0:00:10      2.52MiB [======================>                         ] 48% ETA 0:00:09      2.81MiB [========================>                       ] 54% ETA 0:00:08      3.11MiB [===========================>                    ] 60% ETA 0:00:07      3.39MiB [==============================>                 ] 65% ETA 0:00:063.41MiB [==============================>                 ] 66% ETA 0:00:06  3.68MiB [=================================>              ] 71% ETA 0:00:05      3.96MiB [===================================>            ] 76% ETA 0:00:044.14MiB [=====================================>          ] 80% ETA 0:00:03  4.54MiB [========================================>       ] 87% ETA 0:00:024.54MiB [=========================================>      ] 88% ETA 0:00:02  4.82MiB [===========================================>    ] 93% ETA 0:00:01      5.11MiB [==============================================> ] 99% ETA 0:00:00      5.16MiB [==============================================>] 100%                  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 23.557 seconds.
+  | 
+  | Pairs:               	186308
+  | Joined:              	178594   	95.860%
+  | Ambiguous:           	7691       	4.128%
+  | No Solution:         	23       	0.012%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	100.0
+  | Standard Deviation:  	0.9
+  | Mode:                	100
+  | 
+  | Insert range:        	56 - 130
+  | 90th percentile:     	100
+  | 75th percentile:     	100
+  | 50th percentile:     	100
+  | 25th percentile:     	100
+  | 10th percentile:     	100
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 186308 reads; of these:
+  |   7714 (4.14%) were paired; of these:
+  |     2304 (29.87%) aligned concordantly 0 times
+  |     5410 (70.13%) aligned concordantly exactly 1 time
+  |     0 (0.00%) aligned concordantly >1 times
+  |     ----
+  |     2304 pairs aligned concordantly 0 times; of these:
+  |       4 (0.17%) aligned discordantly 1 time
+  |     ----
+  |     2300 pairs aligned 0 times concordantly or discordantly; of these:
+  |       4600 mates make up the pairs; of these:
+  |         2744 (59.65%) aligned 0 times
+  |         1856 (40.35%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   178594 (95.86%) were unpaired; of these:
+  |     365 (0.20%) aligned 0 times
+  |     178227 (99.79%) aligned exactly 1 time
+  |     2 (0.00%) aligned >1 times
+  | 98.40% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 076-HIV-A35G-75c-a-4-p) (sample: Modified) output message: 
+  |----------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000997
+  | [50,99]	0.999003
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.698463
+  | 1	0.267710
+  | 2	0.032598
+  | 3	0.001213
+  | 4	0.000016
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 076-HIV-A35G-75c-a-4-p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000997
+  | [50,99]	0.999003
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.888600
+  | 1	0.106942
+  | 2	0.004383
+  | 3	0.000065
+  | 4	0.000011
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 17:44:29
+Running CalcProfile at 2025-10-14 17:44:29 . . .
+. . . done at 2025-10-14 17:44:29
+Running NormProfile at 2025-10-14 17:44:29 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 076-HIV-A35G-75c-a-4-p) output message: 
+|--------------------------------------------------------- 
+| 
+| Signal for G = 0.002 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.01856275, 'C': 0.034808, 'U': 0.0044605, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:44:30
+Running CalcProfile at 2025-10-14 17:44:30 . . .
+. . . done at 2025-10-14 17:44:30
+Running NormProfile at 2025-10-14 17:44:30 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 076-HIV-A35G-75c-a-4-p) output message: 
+|--------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.0145355, 'GPUR': 0.010220375, 'GPYR': 0.015723653846153846}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:44:30
+Running TabToShape at 2025-10-14 17:44:30 . . .
+. . . done at 2025-10-14 17:44:31
+Running RenderFigures at 2025-10-14 17:44:31 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 076-HIV-A35G-75c-a-4-p) output message: 
+|----------------------------------------------------------- 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 71.4% (5/7) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 90.0% (9/10) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 75.0% (6/8) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (11/11) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: True
+|         U: False
+|         G: False
+| 
+| 
+|       G and/or U FAILURE, but other reactivities may be usable
+|       Possible causes:
+|        - improper pH control during DMS reaction
+|        - use of a different RT enzyme than MarathonRT
+|        - poor reverse transcription conditions, resulting
+|          in low adduct adduct read-through or detection
+|        - very highly structured or protein bound RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:44:33
+Running RenderMappedDepths at 2025-10-14 17:44:33 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 076-HIV-A35G-75c-a-4-p) output message: 
+|---------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGCACCTCATAACATAAC            0       17      GATTGTGAGTGAGGTTAGT           55      73      185k   
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:44:34
+ShapeMapper run completed at 2025-10-14 17:44:34.
+WARNING: This RNA has a possible poor quality reactivity profile: 076-HIV-A35G-75c-a-4-p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-r--r-- 1 ekc5108 b1044 6.0M Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/077-HIV-A35G-75c-a-5-p_S77_L001_R1_001.fastq.gz
+-rw-r--r-- 1 ekc5108 b1044 6.7M Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/077-HIV-A35G-75c-a-5-p_S77_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>077-HIV-A35G-75c-a-5-p
+ggcacctcataacataacTAAGGCAGATCTGAGCCTGGGGGCTCTCTGCCAATCCactaacctcactcacaatc
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 077-HIV-A35G-75c-a-5-p --target artifacts/077-HIV-A35G-75c-a-5-p/target.fa --out artifacts/077-HIV-A35G-75c-a-5-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/077-HIV-A35G-75c-a-5-p_S77_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/077-HIV-A35G-75c-a-5-p_S77_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 17:44:36
+Output will be logged to 077-HIV-A35G-75c-a-5-p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-4ff5515
+args:  --name 077-HIV-A35G-75c-a-5-p --target artifacts/077-HIV-A35G-75c-a-5-p/target.fa --out artifacts/077-HIV-A35G-75c-a-5-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/077-HIV-A35G-75c-a-5-p_S... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/077-HIV-A35G-75c-a-5-p_S... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 17:44:36
+Running PrimerLocator at 2025-10-14 17:44:36 . . .
+. . . done at 2025-10-14 17:44:36
+Running FastaFormatChecker at 2025-10-14 17:44:36 . . .
+. . . done at 2025-10-14 17:44:36
+Running BowtieIndexBuilder at 2025-10-14 17:44:36 . . .
+. . . done at 2025-10-14 17:44:36
+Running process group 4 at 2025-10-14 17:44:36 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 17:44:36
+    QualityTrimmer1 . . . started at 2025-10-14 17:44:36
+    QualityTrimmer2 . . . started at 2025-10-14 17:44:36
+    Interleaver . . . started at 2025-10-14 17:44:36
+    Merger . . . started at 2025-10-14 17:44:36
+    Tab6Interleaver . . . started at 2025-10-14 17:44:36
+    BowtieAligner . . . started at 2025-10-14 17:44:36
+    MutationParser_Modified . . . started at 2025-10-14 17:44:36
+    MutationParserGA_Modified . . . started at 2025-10-14 17:44:36
+    MutationCounter_Modified . . . started at 2025-10-14 17:44:36
+    MutationCounterGA_Modified . . . started at 2025-10-14 17:44:36
+  620KiB [===>                                            ] 10% ETA 0:00:08       884KiB [=====>                                          ] 14% ETA 0:00:11       1.12MiB [=======>                                        ] 18% ETA 0:00:171.13MiB [=======>                                        ] 18% ETA 0:00:17  1.39MiB [==========>                                     ] 23% ETA 0:00:16      1.65MiB [===========>                                    ] 27% ETA 0:00:18      1.92MiB [==============>                                 ] 32% ETA 0:00:161.93MiB [==============>                                 ] 32% ETA 0:00:16  2.18MiB [================>                               ] 36% ETA 0:00:17      2.44MiB [==================>                             ] 40% ETA 0:00:15      2.70MiB [====================>                           ] 45% ETA 0:00:14      2.96MiB [======================>                         ] 49% ETA 0:00:132.97MiB [======================>                         ] 49% ETA 0:00:13  3.53MiB [===========================>                    ] 59% ETA 0:00:09      3.54MiB [===========================>                    ] 59% ETA 0:00:10      3.82MiB [=============================>                  ] 63% ETA 0:00:09      4.09MiB [===============================>                ] 68% ETA 0:00:084.10MiB [===============================>                ] 68% ETA 0:00:08  4.36MiB [==================================>             ] 73% ETA 0:00:074.39MiB [==================================>             ] 73% ETA 0:00:07  4.63MiB [===================================>            ] 77% ETA 0:00:06      4.90MiB [======================================>         ] 82% ETA 0:00:05      5.18MiB [========================================>       ] 86% ETA 0:00:03      5.45MiB [==========================================>     ] 91% ETA 0:00:025.46MiB [==========================================>     ] 91% ETA 0:00:02  5.73MiB [============================================>   ] 95% ETA 0:00:01      5.98MiB [==============================================>] 100%                  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 30.146 seconds.
+  | 
+  | Pairs:               	223553
+  | Joined:              	215162   	96.247%
+  | Ambiguous:           	8366       	3.742%
+  | No Solution:         	25       	0.011%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	100.0
+  | Standard Deviation:  	0.8
+  | Mode:                	100
+  | 
+  | Insert range:        	58 - 127
+  | 90th percentile:     	100
+  | 75th percentile:     	100
+  | 50th percentile:     	100
+  | 25th percentile:     	100
+  | 10th percentile:     	100
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 223553 reads; of these:
+  |   8391 (3.75%) were paired; of these:
+  |     2384 (28.41%) aligned concordantly 0 times
+  |     6006 (71.58%) aligned concordantly exactly 1 time
+  |     1 (0.01%) aligned concordantly >1 times
+  |     ----
+  |     2384 pairs aligned concordantly 0 times; of these:
+  |       5 (0.21%) aligned discordantly 1 time
+  |     ----
+  |     2379 pairs aligned 0 times concordantly or discordantly; of these:
+  |       4758 mates make up the pairs; of these:
+  |         2888 (60.70%) aligned 0 times
+  |         1870 (39.30%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   215162 (96.25%) were unpaired; of these:
+  |     483 (0.22%) aligned 0 times
+  |     214675 (99.77%) aligned exactly 1 time
+  |     4 (0.00%) aligned >1 times
+  | 98.55% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 077-HIV-A35G-75c-a-5-p) (sample: Modified) output message: 
+  |----------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000714
+  | [50,99]	0.999286
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.682773
+  | 1	0.279859
+  | 2	0.036034
+  | 3	0.001316
+  | 4	0.000013
+  | 5	0.000004
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 077-HIV-A35G-75c-a-5-p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000714
+  | [50,99]	0.999286
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.878346
+  | 1	0.116145
+  | 2	0.005423
+  | 3	0.000081
+  | 4	0.000000
+  | 5	0.000004
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 17:45:07
+Running CalcProfile at 2025-10-14 17:45:07 . . .
+. . . done at 2025-10-14 17:45:07
+Running NormProfile at 2025-10-14 17:45:07 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 077-HIV-A35G-75c-a-5-p) output message: 
+|--------------------------------------------------------- 
+| 
+| Signal for G = 0.002 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.018766249999999998, 'C': 0.036296, 'U': 0.004769, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:45:08
+Running CalcProfile at 2025-10-14 17:45:08 . . .
+. . . done at 2025-10-14 17:45:08
+Running NormProfile at 2025-10-14 17:45:08 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 077-HIV-A35G-75c-a-5-p) output message: 
+|--------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.0160895, 'GPUR': 0.011050875, 'GPYR': 0.01700134615384615}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:45:08
+Running TabToShape at 2025-10-14 17:45:08 . . .
+. . . done at 2025-10-14 17:45:08
+Running RenderFigures at 2025-10-14 17:45:08 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 077-HIV-A35G-75c-a-5-p) output message: 
+|----------------------------------------------------------- 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 71.4% (5/7) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 90.0% (9/10) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 75.0% (6/8) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (11/11) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: True
+|         U: False
+|         G: False
+| 
+| 
+|       G and/or U FAILURE, but other reactivities may be usable
+|       Possible causes:
+|        - improper pH control during DMS reaction
+|        - use of a different RT enzyme than MarathonRT
+|        - poor reverse transcription conditions, resulting
+|          in low adduct adduct read-through or detection
+|        - very highly structured or protein bound RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:45:11
+Running RenderMappedDepths at 2025-10-14 17:45:11 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 077-HIV-A35G-75c-a-5-p) output message: 
+|---------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGCACCTCATAACATAAC            0       17      GATTGTGAGTGAGGTTAGT           55      73      223k   
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:45:12
+ShapeMapper run completed at 2025-10-14 17:45:12.
+WARNING: This RNA has a possible poor quality reactivity profile: 077-HIV-A35G-75c-a-5-p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-r--r-- 1 ekc5108 b1044 1.9K Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230901_M05164_0153_000000000-L6FR8/077-HIV-A35G-75c-a-6-m_S77_L001_R1_001.fastq.gz
+-rw-r--r-- 1 ekc5108 b1044 2.0K Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230901_M05164_0153_000000000-L6FR8/077-HIV-A35G-75c-a-6-m_S77_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>077-HIV-A35G-75c-a-6-m
+ggcacctcataacataacTAAGGCAGATCTGAGCCTGGGGGCTCTCTGCCAATCCactaacctcactcacaatc
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 077-HIV-A35G-75c-a-6-m --target artifacts/077-HIV-A35G-75c-a-6-m/target.fa --out artifacts/077-HIV-A35G-75c-a-6-m --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230901_M05164_0153_000000000-L6FR8/077-HIV-A35G-75c-a-6-m_S77_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230901_M05164_0153_000000000-L6FR8/077-HIV-A35G-75c-a-6-m_S77_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 17:45:14
+Output will be logged to 077-HIV-A35G-75c-a-6-m_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-4ff5515
+args:  --name 077-HIV-A35G-75c-a-6-m --target artifacts/077-HIV-A35G-75c-a-6-m/target.fa --out artifacts/077-HIV-A35G-75c-a-6-m --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230901_M05164_0153_000000000-L6FR8/077-HIV-A35G-75c-a-6-m_S... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230901_M05164_0153_000000000-L6FR8/077-HIV-A35G-75c-a-6-m_S... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 17:45:14
+Running PrimerLocator at 2025-10-14 17:45:14 . . .
+. . . done at 2025-10-14 17:45:14
+Running FastaFormatChecker at 2025-10-14 17:45:14 . . .
+. . . done at 2025-10-14 17:45:14
+Running BowtieIndexBuilder at 2025-10-14 17:45:14 . . .
+. . . done at 2025-10-14 17:45:14
+Running process group 4 at 2025-10-14 17:45:14 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 17:45:14
+    QualityTrimmer1 . . . started at 2025-10-14 17:45:14
+    QualityTrimmer2 . . . started at 2025-10-14 17:45:14
+    Interleaver . . . started at 2025-10-14 17:45:14
+    Merger . . . started at 2025-10-14 17:45:14
+    Tab6Interleaver . . . started at 2025-10-14 17:45:14
+    BowtieAligner . . . started at 2025-10-14 17:45:14
+    MutationParser_Modified . . . started at 2025-10-14 17:45:14
+    MutationParserGA_Modified . . . started at 2025-10-14 17:45:14
+    MutationCounter_Modified . . . started at 2025-10-14 17:45:14
+    MutationCounterGA_Modified . . . started at 2025-10-14 17:45:14
+  1.85KiB [==============================================>] 100%                  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 0.067 seconds.
+  | 
+  | Pairs:               	11
+  | Joined:              	9       	81.818%
+  | Ambiguous:           	2       	18.182%
+  | No Solution:         	0       	0.000%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	99.6
+  | Standard Deviation:  	0.8
+  | Mode:                	100
+  | 
+  | Insert range:        	98 - 100
+  | 90th percentile:     	100
+  | 75th percentile:     	100
+  | 50th percentile:     	100
+  | 25th percentile:     	98
+  | 10th percentile:     	0
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 11 reads; of these:
+  |   2 (18.18%) were paired; of these:
+  |     1 (50.00%) aligned concordantly 0 times
+  |     1 (50.00%) aligned concordantly exactly 1 time
+  |     0 (0.00%) aligned concordantly >1 times
+  |     ----
+  |     1 pairs aligned concordantly 0 times; of these:
+  |       0 (0.00%) aligned discordantly 1 time
+  |     ----
+  |     1 pairs aligned 0 times concordantly or discordantly; of these:
+  |       2 mates make up the pairs; of these:
+  |         2 (100.00%) aligned 0 times
+  |         0 (0.00%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   9 (81.82%) were unpaired; of these:
+  |     0 (0.00%) aligned 0 times
+  |     9 (100.00%) aligned exactly 1 time
+  |     0 (0.00%) aligned >1 times
+  | 84.62% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 077-HIV-A35G-75c-a-6-m) (sample: Modified) output message: 
+  |----------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000000
+  | [50,99]	1.000000
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.800000
+  | 1	0.100000
+  | 2	0.100000
+  | 3	0.000000
+  | 4	0.000000
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 077-HIV-A35G-75c-a-6-m) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000000
+  | [50,99]	1.000000
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.800000
+  | 1	0.200000
+  | 2	0.000000
+  | 3	0.000000
+  | 4	0.000000
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 17:45:15
+Running CalcProfile at 2025-10-14 17:45:15 . . .
+. . . done at 2025-10-14 17:45:15
+Running NormProfile at 2025-10-14 17:45:15 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 077-HIV-A35G-75c-a-6-m) output message: 
+|--------------------------------------------------------- 
+| 
+| (NormError(...), 'Error: sequence contains too few A nucleotides (=0) with quality reactivity information for effective per-nt normalization factor calculation. This means render figures will not render DMS reactivity because there are no normalized reactivities. The current quality reactivity threshold is 1. This may be changed with --pernt-norm-factor-threshold.')
+| factors = None
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:45:16
+Running CalcProfile at 2025-10-14 17:45:16 . . .
+. . . done at 2025-10-14 17:45:16
+Running NormProfile at 2025-10-14 17:45:16 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 077-HIV-A35G-75c-a-6-m) output message: 
+|--------------------------------------------------------- 
+| 
+| (NormError(...), 'Error: sequence contains too few A nucleotides (=0) with quality reactivity information for effective per-nt normalization factor calculation. This means render figures will not render DMS reactivity because there are no normalized reactivities. The current quality reactivity threshold is 1. This may be changed with --pernt-norm-factor-threshold.')
+| factors = None
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:45:16
+Running TabToShape at 2025-10-14 17:45:16 . . .
+. . . done at 2025-10-14 17:45:16
+Running RenderFigures at 2025-10-14 17:45:16 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 077-HIV-A35G-75c-a-6-m) output message: 
+|----------------------------------------------------------- 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 0.0% (0/7) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       The modified sample is particulary low.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 0.0% (0/10) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       The modified sample is particulary low.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 0.0% (0/8) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       The modified sample is particulary low.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 0.0% (0/11) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       The modified sample is particulary low.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: False
+|         U: False
+|         G: False
+| 
+| 
+|       A and/or C FAILURE: Possible causes:
+|        - low sequencing depth
+|        - DNA contamination
+|        - poor mixing of chemical reagents and RNA and/or poor
+|          reagent diffusion (if modifying in cells), resulting
+|          in low modification rates
+|        - expired reagents, resulting in low modification rates
+|        - poor reverse transcription conditions, resulting in
+|          low adduct read-through
+|        - extremely highly structured RNA
+| 
+| Reactivity is none.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:45:21
+Running RenderMappedDepths at 2025-10-14 17:45:21 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 077-HIV-A35G-75c-a-6-m) output message: 
+|---------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGCACCTCATAACATAAC            0       17      GATTGTGAGTGAGGTTAGT           55      73      10     
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:45:22
+ShapeMapper run completed at 2025-10-14 17:45:22.
+WARNING: This RNA has a possible poor quality reactivity profile: 077-HIV-A35G-75c-a-6-m
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-r--r-- 1 ekc5108 b1044 6.0M Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/078-HIV-A35G-75c-a-6-p_S78_L001_R1_001.fastq.gz
+-rw-r--r-- 1 ekc5108 b1044 6.9M Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/078-HIV-A35G-75c-a-6-p_S78_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>078-HIV-A35G-75c-a-6-p
+ggcacctcataacataacTAAGGCAGATCTGAGCCTGGGGGCTCTCTGCCAATCCactaacctcactcacaatc
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 078-HIV-A35G-75c-a-6-p --target artifacts/078-HIV-A35G-75c-a-6-p/target.fa --out artifacts/078-HIV-A35G-75c-a-6-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/078-HIV-A35G-75c-a-6-p_S78_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/078-HIV-A35G-75c-a-6-p_S78_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 17:45:23
+Output will be logged to 078-HIV-A35G-75c-a-6-p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-4ff5515
+args:  --name 078-HIV-A35G-75c-a-6-p --target artifacts/078-HIV-A35G-75c-a-6-p/target.fa --out artifacts/078-HIV-A35G-75c-a-6-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/078-HIV-A35G-75c-a-6-p_S... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/230831_M05164_0151_000000000-L642V/078-HIV-A35G-75c-a-6-p_S... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 17:45:23
+Running PrimerLocator at 2025-10-14 17:45:23 . . .
+. . . done at 2025-10-14 17:45:23
+Running FastaFormatChecker at 2025-10-14 17:45:23 . . .
+. . . done at 2025-10-14 17:45:23
+Running BowtieIndexBuilder at 2025-10-14 17:45:23 . . .
+. . . done at 2025-10-14 17:45:23
+Running process group 4 at 2025-10-14 17:45:23 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 17:45:23
+    QualityTrimmer1 . . . started at 2025-10-14 17:45:23
+    QualityTrimmer2 . . . started at 2025-10-14 17:45:23
+    Interleaver . . . started at 2025-10-14 17:45:23
+    Merger . . . started at 2025-10-14 17:45:23
+    Tab6Interleaver . . . started at 2025-10-14 17:45:23
+    BowtieAligner . . . started at 2025-10-14 17:45:23
+    MutationParser_Modified . . . started at 2025-10-14 17:45:23
+    MutationParserGA_Modified . . . started at 2025-10-14 17:45:23
+    MutationCounter_Modified . . . started at 2025-10-14 17:45:23
+    MutationCounterGA_Modified . . . started at 2025-10-14 17:45:23
+  628KiB [===>                                            ] 10% ETA 0:00:08       884KiB [=====>                                          ] 14% ETA 0:00:11       1.12MiB [=======>                                        ] 18% ETA 0:00:171.14MiB [========>                                       ] 19% ETA 0:00:16  1.39MiB [==========>                                     ] 23% ETA 0:00:16      1.65MiB [===========>                                    ] 27% ETA 0:00:18      1.92MiB [==============>                                 ] 32% ETA 0:00:161.93MiB [==============>                                 ] 32% ETA 0:00:16  2.21MiB [================>                               ] 37% ETA 0:00:15      2.44MiB [==================>                             ] 41% ETA 0:00:15      2.59MiB [===================>                            ] 43% ETA 0:00:14      2.71MiB [====================>                           ] 45% ETA 0:00:14      2.97MiB [=======================>                        ] 50% ETA 0:00:13      3.28MiB [=========================>                      ] 55% ETA 0:00:123.29MiB [=========================>                      ] 55% ETA 0:00:12  3.56MiB [===========================>                    ] 59% ETA 0:00:11      3.84MiB [=============================>                  ] 64% ETA 0:00:09      4.12MiB [================================>               ] 69% ETA 0:00:084.13MiB [================================>               ] 69% ETA 0:00:08  4.38MiB [==================================>             ] 73% ETA 0:00:07      4.65MiB [====================================>           ] 78% ETA 0:00:06      4.93MiB [======================================>         ] 83% ETA 0:00:044.94MiB [======================================>         ] 83% ETA 0:00:04  5.21MiB [========================================>       ] 87% ETA 0:00:03      5.48MiB [===========================================>    ] 92% ETA 0:00:02      5.76MiB [=============================================>  ] 96% ETA 0:00:005.94MiB [==============================================>] 100%  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 29.484 seconds.
+  | 
+  | Pairs:               	221251
+  | Joined:              	211459   	95.574%
+  | Ambiguous:           	9773       	4.417%
+  | No Solution:         	19       	0.009%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	100.0
+  | Standard Deviation:  	0.9
+  | Mode:                	100
+  | 
+  | Insert range:        	56 - 135
+  | 90th percentile:     	100
+  | 75th percentile:     	100
+  | 50th percentile:     	100
+  | 25th percentile:     	100
+  | 10th percentile:     	100
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 221251 reads; of these:
+  |   9792 (4.43%) were paired; of these:
+  |     2577 (26.32%) aligned concordantly 0 times
+  |     7214 (73.67%) aligned concordantly exactly 1 time
+  |     1 (0.01%) aligned concordantly >1 times
+  |     ----
+  |     2577 pairs aligned concordantly 0 times; of these:
+  |       3 (0.12%) aligned discordantly 1 time
+  |     ----
+  |     2574 pairs aligned 0 times concordantly or discordantly; of these:
+  |       5148 mates make up the pairs; of these:
+  |         3111 (60.43%) aligned 0 times
+  |         2037 (39.57%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   211459 (95.57%) were unpaired; of these:
+  |     458 (0.22%) aligned 0 times
+  |     210997 (99.78%) aligned exactly 1 time
+  |     4 (0.00%) aligned >1 times
+  | 98.46% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 078-HIV-A35G-75c-a-6-p) (sample: Modified) output message: 
+  |----------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000872
+  | [50,99]	0.999128
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.684671
+  | 1	0.279140
+  | 2	0.034818
+  | 3	0.001353
+  | 4	0.000018
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 078-HIV-A35G-75c-a-6-p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000872
+  | [50,99]	0.999128
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.884645
+  | 1	0.110429
+  | 2	0.004867
+  | 3	0.000054
+  | 4	0.000005
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 17:45:54
+Running CalcProfile at 2025-10-14 17:45:54 . . .
+. . . done at 2025-10-14 17:45:54
+Running NormProfile at 2025-10-14 17:45:54 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 078-HIV-A35G-75c-a-6-p) output message: 
+|--------------------------------------------------------- 
+| 
+| Signal for G = 0.002 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.01947925, 'C': 0.036446, 'U': 0.0045520000000000005, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:45:54
+Running CalcProfile at 2025-10-14 17:45:54 . . .
+. . . done at 2025-10-14 17:45:54
+Running NormProfile at 2025-10-14 17:45:54 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 078-HIV-A35G-75c-a-6-p) output message: 
+|--------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.01509, 'GPUR': 0.010403250000000001, 'GPYR': 0.016005000000000002}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:45:55
+Running TabToShape at 2025-10-14 17:45:55 . . .
+. . . done at 2025-10-14 17:45:55
+Running RenderFigures at 2025-10-14 17:45:55 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 078-HIV-A35G-75c-a-6-p) output message: 
+|----------------------------------------------------------- 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 71.4% (5/7) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 90.0% (9/10) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 75.0% (6/8) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (11/11) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: True
+|         U: False
+|         G: False
+| 
+| 
+|       G and/or U FAILURE, but other reactivities may be usable
+|       Possible causes:
+|        - improper pH control during DMS reaction
+|        - use of a different RT enzyme than MarathonRT
+|        - poor reverse transcription conditions, resulting
+|          in low adduct adduct read-through or detection
+|        - very highly structured or protein bound RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:45:58
+Running RenderMappedDepths at 2025-10-14 17:45:58 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 078-HIV-A35G-75c-a-6-p) output message: 
+|---------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGCACCTCATAACATAAC            0       17      GATTGTGAGTGAGGTTAGT           55      73      220k   
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:45:59
+ShapeMapper run completed at 2025-10-14 17:45:59.
+WARNING: This RNA has a possible poor quality reactivity profile: 078-HIV-A35G-75c-a-6-p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.

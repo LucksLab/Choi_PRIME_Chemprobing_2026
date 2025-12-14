@@ -1,0 +1,49 @@
+run:
+  label: 04_probe_tc_kinetics
+  output_dir: manuscript_pipeline
+  backend: local
+  threads: 4
+  time: "00:39:00"
+
+# Demonstrates the migrated probe timecourse fitting engine.
+probe_timecourse:
+  engine: r_integration
+  rounds:
+    - round1_free
+    - round2_global
+    - round3_constrained
+
+  # Reaction groups pulled from examples/nerd.sqlite
+  rg_ids:
+    - 99
+
+  outliers:
+    - 99:006-HIV-UUCG-ES-25c-a-6-p:34_G:modrate # 0tp too high
+
+  # The example database stores probing timecourse amplitudes under multiple value types.
+  valtype:
+    - modrate
+    - GAmodrate
+
+  # Specify experimenter (only 1 currently supported).
+  done_by: EKC
+  
+  min_points: 3
+  overwrite: true
+
+  # Optional nucleotide filter. Uncomment to focus on specific sites.
+  # nt_ids:
+  #   - 390  # site indexing comes from meta_nucleotides.id
+
+  # Forward knobs into the engine to tune selection and initial guesses.
+  engine_options:
+    global_selection: ac_only  # acceptable values: ac_only, acg_only, all
+    global_filters:
+      r2_threshold: 0.8
+    initialize_kdeg_arrhenius: nmr:deg:dms:Schwalbe_bistris
+    keep_tmp_dir: true
+
+  # Metadata mirrored into result artifacts for provenance.
+  global_metadata:
+    experiment_id: ekc.01.0xx
+    notes: "Baseline python engine demo using examples/nerd.sqlite"

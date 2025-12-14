@@ -1,0 +1,43 @@
+2025-10-23 17:33:23,388 - nerd.db.api - INFO - Database schema initialized successfully.
+2025-10-23 17:33:23,390 - nerd.utils.paths - INFO - Created run directory: manuscript_pipeline/04_probe_tc_kinetics/probe_timecourse/probe_timecourse___cfg-c14a07d
+2025-10-23 17:33:23,391 - nerd.pipeline.tasks.base - INFO - Executing task 'probe_timecourse' in run directory: manuscript_pipeline/04_probe_tc_kinetics/probe_timecourse/probe_timecourse___cfg-c14a07d
+2025-10-23 17:33:23,391 - nerd.db.api - INFO - Began task 'probe_timecourse' (ID: 312) for rg:101 (cfg=c14a07d5231d54df442c2967c6360cbad4852e78734e1acf3de06a1dabb0f473)
+2025-10-23 17:33:23,392 - nerd.pipeline.tasks.base - INFO - Command completed successfully. Consuming outputs.
+2025-10-23 17:33:23,551 - nerd.pipeline.tasks.timecourse - INFO - Marked 9 fmod values as outliers across 7 reaction group(s).
+2025-10-23 17:33:24,399 - nerd.cli - ERROR - Failed to execute task 'probe_tc_kinetics': R integration engine exited with status 1.
+---- R STDOUT ----
+
+---- R STDERR ----
+Warning messages:
+1: package ‘jsonlite’ was built under R version 4.4.3 
+2: package ‘nlme’ was built under R version 4.4.3 
+Warning message:
+In nls(fmod ~ fmod_model(timepoint, log_kappa, log_kdeg, log_fmod0),  :
+  Convergence failure: singular convergence (7)
+Error: unexpected end of input
+Execution halted
+Temporary files preserved at: /var/folders/k7/k3x4cyj90rz6_py6pr8yth9m0000gn/T/nerd_r_engine__7e3bnle
+Traceback (most recent call last):
+  File "/Users/edricchoi/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/cli.py", line 132, in run
+    task.exec(conn, cfg, verbose=state["verbose"])
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/edricchoi/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/base.py", line 264, in exec
+    self.consume_outputs(ctx, inputs, params, run_dir, task_id=task_id)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/edricchoi/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 339, in consume_outputs
+    result = engine.run(request)
+  File "/Users/edricchoi/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/plugins/timecourse/r_integration.py", line 157, in run
+    raise RuntimeError(details)
+RuntimeError: R integration engine exited with status 1.
+---- R STDOUT ----
+
+---- R STDERR ----
+Warning messages:
+1: package ‘jsonlite’ was built under R version 4.4.3 
+2: package ‘nlme’ was built under R version 4.4.3 
+Warning message:
+In nls(fmod ~ fmod_model(timepoint, log_kappa, log_kdeg, log_fmod0),  :
+  Convergence failure: singular convergence (7)
+Error: unexpected end of input
+Execution halted
+Temporary files preserved at: /var/folders/k7/k3x4cyj90rz6_py6pr8yth9m0000gn/T/nerd_r_engine__7e3bnle

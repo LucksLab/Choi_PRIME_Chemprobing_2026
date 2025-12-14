@@ -1,0 +1,2439 @@
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-rw-r-- 1 ekc5108 b1044 2.6M Apr  6  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/007-fourU-WT-65c-b-1-p_S7_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 ekc5108 b1044 3.2M Apr  6  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/007-fourU-WT-65c-b-1-p_S7_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>007-fourU-WT-65c-b-1-p
+ggtgtaagggtgaagtgtaAGGTTGAACTTTTGAATAGTGATTCAGGAGGTTAATGGAAGtaaaggtaatgaaggtgaag
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 007-fourU-WT-65c-b-1-p --target artifacts/007-fourU-WT-65c-b-1-p/target.fa --out artifacts/007-fourU-WT-65c-b-1-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/007-fourU-WT-65c-b-1-p_S7_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/007-fourU-WT-65c-b-1-p_S7_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 17:21:05
+Output will be logged to 007-fourU-WT-65c-b-1-p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-34a5274
+args:  --name 007-fourU-WT-65c-b-1-p --target artifacts/007-fourU-WT-65c-b-1-p/target.fa --out artifacts/007-fourU-WT-65c-b-1-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/007-fourU-WT-65c-b-1-p_S... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/007-fourU-WT-65c-b-1-p_S... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 17:21:05
+Running PrimerLocator at 2025-10-14 17:21:05 . . .
+. . . done at 2025-10-14 17:21:05
+Running FastaFormatChecker at 2025-10-14 17:21:05 . . .
+. . . done at 2025-10-14 17:21:05
+Running BowtieIndexBuilder at 2025-10-14 17:21:05 . . .
+. . . done at 2025-10-14 17:21:06
+Running process group 4 at 2025-10-14 17:21:06 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 17:21:06
+    QualityTrimmer1 . . . started at 2025-10-14 17:21:06
+    QualityTrimmer2 . . . started at 2025-10-14 17:21:06
+    Interleaver . . . started at 2025-10-14 17:21:06
+    Merger . . . started at 2025-10-14 17:21:06
+    Tab6Interleaver . . . started at 2025-10-14 17:21:06
+    BowtieAligner . . . started at 2025-10-14 17:21:06
+    MutationParser_Modified . . . started at 2025-10-14 17:21:06
+    MutationParserGA_Modified . . . started at 2025-10-14 17:21:06
+    MutationCounter_Modified . . . started at 2025-10-14 17:21:06
+    MutationCounterGA_Modified . . . started at 2025-10-14 17:21:06
+  244KiB [===>                                            ]  9% ETA 0:00:09       396KiB [======>                                         ] 15% ETA 0:00:11       548KiB [========>                                       ] 20% ETA 0:00:11       708KiB [===========>                                    ] 27% ETA 0:00:13 716KiB [===========>                                    ] 27% ETA 0:00:13  1.00MiB [=================>                              ] 39% ETA 0:00:101.01MiB [=================>                              ] 39% ETA 0:00:10  1.15MiB [====================>                           ] 45% ETA 0:00:10      1.31MiB [=======================>                        ] 51% ETA 0:00:09      1.46MiB [=========================>                      ] 56% ETA 0:00:091.46MiB [==========================>                     ] 57% ETA 0:00:08  1.61MiB [============================>                   ] 62% ETA 0:00:07      1.75MiB [===============================>                ] 68% ETA 0:00:061.81MiB [================================>               ] 70% ETA 0:00:06  1.90MiB [==================================>             ] 74% ETA 0:00:05      2.07MiB [=====================================>          ] 80% ETA 0:00:042.07MiB [=====================================>          ] 81% ETA 0:00:04  2.21MiB [========================================>       ] 86% ETA 0:00:03      2.36MiB [===========================================>    ] 92% ETA 0:00:01      2.54MiB [==============================================> ] 99% ETA 0:00:002.56MiB [==============================================>] 100%  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 23.103 seconds.
+  | 
+  | Pairs:               	157567
+  | Joined:              	152981   	97.089%
+  | Ambiguous:           	4586       	2.911%
+  | No Solution:         	0       	0.000%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	106.0
+  | Standard Deviation:  	1.2
+  | Mode:                	106
+  | 
+  | Insert range:        	41 - 117
+  | 90th percentile:     	106
+  | 75th percentile:     	106
+  | 50th percentile:     	106
+  | 25th percentile:     	106
+  | 10th percentile:     	106
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 157567 reads; of these:
+  |   4586 (2.91%) were paired; of these:
+  |     1295 (28.24%) aligned concordantly 0 times
+  |     3291 (71.76%) aligned concordantly exactly 1 time
+  |     0 (0.00%) aligned concordantly >1 times
+  |     ----
+  |     1295 pairs aligned concordantly 0 times; of these:
+  |       0 (0.00%) aligned discordantly 1 time
+  |     ----
+  |     1295 pairs aligned 0 times concordantly or discordantly; of these:
+  |       2590 mates make up the pairs; of these:
+  |         1444 (55.75%) aligned 0 times
+  |         1146 (44.25%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   152981 (97.09%) were unpaired; of these:
+  |     83 (0.05%) aligned 0 times
+  |     152898 (99.95%) aligned exactly 1 time
+  |     0 (0.00%) aligned >1 times
+  | 99.06% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 007-fourU-WT-65c-b-1-p) (sample: Modified) output message: 
+  |----------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000890
+  | [50,99]	0.999110
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.887469
+  | 1	0.107420
+  | 2	0.004970
+  | 3	0.000114
+  | 4	0.000025
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 007-fourU-WT-65c-b-1-p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000890
+  | [50,99]	0.999110
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.984434
+  | 1	0.015451
+  | 2	0.000095
+  | 3	0.000013
+  | 4	0.000006
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 17:21:30
+Running CalcProfile at 2025-10-14 17:21:30 . . .
+. . . done at 2025-10-14 17:21:30
+Running NormProfile at 2025-10-14 17:21:30 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 007-fourU-WT-65c-b-1-p) output message: 
+|--------------------------------------------------------- 
+| 
+| Signal for G = 0.001 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.0072517499999999995, 'C': 0.0094115, 'U': 0.002822, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:21:30
+Running CalcProfile at 2025-10-14 17:21:30 . . .
+. . . done at 2025-10-14 17:21:31
+Running NormProfile at 2025-10-14 17:21:31 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 007-fourU-WT-65c-b-1-p) output message: 
+|--------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.001895, 'GPUR': 0.001895, 'GPYR': 0.0029153846153846153}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:21:31
+Running TabToShape at 2025-10-14 17:21:31 . . .
+. . . done at 2025-10-14 17:21:31
+Running RenderFigures at 2025-10-14 17:21:31 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 007-fourU-WT-65c-b-1-p) output message: 
+|----------------------------------------------------------- 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 76.9% (10/13) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (2/2) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (13/13) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 83.3% (10/12) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: True
+|         U: True
+|         G: False
+| 
+| 
+|       G and/or U FAILURE, but other reactivities may be usable
+|       Possible causes:
+|        - improper pH control during DMS reaction
+|        - use of a different RT enzyme than MarathonRT
+|        - poor reverse transcription conditions, resulting
+|          in low adduct adduct read-through or detection
+|        - very highly structured or protein bound RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:21:34
+Running RenderMappedDepths at 2025-10-14 17:21:34 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 007-fourU-WT-65c-b-1-p) output message: 
+|---------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGTGTAAGGGTGAAGTGTA           0       18      CTTCACCTTCATTACCTTTA          60      79      157k   
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:21:35
+ShapeMapper run completed at 2025-10-14 17:21:35.
+WARNING: This RNA has a possible poor quality reactivity profile: 007-fourU-WT-65c-b-1-p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-rw-r-- 1 ekc5108 b1044 3.0M Apr  6  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/008-fourU-WT-65c-b-2-p_S8_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 ekc5108 b1044 3.6M Apr  6  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/008-fourU-WT-65c-b-2-p_S8_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>008-fourU-WT-65c-b-2-p
+ggtgtaagggtgaagtgtaAGGTTGAACTTTTGAATAGTGATTCAGGAGGTTAATGGAAGtaaaggtaatgaaggtgaag
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 008-fourU-WT-65c-b-2-p --target artifacts/008-fourU-WT-65c-b-2-p/target.fa --out artifacts/008-fourU-WT-65c-b-2-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/008-fourU-WT-65c-b-2-p_S8_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/008-fourU-WT-65c-b-2-p_S8_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 17:21:36
+Output will be logged to 008-fourU-WT-65c-b-2-p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-34a5274
+args:  --name 008-fourU-WT-65c-b-2-p --target artifacts/008-fourU-WT-65c-b-2-p/target.fa --out artifacts/008-fourU-WT-65c-b-2-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/008-fourU-WT-65c-b-2-p_S... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/008-fourU-WT-65c-b-2-p_S... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 17:21:36
+Running PrimerLocator at 2025-10-14 17:21:36 . . .
+. . . done at 2025-10-14 17:21:36
+Running FastaFormatChecker at 2025-10-14 17:21:36 . . .
+. . . done at 2025-10-14 17:21:36
+Running BowtieIndexBuilder at 2025-10-14 17:21:36 . . .
+. . . done at 2025-10-14 17:21:37
+Running process group 4 at 2025-10-14 17:21:37 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 17:21:37
+    QualityTrimmer1 . . . started at 2025-10-14 17:21:37
+    QualityTrimmer2 . . . started at 2025-10-14 17:21:37
+    Interleaver . . . started at 2025-10-14 17:21:37
+    Merger . . . started at 2025-10-14 17:21:37
+    Tab6Interleaver . . . started at 2025-10-14 17:21:37
+    BowtieAligner . . . started at 2025-10-14 17:21:37
+    MutationParser_Modified . . . started at 2025-10-14 17:21:37
+    MutationParserGA_Modified . . . started at 2025-10-14 17:21:37
+    MutationCounter_Modified . . . started at 2025-10-14 17:21:37
+    MutationCounterGA_Modified . . . started at 2025-10-14 17:21:37
+  412KiB [=====>                                          ] 13% ETA 0:00:06       564KiB [=======>                                        ] 18% ETA 0:00:08       740KiB [==========>                                     ] 24% ETA 0:00:09       892KiB [============>                                   ] 29% ETA 0:00:09 940KiB [=============>                                  ] 31% ETA 0:00:10  1.03MiB [===============>                                ] 35% ETA 0:00:10      1.19MiB [==================>                             ] 41% ETA 0:00:10      1.35MiB [=====================>                          ] 46% ETA 0:00:09      1.51MiB [=======================>                        ] 52% ETA 0:00:091.52MiB [=======================>                        ] 52% ETA 0:00:09  1.82MiB [============================>                   ] 62% ETA 0:00:07      1.86MiB [=============================>                  ] 64% ETA 0:00:06      1.97MiB [===============================>                ] 67% ETA 0:00:06      2.12MiB [==================================>             ] 73% ETA 0:00:05      2.28MiB [====================================>           ] 78% ETA 0:00:042.29MiB [====================================>           ] 78% ETA 0:00:04  2.60MiB [=========================================>      ] 89% ETA 0:00:02      2.75MiB [============================================>   ] 94% ETA 0:00:012.76MiB [============================================>   ] 95% ETA 0:00:00  2.90MiB [==============================================> ] 99% ETA 0:00:002.90MiB [==============================================>] 100%  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 22.440 seconds.
+  | 
+  | Pairs:               	173351
+  | Joined:              	168066   	96.951%
+  | Ambiguous:           	5285       	3.049%
+  | No Solution:         	0       	0.000%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	106.0
+  | Standard Deviation:  	1.2
+  | Mode:                	106
+  | 
+  | Insert range:        	41 - 127
+  | 90th percentile:     	106
+  | 75th percentile:     	106
+  | 50th percentile:     	106
+  | 25th percentile:     	106
+  | 10th percentile:     	106
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 173351 reads; of these:
+  |   5285 (3.05%) were paired; of these:
+  |     1443 (27.30%) aligned concordantly 0 times
+  |     3842 (72.70%) aligned concordantly exactly 1 time
+  |     0 (0.00%) aligned concordantly >1 times
+  |     ----
+  |     1443 pairs aligned concordantly 0 times; of these:
+  |       0 (0.00%) aligned discordantly 1 time
+  |     ----
+  |     1443 pairs aligned 0 times concordantly or discordantly; of these:
+  |       2886 mates make up the pairs; of these:
+  |         1635 (56.65%) aligned 0 times
+  |         1251 (43.35%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   168066 (96.95%) were unpaired; of these:
+  |     103 (0.06%) aligned 0 times
+  |     167963 (99.94%) aligned exactly 1 time
+  |     0 (0.00%) aligned >1 times
+  | 99.03% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 008-fourU-WT-65c-b-2-p) (sample: Modified) output message: 
+  |----------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000890
+  | [50,99]	0.999110
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.820174
+  | 1	0.167582
+  | 2	0.011915
+  | 3	0.000324
+  | 4	0.000006
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 008-fourU-WT-65c-b-2-p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000890
+  | [50,99]	0.999110
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.974569
+  | 1	0.025032
+  | 2	0.000381
+  | 3	0.000012
+  | 4	0.000006
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 17:22:00
+Running CalcProfile at 2025-10-14 17:22:00 . . .
+. . . done at 2025-10-14 17:22:00
+Running NormProfile at 2025-10-14 17:22:00 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 008-fourU-WT-65c-b-2-p) output message: 
+|--------------------------------------------------------- 
+| 
+| Signal for G = 0.001 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.0130495, 'C': 0.017344250000000002, 'U': 0.003211, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:22:00
+Running CalcProfile at 2025-10-14 17:22:00 . . .
+. . . done at 2025-10-14 17:22:00
+Running NormProfile at 2025-10-14 17:22:00 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 008-fourU-WT-65c-b-2-p) output message: 
+|--------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.00325975, 'GPUR': 0.0031311250000000002, 'GPYR': 0.004817115384615385}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:22:01
+Running TabToShape at 2025-10-14 17:22:01 . . .
+. . . done at 2025-10-14 17:22:01
+Running RenderFigures at 2025-10-14 17:22:01 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 008-fourU-WT-65c-b-2-p) output message: 
+|----------------------------------------------------------- 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 76.9% (10/13) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (2/2) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (13/13) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 83.3% (10/12) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: True
+|         U: True
+|         G: False
+| 
+| 
+|       G and/or U FAILURE, but other reactivities may be usable
+|       Possible causes:
+|        - improper pH control during DMS reaction
+|        - use of a different RT enzyme than MarathonRT
+|        - poor reverse transcription conditions, resulting
+|          in low adduct adduct read-through or detection
+|        - very highly structured or protein bound RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:22:04
+Running RenderMappedDepths at 2025-10-14 17:22:04 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 008-fourU-WT-65c-b-2-p) output message: 
+|---------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGTGTAAGGGTGAAGTGTA           0       18      CTTCACCTTCATTACCTTTA          60      79      173k   
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:22:05
+ShapeMapper run completed at 2025-10-14 17:22:05.
+WARNING: This RNA has a possible poor quality reactivity profile: 008-fourU-WT-65c-b-2-p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-rw-r-- 1 ekc5108 b1044 3.0M Apr  6  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/009-fourU-WT-65c-b-3-p_S9_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 ekc5108 b1044 3.6M Apr  6  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/009-fourU-WT-65c-b-3-p_S9_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>009-fourU-WT-65c-b-3-p
+ggtgtaagggtgaagtgtaAGGTTGAACTTTTGAATAGTGATTCAGGAGGTTAATGGAAGtaaaggtaatgaaggtgaag
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 009-fourU-WT-65c-b-3-p --target artifacts/009-fourU-WT-65c-b-3-p/target.fa --out artifacts/009-fourU-WT-65c-b-3-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/009-fourU-WT-65c-b-3-p_S9_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/009-fourU-WT-65c-b-3-p_S9_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 17:22:06
+Output will be logged to 009-fourU-WT-65c-b-3-p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-34a5274
+args:  --name 009-fourU-WT-65c-b-3-p --target artifacts/009-fourU-WT-65c-b-3-p/target.fa --out artifacts/009-fourU-WT-65c-b-3-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/009-fourU-WT-65c-b-3-p_S... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/009-fourU-WT-65c-b-3-p_S... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 17:22:06
+Running PrimerLocator at 2025-10-14 17:22:06 . . .
+. . . done at 2025-10-14 17:22:06
+Running FastaFormatChecker at 2025-10-14 17:22:06 . . .
+. . . done at 2025-10-14 17:22:07
+Running BowtieIndexBuilder at 2025-10-14 17:22:07 . . .
+. . . done at 2025-10-14 17:22:07
+Running process group 4 at 2025-10-14 17:22:07 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 17:22:07
+    QualityTrimmer1 . . . started at 2025-10-14 17:22:07
+    QualityTrimmer2 . . . started at 2025-10-14 17:22:07
+    Interleaver . . . started at 2025-10-14 17:22:07
+    Merger . . . started at 2025-10-14 17:22:07
+    Tab6Interleaver . . . started at 2025-10-14 17:22:07
+    BowtieAligner . . . started at 2025-10-14 17:22:07
+    MutationParser_Modified . . . started at 2025-10-14 17:22:07
+    MutationParserGA_Modified . . . started at 2025-10-14 17:22:07
+    MutationCounter_Modified . . . started at 2025-10-14 17:22:07
+    MutationCounterGA_Modified . . . started at 2025-10-14 17:22:07
+  420KiB [=====>                                          ] 14% ETA 0:00:06       588KiB [========>                                       ] 19% ETA 0:00:08       756KiB [===========>                                    ] 25% ETA 0:00:11 764KiB [===========>                                    ] 25% ETA 0:00:11  940KiB [=============>                                  ] 31% ETA 0:00:10       1.07MiB [================>                               ] 36% ETA 0:00:10      1.25MiB [===================>                            ] 42% ETA 0:00:09      1.41MiB [======================>                         ] 48% ETA 0:00:08      1.57MiB [========================>                       ] 53% ETA 0:00:081.57MiB [========================>                       ] 53% ETA 0:00:08  1.89MiB [=============================>                  ] 64% ETA 0:00:06      2.05MiB [================================>               ] 70% ETA 0:00:05      2.21MiB [===================================>            ] 75% ETA 0:00:04      2.38MiB [=====================================>          ] 81% ETA 0:00:03      2.54MiB [========================================>       ] 87% ETA 0:00:022.56MiB [========================================>       ] 87% ETA 0:00:02  2.86MiB [=============================================>  ] 97% ETA 0:00:00      2.87MiB [==============================================> ] 98% ETA 0:00:002.92MiB [==============================================>] 100%  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 20.322 seconds.
+  | 
+  | Pairs:               	166785
+  | Joined:              	161465   	96.810%
+  | Ambiguous:           	5320       	3.190%
+  | No Solution:         	0       	0.000%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	105.9
+  | Standard Deviation:  	1.8
+  | Mode:                	106
+  | 
+  | Insert range:        	41 - 130
+  | 90th percentile:     	106
+  | 75th percentile:     	106
+  | 50th percentile:     	106
+  | 25th percentile:     	106
+  | 10th percentile:     	106
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 166785 reads; of these:
+  |   5320 (3.19%) were paired; of these:
+  |     1328 (24.96%) aligned concordantly 0 times
+  |     3991 (75.02%) aligned concordantly exactly 1 time
+  |     1 (0.02%) aligned concordantly >1 times
+  |     ----
+  |     1328 pairs aligned concordantly 0 times; of these:
+  |       2 (0.15%) aligned discordantly 1 time
+  |     ----
+  |     1326 pairs aligned 0 times concordantly or discordantly; of these:
+  |       2652 mates make up the pairs; of these:
+  |         1537 (57.96%) aligned 0 times
+  |         1115 (42.04%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   161465 (96.81%) were unpaired; of these:
+  |     225 (0.14%) aligned 0 times
+  |     161240 (99.86%) aligned exactly 1 time
+  |     0 (0.00%) aligned >1 times
+  | 98.98% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 009-fourU-WT-65c-b-3-p) (sample: Modified) output message: 
+  |----------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.001100
+  | [50,99]	0.998900
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.750161
+  | 1	0.225361
+  | 2	0.023474
+  | 3	0.000992
+  | 4	0.000012
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 009-fourU-WT-65c-b-3-p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.001100
+  | [50,99]	0.998900
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.974373
+  | 1	0.025278
+  | 2	0.000283
+  | 3	0.000066
+  | 4	0.000000
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 17:22:28
+Running CalcProfile at 2025-10-14 17:22:28 . . .
+. . . done at 2025-10-14 17:22:28
+Running NormProfile at 2025-10-14 17:22:28 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 009-fourU-WT-65c-b-3-p) output message: 
+|--------------------------------------------------------- 
+| 
+| Signal for G = 0.001 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.020578, 'C': 0.026148499999999998, 'U': 0.002654, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:22:28
+Running CalcProfile at 2025-10-14 17:22:28 . . .
+. . . done at 2025-10-14 17:22:28
+Running NormProfile at 2025-10-14 17:22:28 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 009-fourU-WT-65c-b-3-p) output message: 
+|--------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.003246, 'GPUR': 0.0029565, 'GPYR': 0.0045484615384615385}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:22:29
+Running TabToShape at 2025-10-14 17:22:29 . . .
+. . . done at 2025-10-14 17:22:29
+Running RenderFigures at 2025-10-14 17:22:29 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 009-fourU-WT-65c-b-3-p) output message: 
+|----------------------------------------------------------- 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 76.9% (10/13) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (2/2) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (13/13) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 83.3% (10/12) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: True
+|         U: True
+|         G: False
+| 
+| 
+|       G and/or U FAILURE, but other reactivities may be usable
+|       Possible causes:
+|        - improper pH control during DMS reaction
+|        - use of a different RT enzyme than MarathonRT
+|        - poor reverse transcription conditions, resulting
+|          in low adduct adduct read-through or detection
+|        - very highly structured or protein bound RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:22:32
+Running RenderMappedDepths at 2025-10-14 17:22:32 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 009-fourU-WT-65c-b-3-p) output message: 
+|---------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGTGTAAGGGTGAAGTGTA           0       18      CTTCACCTTCATTACCTTTA          60      79      166k   
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:22:33
+ShapeMapper run completed at 2025-10-14 17:22:33.
+WARNING: This RNA has a possible poor quality reactivity profile: 009-fourU-WT-65c-b-3-p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-rw-r-- 1 ekc5108 b1044 3.7M Apr  6  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/010-fourU-WT-65c-b-4-p_S10_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 ekc5108 b1044 4.3M Apr  6  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/010-fourU-WT-65c-b-4-p_S10_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>010-fourU-WT-65c-b-4-p
+ggtgtaagggtgaagtgtaAGGTTGAACTTTTGAATAGTGATTCAGGAGGTTAATGGAAGtaaaggtaatgaaggtgaag
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 010-fourU-WT-65c-b-4-p --target artifacts/010-fourU-WT-65c-b-4-p/target.fa --out artifacts/010-fourU-WT-65c-b-4-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/010-fourU-WT-65c-b-4-p_S10_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/010-fourU-WT-65c-b-4-p_S10_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 17:22:34
+Output will be logged to 010-fourU-WT-65c-b-4-p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-34a5274
+args:  --name 010-fourU-WT-65c-b-4-p --target artifacts/010-fourU-WT-65c-b-4-p/target.fa --out artifacts/010-fourU-WT-65c-b-4-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/010-fourU-WT-65c-b-4-p_S... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/010-fourU-WT-65c-b-4-p_S... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 17:22:34
+Running PrimerLocator at 2025-10-14 17:22:34 . . .
+. . . done at 2025-10-14 17:22:34
+Running FastaFormatChecker at 2025-10-14 17:22:34 . . .
+. . . done at 2025-10-14 17:22:34
+Running BowtieIndexBuilder at 2025-10-14 17:22:34 . . .
+. . . done at 2025-10-14 17:22:34
+Running process group 4 at 2025-10-14 17:22:34 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 17:22:34
+    QualityTrimmer1 . . . started at 2025-10-14 17:22:34
+    QualityTrimmer2 . . . started at 2025-10-14 17:22:34
+    Interleaver . . . started at 2025-10-14 17:22:34
+    Merger . . . started at 2025-10-14 17:22:34
+    Tab6Interleaver . . . started at 2025-10-14 17:22:34
+    BowtieAligner . . . started at 2025-10-14 17:22:34
+    MutationParser_Modified . . . started at 2025-10-14 17:22:34
+    MutationParserGA_Modified . . . started at 2025-10-14 17:22:34
+    MutationCounter_Modified . . . started at 2025-10-14 17:22:34
+    MutationCounterGA_Modified . . . started at 2025-10-14 17:22:34
+  428KiB [====>                                           ] 11% ETA 0:00:07       604KiB [======>                                         ] 16% ETA 0:00:10       788KiB [=========>                                      ] 21% ETA 0:00:11       996KiB [===========>                                    ] 26% ETA 0:00:131004KiB [===========>                                    ] 27% ETA 0:00:13  1.10MiB [=============>                                  ] 30% ETA 0:00:13      1.27MiB [===============>                                ] 34% ETA 0:00:13      1.45MiB [=================>                              ] 39% ETA 0:00:12      1.61MiB [====================>                           ] 44% ETA 0:00:11      1.79MiB [======================>                         ] 49% ETA 0:00:10      1.96MiB [========================>                       ] 53% ETA 0:00:10      1.96MiB [========================>                       ] 54% ETA 0:00:10      2.12MiB [==========================>                     ] 58% ETA 0:00:09      2.29MiB [============================>                   ] 62% ETA 0:00:08      2.46MiB [===============================>                ] 67% ETA 0:00:07      2.62MiB [=================================>              ] 72% ETA 0:00:06      2.79MiB [===================================>            ] 76% ETA 0:00:05      2.96MiB [=====================================>          ] 81% ETA 0:00:04      3.13MiB [========================================>       ] 86% ETA 0:00:03      3.29MiB [==========================================>     ] 90% ETA 0:00:02      3.46MiB [============================================>   ] 95% ETA 0:00:01      3.63MiB [==============================================>] 100% ETA 0:00:003.63MiB [==============================================>] 100%  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 24.628 seconds.
+  | 
+  | Pairs:               	200897
+  | Joined:              	194325   	96.729%
+  | Ambiguous:           	6572       	3.271%
+  | No Solution:         	0       	0.000%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	105.9
+  | Standard Deviation:  	1.6
+  | Mode:                	106
+  | 
+  | Insert range:        	41 - 120
+  | 90th percentile:     	106
+  | 75th percentile:     	106
+  | 50th percentile:     	106
+  | 25th percentile:     	106
+  | 10th percentile:     	106
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 200897 reads; of these:
+  |   6572 (3.27%) were paired; of these:
+  |     1588 (24.16%) aligned concordantly 0 times
+  |     4980 (75.78%) aligned concordantly exactly 1 time
+  |     4 (0.06%) aligned concordantly >1 times
+  |     ----
+  |     1588 pairs aligned concordantly 0 times; of these:
+  |       0 (0.00%) aligned discordantly 1 time
+  |     ----
+  |     1588 pairs aligned 0 times concordantly or discordantly; of these:
+  |       3176 mates make up the pairs; of these:
+  |         1872 (58.94%) aligned 0 times
+  |         1304 (41.06%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   194325 (96.73%) were unpaired; of these:
+  |     321 (0.17%) aligned 0 times
+  |     194004 (99.83%) aligned exactly 1 time
+  |     0 (0.00%) aligned >1 times
+  | 98.94% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 010-fourU-WT-65c-b-4-p) (sample: Modified) output message: 
+  |----------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000864
+  | [50,99]	0.999136
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.710513
+  | 1	0.256505
+  | 2	0.031559
+  | 3	0.001378
+  | 4	0.000040
+  | 5	0.000005
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 010-fourU-WT-65c-b-4-p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000864
+  | [50,99]	0.999136
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.955150
+  | 1	0.043911
+  | 2	0.000894
+  | 3	0.000030
+  | 4	0.000010
+  | 5	0.000005
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 17:23:00
+Running CalcProfile at 2025-10-14 17:23:00 . . .
+. . . done at 2025-10-14 17:23:01
+Running NormProfile at 2025-10-14 17:23:01 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 010-fourU-WT-65c-b-4-p) output message: 
+|--------------------------------------------------------- 
+| 
+| Signal for G = 0.001 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.02383375, 'C': 0.03162, 'U': 0.003571, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:23:01
+Running CalcProfile at 2025-10-14 17:23:01 . . .
+. . . done at 2025-10-14 17:23:02
+Running NormProfile at 2025-10-14 17:23:02 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 010-fourU-WT-65c-b-4-p) output message: 
+|--------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.00585675, 'GPUR': 0.0056732499999999995, 'GPYR': 0.008728076923076922}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:23:02
+Running TabToShape at 2025-10-14 17:23:02 . . .
+. . . done at 2025-10-14 17:23:02
+Running RenderFigures at 2025-10-14 17:23:02 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 010-fourU-WT-65c-b-4-p) output message: 
+|----------------------------------------------------------- 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 76.9% (10/13) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (2/2) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (13/13) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 83.3% (10/12) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: True
+|         U: True
+|         G: False
+| 
+| 
+|       G and/or U FAILURE, but other reactivities may be usable
+|       Possible causes:
+|        - improper pH control during DMS reaction
+|        - use of a different RT enzyme than MarathonRT
+|        - poor reverse transcription conditions, resulting
+|          in low adduct adduct read-through or detection
+|        - very highly structured or protein bound RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:23:07
+Running RenderMappedDepths at 2025-10-14 17:23:07 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 010-fourU-WT-65c-b-4-p) output message: 
+|---------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGTGTAAGGGTGAAGTGTA           0       18      CTTCACCTTCATTACCTTTA          60      79      200k   
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:23:08
+ShapeMapper run completed at 2025-10-14 17:23:08.
+WARNING: This RNA has a possible poor quality reactivity profile: 010-fourU-WT-65c-b-4-p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-rw-r-- 1 ekc5108 b1044 4.2M Apr  6  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/011-fourU-WT-65c-b-5-p_S11_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 ekc5108 b1044 4.9M Apr  6  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/011-fourU-WT-65c-b-5-p_S11_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>011-fourU-WT-65c-b-5-p
+ggtgtaagggtgaagtgtaAGGTTGAACTTTTGAATAGTGATTCAGGAGGTTAATGGAAGtaaaggtaatgaaggtgaag
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 011-fourU-WT-65c-b-5-p --target artifacts/011-fourU-WT-65c-b-5-p/target.fa --out artifacts/011-fourU-WT-65c-b-5-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/011-fourU-WT-65c-b-5-p_S11_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/011-fourU-WT-65c-b-5-p_S11_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 17:23:09
+Output will be logged to 011-fourU-WT-65c-b-5-p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-34a5274
+args:  --name 011-fourU-WT-65c-b-5-p --target artifacts/011-fourU-WT-65c-b-5-p/target.fa --out artifacts/011-fourU-WT-65c-b-5-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/011-fourU-WT-65c-b-5-p_S... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/011-fourU-WT-65c-b-5-p_S... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 17:23:09
+Running PrimerLocator at 2025-10-14 17:23:09 . . .
+. . . done at 2025-10-14 17:23:09
+Running FastaFormatChecker at 2025-10-14 17:23:09 . . .
+. . . done at 2025-10-14 17:23:10
+Running BowtieIndexBuilder at 2025-10-14 17:23:10 . . .
+. . . done at 2025-10-14 17:23:10
+Running process group 4 at 2025-10-14 17:23:10 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 17:23:10
+    QualityTrimmer1 . . . started at 2025-10-14 17:23:10
+    QualityTrimmer2 . . . started at 2025-10-14 17:23:10
+    Interleaver . . . started at 2025-10-14 17:23:10
+    Merger . . . started at 2025-10-14 17:23:10
+    Tab6Interleaver . . . started at 2025-10-14 17:23:10
+    BowtieAligner . . . started at 2025-10-14 17:23:10
+    MutationParser_Modified . . . started at 2025-10-14 17:23:10
+    MutationParserGA_Modified . . . started at 2025-10-14 17:23:10
+    MutationCounter_Modified . . . started at 2025-10-14 17:23:10
+    MutationCounterGA_Modified . . . started at 2025-10-14 17:23:10
+  436KiB [===>                                            ] 10% ETA 0:00:08       604KiB [=====>                                          ] 14% ETA 0:00:12       780KiB [=======>                                        ] 18% ETA 0:00:13       956KiB [=========>                                      ] 22% ETA 0:00:13       1.11MiB [===========>                                    ] 26% ETA 0:00:161.12MiB [===========>                                    ] 27% ETA 0:00:16  1.29MiB [=============>                                  ] 31% ETA 0:00:15      1.46MiB [===============>                                ] 35% ETA 0:00:16      1.60MiB [=================>                              ] 38% ETA 0:00:14      1.64MiB [=================>                              ] 39% ETA 0:00:15      1.81MiB [===================>                            ] 43% ETA 0:00:14      1.98MiB [=====================>                          ] 47% ETA 0:00:141.99MiB [======================>                         ] 48% ETA 0:00:14  2.15MiB [=======================>                        ] 52% ETA 0:00:12      2.32MiB [=========================>                      ] 55% ETA 0:00:12      2.32MiB [=========================>                      ] 56% ETA 0:00:12      2.65MiB [=============================>                  ] 64% ETA 0:00:10      2.82MiB [===============================>                ] 68% ETA 0:00:082.86MiB [===============================>                ] 68% ETA 0:00:08  3.00MiB [=================================>              ] 72% ETA 0:00:08      3.16MiB [===================================>            ] 76% ETA 0:00:06      3.33MiB [=====================================>          ] 80% ETA 0:00:05      3.50MiB [=======================================>        ] 84% ETA 0:00:043.50MiB [=======================================>        ] 84% ETA 0:00:04  3.67MiB [=========================================>      ] 88% ETA 0:00:03      3.84MiB [===========================================>    ] 92% ETA 0:00:023.85MiB [===========================================>    ] 92% ETA 0:00:02  4.14MiB [==============================================>] 100%                  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 31.298 seconds.
+  | 
+  | Pairs:               	226739
+  | Joined:              	218994   	96.584%
+  | Ambiguous:           	7745       	3.416%
+  | No Solution:         	0       	0.000%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	106.0
+  | Standard Deviation:  	1.2
+  | Mode:                	106
+  | 
+  | Insert range:        	41 - 134
+  | 90th percentile:     	106
+  | 75th percentile:     	106
+  | 50th percentile:     	106
+  | 25th percentile:     	106
+  | 10th percentile:     	106
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 226739 reads; of these:
+  |   7745 (3.42%) were paired; of these:
+  |     2045 (26.40%) aligned concordantly 0 times
+  |     5699 (73.58%) aligned concordantly exactly 1 time
+  |     1 (0.01%) aligned concordantly >1 times
+  |     ----
+  |     2045 pairs aligned concordantly 0 times; of these:
+  |       2 (0.10%) aligned discordantly 1 time
+  |     ----
+  |     2043 pairs aligned 0 times concordantly or discordantly; of these:
+  |       4086 mates make up the pairs; of these:
+  |         2424 (59.32%) aligned 0 times
+  |         1662 (40.68%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   218994 (96.58%) were unpaired; of these:
+  |     374 (0.17%) aligned 0 times
+  |     218620 (99.83%) aligned exactly 1 time
+  |     0 (0.00%) aligned >1 times
+  | 98.81% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 011-fourU-WT-65c-b-5-p) (sample: Modified) output message: 
+  |----------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.001217
+  | [50,99]	0.998783
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.669400
+  | 1	0.287252
+  | 2	0.040954
+  | 3	0.002350
+  | 4	0.000044
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 011-fourU-WT-65c-b-5-p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.001217
+  | [50,99]	0.998783
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.964741
+  | 1	0.034737
+  | 2	0.000447
+  | 3	0.000049
+  | 4	0.000027
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 17:23:42
+Running CalcProfile at 2025-10-14 17:23:42 . . .
+. . . done at 2025-10-14 17:23:42
+Running NormProfile at 2025-10-14 17:23:42 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 011-fourU-WT-65c-b-5-p) output message: 
+|--------------------------------------------------------- 
+| 
+| Signal for G = 0.001 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.02890475, 'C': 0.036262, 'U': 0.003015, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:23:42
+Running CalcProfile at 2025-10-14 17:23:42 . . .
+. . . done at 2025-10-14 17:23:42
+Running NormProfile at 2025-10-14 17:23:42 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 011-fourU-WT-65c-b-5-p) output message: 
+|--------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.00453325, 'GPUR': 0.004334, 'GPYR': 0.006667692307692308}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:23:43
+Running TabToShape at 2025-10-14 17:23:43 . . .
+. . . done at 2025-10-14 17:23:43
+Running RenderFigures at 2025-10-14 17:23:43 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 011-fourU-WT-65c-b-5-p) output message: 
+|----------------------------------------------------------- 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 76.9% (10/13) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (2/2) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (13/13) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 83.3% (10/12) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: True
+|         U: True
+|         G: False
+| 
+| 
+|       G and/or U FAILURE, but other reactivities may be usable
+|       Possible causes:
+|        - improper pH control during DMS reaction
+|        - use of a different RT enzyme than MarathonRT
+|        - poor reverse transcription conditions, resulting
+|          in low adduct adduct read-through or detection
+|        - very highly structured or protein bound RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:23:46
+Running RenderMappedDepths at 2025-10-14 17:23:46 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 011-fourU-WT-65c-b-5-p) output message: 
+|---------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGTGTAAGGGTGAAGTGTA           0       18      CTTCACCTTCATTACCTTTA          60      79      226k   
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:23:47
+ShapeMapper run completed at 2025-10-14 17:23:47.
+WARNING: This RNA has a possible poor quality reactivity profile: 011-fourU-WT-65c-b-5-p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-rw-r-- 1 ekc5108 b1044 3.7M Apr  6  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/012-fourU-WT-65c-b-6-p_S12_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 ekc5108 b1044 4.1M Apr  6  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/012-fourU-WT-65c-b-6-p_S12_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>012-fourU-WT-65c-b-6-p
+ggtgtaagggtgaagtgtaAGGTTGAACTTTTGAATAGTGATTCAGGAGGTTAATGGAAGtaaaggtaatgaaggtgaag
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 012-fourU-WT-65c-b-6-p --target artifacts/012-fourU-WT-65c-b-6-p/target.fa --out artifacts/012-fourU-WT-65c-b-6-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/012-fourU-WT-65c-b-6-p_S12_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/012-fourU-WT-65c-b-6-p_S12_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 17:23:48
+Output will be logged to 012-fourU-WT-65c-b-6-p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-34a5274
+args:  --name 012-fourU-WT-65c-b-6-p --target artifacts/012-fourU-WT-65c-b-6-p/target.fa --out artifacts/012-fourU-WT-65c-b-6-p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/012-fourU-WT-65c-b-6-p_S... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240405_M05164_0164_000000000-LH62L/012-fourU-WT-65c-b-6-p_S... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 17:23:48
+Running PrimerLocator at 2025-10-14 17:23:48 . . .
+. . . done at 2025-10-14 17:23:48
+Running FastaFormatChecker at 2025-10-14 17:23:48 . . .
+. . . done at 2025-10-14 17:23:48
+Running BowtieIndexBuilder at 2025-10-14 17:23:48 . . .
+. . . done at 2025-10-14 17:23:49
+Running process group 4 at 2025-10-14 17:23:49 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 17:23:49
+    QualityTrimmer1 . . . started at 2025-10-14 17:23:49
+    QualityTrimmer2 . . . started at 2025-10-14 17:23:49
+    Interleaver . . . started at 2025-10-14 17:23:49
+    Merger . . . started at 2025-10-14 17:23:49
+    Tab6Interleaver . . . started at 2025-10-14 17:23:49
+    BowtieAligner . . . started at 2025-10-14 17:23:49
+    MutationParser_Modified . . . started at 2025-10-14 17:23:49
+    MutationParserGA_Modified . . . started at 2025-10-14 17:23:49
+    MutationCounter_Modified . . . started at 2025-10-14 17:23:49
+    MutationCounterGA_Modified . . . started at 2025-10-14 17:23:49
+  436KiB [====>                                           ] 11% ETA 0:00:07       612KiB [======>                                         ] 16% ETA 0:00:10       796KiB [=========>                                      ] 21% ETA 0:00:11       972KiB [===========>                                    ] 26% ETA 0:00:14 980KiB [===========>                                    ] 26% ETA 0:00:14  1.12MiB [=============>                                  ] 30% ETA 0:00:13      1.30MiB [===============>                                ] 35% ETA 0:00:12      1.48MiB [==================>                             ] 40% ETA 0:00:131.49MiB [==================>                             ] 40% ETA 0:00:13  1.82MiB [=======================>                        ] 50% ETA 0:00:09      2.00MiB [========================>                       ] 54% ETA 0:00:09      2.17MiB [===========================>                    ] 59% ETA 0:00:08      2.33MiB [=============================>                  ] 63% ETA 0:00:072.34MiB [=============================>                  ] 64% ETA 0:00:07  2.50MiB [===============================>                ] 68% ETA 0:00:06      2.67MiB [==================================>             ] 73% ETA 0:00:05      2.85MiB [====================================>           ] 78% ETA 0:00:04      3.02MiB [======================================>         ] 82% ETA 0:00:03      3.20MiB [========================================>       ] 87% ETA 0:00:023.21MiB [========================================>       ] 87% ETA 0:00:02  3.36MiB [===========================================>    ] 92% ETA 0:00:01      3.54MiB [=============================================>  ] 96% ETA 0:00:003.65MiB [==============================================>] 100%  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 25.282 seconds.
+  | 
+  | Pairs:               	197802
+  | Joined:              	191203   	96.664%
+  | Ambiguous:           	6599       	3.336%
+  | No Solution:         	0       	0.000%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	106.0
+  | Standard Deviation:  	1.3
+  | Mode:                	106
+  | 
+  | Insert range:        	40 - 129
+  | 90th percentile:     	106
+  | 75th percentile:     	106
+  | 50th percentile:     	106
+  | 25th percentile:     	106
+  | 10th percentile:     	106
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 197802 reads; of these:
+  |   6599 (3.34%) were paired; of these:
+  |     1736 (26.31%) aligned concordantly 0 times
+  |     4861 (73.66%) aligned concordantly exactly 1 time
+  |     2 (0.03%) aligned concordantly >1 times
+  |     ----
+  |     1736 pairs aligned concordantly 0 times; of these:
+  |       0 (0.00%) aligned discordantly 1 time
+  |     ----
+  |     1736 pairs aligned 0 times concordantly or discordantly; of these:
+  |       3472 mates make up the pairs; of these:
+  |         2070 (59.62%) aligned 0 times
+  |         1402 (40.38%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   191203 (96.66%) were unpaired; of these:
+  |     310 (0.16%) aligned 0 times
+  |     190893 (99.84%) aligned exactly 1 time
+  |     0 (0.00%) aligned >1 times
+  | 98.84% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 012-fourU-WT-65c-b-6-p) (sample: Modified) output message: 
+  |----------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.001314
+  | [50,99]	0.998686
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.653537
+  | 1	0.299146
+  | 2	0.044655
+  | 3	0.002622
+  | 4	0.000036
+  | 5	0.000005
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 012-fourU-WT-65c-b-6-p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.001314
+  | [50,99]	0.998686
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.966550
+  | 1	0.032999
+  | 2	0.000396
+  | 3	0.000041
+  | 4	0.000010
+  | 5	0.000005
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 17:24:15
+Running CalcProfile at 2025-10-14 17:24:15 . . .
+. . . done at 2025-10-14 17:24:15
+Running NormProfile at 2025-10-14 17:24:15 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 012-fourU-WT-65c-b-6-p) output message: 
+|--------------------------------------------------------- 
+| 
+| Signal for G = 0.002 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.03061175, 'C': 0.038875, 'U': 0.00279, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:24:15
+Running CalcProfile at 2025-10-14 17:24:15 . . .
+. . . done at 2025-10-14 17:24:15
+Running NormProfile at 2025-10-14 17:24:15 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 012-fourU-WT-65c-b-6-p) output message: 
+|--------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.0041525, 'GPUR': 0.0039665, 'GPYR': 0.0061023076923076925}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:24:16
+Running TabToShape at 2025-10-14 17:24:16 . . .
+. . . done at 2025-10-14 17:24:16
+Running RenderFigures at 2025-10-14 17:24:16 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 012-fourU-WT-65c-b-6-p) output message: 
+|----------------------------------------------------------- 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 76.9% (10/13) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (2/2) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (13/13) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 83.3% (10/12) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: True
+|         U: True
+|         G: False
+| 
+| 
+|       G and/or U FAILURE, but other reactivities may be usable
+|       Possible causes:
+|        - improper pH control during DMS reaction
+|        - use of a different RT enzyme than MarathonRT
+|        - poor reverse transcription conditions, resulting
+|          in low adduct adduct read-through or detection
+|        - very highly structured or protein bound RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:24:19
+Running RenderMappedDepths at 2025-10-14 17:24:19 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 012-fourU-WT-65c-b-6-p) output message: 
+|---------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGTGTAAGGGTGAAGTGTA           0       18      CTTCACCTTCATTACCTTTA          60      79      197k   
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:24:20
+ShapeMapper run completed at 2025-10-14 17:24:20.
+WARNING: This RNA has a possible poor quality reactivity profile: 012-fourU-WT-65c-b-6-p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-r--r-- 1 ekc5108 b1044 190M Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240424_Lucks24_fourU_DMS_BATCH5-6/060_fourU_WT65c_b_6_m_S156_R1_001.fastq.gz
+-rw-r--r-- 1 ekc5108 b1044 252M Sep 17  2024 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240424_Lucks24_fourU_DMS_BATCH5-6/060_fourU_WT65c_b_6_m_S156_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>060_fourU_WT65c_b_6_m
+ggtgtaagggtgaagtgtaAGGTTGAACTTTTGAATAGTGATTCAGGAGGTTAATGGAAGtaaaggtaatgaaggtgaag
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 060_fourU_WT65c_b_6_m --target artifacts/060_fourU_WT65c_b_6_m/target.fa --out artifacts/060_fourU_WT65c_b_6_m --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240424_Lucks24_fourU_DMS_BATCH5-6/060_fourU_WT65c_b_6_m_S156_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240424_Lucks24_fourU_DMS_BATCH5-6/060_fourU_WT65c_b_6_m_S156_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 17:24:21
+Output will be logged to 060_fourU_WT65c_b_6_m_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-34a5274
+args:  --name 060_fourU_WT65c_b_6_m --target artifacts/060_fourU_WT65c_b_6_m/target.fa --out artifacts/060_fourU_WT65c_b_6_m --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240424_Lucks24_fourU_DMS_BATCH5-6/060_fourU_WT65c_b_6_m_S15... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/240424_Lucks24_fourU_DMS_BATCH5-6/060_fourU_WT65c_b_6_m_S15... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 17:24:21
+Running PrimerLocator at 2025-10-14 17:24:21 . . .
+. . . done at 2025-10-14 17:24:21
+Running FastaFormatChecker at 2025-10-14 17:24:21 . . .
+. . . done at 2025-10-14 17:24:21
+Running BowtieIndexBuilder at 2025-10-14 17:24:21 . . .
+. . . done at 2025-10-14 17:24:21
+Running process group 4 at 2025-10-14 17:24:21 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 17:24:21
+    QualityTrimmer1 . . . started at 2025-10-14 17:24:21
+    QualityTrimmer2 . . . started at 2025-10-14 17:24:22
+    Interleaver . . . started at 2025-10-14 17:24:22
+    Merger . . . started at 2025-10-14 17:24:22
+    Tab6Interleaver . . . started at 2025-10-14 17:24:22
+    BowtieAligner . . . started at 2025-10-14 17:24:22
+    MutationParser_Modified . . . started at 2025-10-14 17:24:22
+    MutationParserGA_Modified . . . started at 2025-10-14 17:24:22
+    MutationCounter_Modified . . . started at 2025-10-14 17:24:22
+    MutationCounterGA_Modified . . . started at 2025-10-14 17:24:22
+  580KiB [>                                               ]  0% ETA 0:05:32 668KiB [>                                               ]  0% ETA 0:09:37  892KiB [>                                               ]  0% ETA 0:10:48       1.67MiB [>                                               ]  0% ETA 0:09:211.68MiB [>                                               ]  0% ETA 0:09:19  2.36MiB [>                                               ]  1% ETA 0:07:55      2.49MiB [>                                               ]  1% ETA 0:09:59      2.54MiB [>                                               ]  1% ETA 0:09:48      2.66MiB [>                                               ]  1% ETA 0:10:30      2.85MiB [>                                               ]  1% ETA 0:10:53      3.05MiB [>                                               ]  1% ETA 0:11:10      3.25MiB [>                                               ]  1% ETA 0:11:25      3.98MiB [>                                               ]  2% ETA 0:10:514.00MiB [>                                               ]  2% ETA 0:10:48  4.73MiB [>                                               ]  2% ETA 0:10:23      4.85MiB [>                                               ]  2% ETA 0:10:08      5.10MiB [>                                               ]  2% ETA 0:10:13      5.35MiB [>                                               ]  2% ETA 0:10:52      5.47MiB [>                                               ]  2% ETA 0:11:10      5.76MiB [>                                               ]  3% ETA 0:11:395.77MiB [>                                               ]  3% ETA 0:11:38  6.28MiB [>                                               ]  3% ETA 0:11:09      6.87MiB [>                                               ]  3% ETA 0:10:36      7.76MiB [>                                               ]  4% ETA 0:09:44      8.29MiB [>                                               ]  4% ETA 0:09:27      8.61MiB [>                                               ]  4% ETA 0:09:25      8.80MiB [>                                               ]  4% ETA 0:09:33      8.94MiB [>                                               ]  4% ETA 0:10:048.95MiB [>                                               ]  4% ETA 0:10:03  9.11MiB [>                                               ]  4% ETA 0:10:12      9.29MiB [>                                               ]  4% ETA 0:10:19      9.44MiB [>                                               ]  4% ETA 0:10:27      9.68MiB [=>                                              ]  5% ETA 0:10:30      9.79MiB [=>                                              ]  5% ETA 0:10:40      9.92MiB [=>                                              ]  5% ETA 0:10:50      10.2MiB [=>                                              ]  5% ETA 0:10:50      10.3MiB [=>                                              ]  5% ETA 0:10:58      10.7MiB [=>                                              ]  5% ETA 0:10:51      11.7MiB [=>                                              ]  6% ETA 0:10:07      11.9MiB [=>                                              ]  6% ETA 0:10:10      12.2MiB [=>                                              ]  6% ETA 0:10:10      12.3MiB [=>                                              ]  6% ETA 0:10:15      12.5MiB [=>                                              ]  6% ETA 0:10:21      12.7MiB [=>                                              ]  6% ETA 0:10:41      12.8MiB [=>                                              ]  6% ETA 0:10:49      12.8MiB [=>                                              ]  6% ETA 0:10:44      12.9MiB [=>                                              ]  6% ETA 0:10:56      13.1MiB [=>                                              ]  6% ETA 0:10:57      13.4MiB [==>                                             ]  7% ETA 0:10:53      13.4MiB [==>                                             ]  7% ETA 0:11:06      13.8MiB [==>                                             ]  7% ETA 0:11:02      14.1MiB [==>                                             ]  7% ETA 0:10:55      14.7MiB [==>                                             ]  7% ETA 0:10:51      15.0MiB [==>                                             ]  7% ETA 0:10:36      15.3MiB [==>                                             ]  8% ETA 0:10:35      15.4MiB [==>                                             ]  8% ETA 0:10:43      15.5MiB [==>                                             ]  8% ETA 0:10:49      15.6MiB [==>                                             ]  8% ETA 0:10:55      15.7MiB [==>                                             ]  8% ETA 0:11:1115.8MiB [==>                                             ]  8% ETA 0:11:10  16.1MiB [==>                                             ]  8% ETA 0:11:16      16.2MiB [==>                                             ]  8% ETA 0:11:2116.2MiB [==>                                             ]  8% ETA 0:11:21  16.5MiB [==>                                             ]  8% ETA 0:11:31      16.6MiB [==>                                             ]  8% ETA 0:11:3616.6MiB [==>                                             ]  8% ETA 0:11:36  16.7MiB [==>                                             ]  8% ETA 0:11:52      16.8MiB [==>                                             ]  8% ETA 0:11:46      17.0MiB [===>                                            ]  9% ETA 0:11:57      17.2MiB [===>                                            ]  9% ETA 0:12:01      17.3MiB [===>                                            ]  9% ETA 0:12:06      17.4MiB [===>                                            ]  9% ETA 0:12:11      17.6MiB [===>                                            ]  9% ETA 0:12:12      17.7MiB [===>                                            ]  9% ETA 0:12:15      17.9MiB [===>                                            ]  9% ETA 0:12:17      18.1MiB [===>                                            ]  9% ETA 0:12:18      18.3MiB [===>                                            ]  9% ETA 0:12:2718.3MiB [===>                                            ]  9% ETA 0:12:27  18.5MiB [===>                                            ]  9% ETA 0:12:27      18.7MiB [===>                                            ]  9% ETA 0:12:27      19.6MiB [===>                                            ] 10% ETA 0:12:0519.6MiB [===>                                            ] 10% ETA 0:12:04  20.4MiB [===>                                            ] 10% ETA 0:11:5020.4MiB [===>                                            ] 10% ETA 0:11:50  20.6MiB [===>                                            ] 10% ETA 0:11:50      20.7MiB [===>                                            ] 10% ETA 0:12:02      20.9MiB [====>                                           ] 11% ETA 0:12:05      21.0MiB [====>                                           ] 11% ETA 0:12:08      21.2MiB [====>                                           ] 11% ETA 0:12:08      21.4MiB [====>                                           ] 11% ETA 0:12:02      21.4MiB [====>                                           ] 11% ETA 0:12:15      21.6MiB [====>                                           ] 11% ETA 0:12:14      21.8MiB [====>                                           ] 11% ETA 0:12:08      21.9MiB [====>                                           ] 11% ETA 0:12:12      22.3MiB [====>                                           ] 11% ETA 0:12:14      22.4MiB [====>                                           ] 11% ETA 0:12:17      22.5MiB [====>                                           ] 11% ETA 0:12:19      22.7MiB [====>                                           ] 11% ETA 0:12:21      22.8MiB [====>                                           ] 12% ETA 0:12:25      22.9MiB [====>                                           ] 12% ETA 0:12:28      23.0MiB [====>                                           ] 12% ETA 0:12:31      23.3MiB [====>                                           ] 12% ETA 0:12:19      24.0MiB [====>                                           ] 12% ETA 0:12:08      24.7MiB [=====>                                          ] 13% ETA 0:11:45      24.9MiB [=====>                                          ] 13% ETA 0:11:51      25.1MiB [=====>                                          ] 13% ETA 0:11:45      25.3MiB [=====>                                          ] 13% ETA 0:11:46      25.5MiB [=====>                                          ] 13% ETA 0:11:52      25.7MiB [=====>                                          ] 13% ETA 0:11:51      25.8MiB [=====>                                          ] 13% ETA 0:11:54      25.9MiB [=====>                                          ] 13% ETA 0:11:50      26.1MiB [=====>                                          ] 13% ETA 0:11:51      26.2MiB [=====>                                          ] 13% ETA 0:11:55      26.4MiB [=====>                                          ] 13% ETA 0:12:00      26.5MiB [=====>                                          ] 14% ETA 0:12:0326.6MiB [=====>                                          ] 14% ETA 0:12:01  26.6MiB [=====>                                          ] 14% ETA 0:12:11      26.7MiB [=====>                                          ] 14% ETA 0:12:08      27.0MiB [=====>                                          ] 14% ETA 0:12:1327.0MiB [=====>                                          ] 14% ETA 0:12:13  27.3MiB [=====>                                          ] 14% ETA 0:12:14      27.4MiB [=====>                                          ] 14% ETA 0:12:11      27.6MiB [=====>                                          ] 14% ETA 0:12:2127.7MiB [=====>                                          ] 14% ETA 0:12:21  28.0MiB [=====>                                          ] 14% ETA 0:12:16      28.1MiB [=====>                                          ] 14% ETA 0:12:19      28.3MiB [=====>                                          ] 14% ETA 0:12:17      28.4MiB [======>                                         ] 15% ETA 0:12:20      28.5MiB [======>                                         ] 15% ETA 0:12:22      28.8MiB [======>                                         ] 15% ETA 0:12:21      29.0MiB [======>                                         ] 15% ETA 0:12:20      29.1MiB [======>                                         ] 15% ETA 0:12:21      29.2MiB [======>                                         ] 15% ETA 0:12:23      29.4MiB [======>                                         ] 15% ETA 0:12:24      29.6MiB [======>                                         ] 15% ETA 0:12:22      29.8MiB [======>                                         ] 15% ETA 0:12:22      30.0MiB [======>                                         ] 15% ETA 0:12:23      30.1MiB [======>                                         ] 15% ETA 0:12:24      30.3MiB [======>                                         ] 16% ETA 0:12:24      30.4MiB [======>                                         ] 16% ETA 0:12:26      30.5MiB [======>                                         ] 16% ETA 0:12:28      30.6MiB [======>                                         ] 16% ETA 0:12:29      30.8MiB [======>                                         ] 16% ETA 0:12:3630.8MiB [======>                                         ] 16% ETA 0:12:35  30.9MiB [======>                                         ] 16% ETA 0:12:38      31.0MiB [======>                                         ] 16% ETA 0:12:39      31.2MiB [======>                                         ] 16% ETA 0:12:38      31.3MiB [======>                                         ] 16% ETA 0:12:39      31.6MiB [======>                                         ] 16% ETA 0:12:38      31.7MiB [======>                                         ] 16% ETA 0:12:39      32.1MiB [======>                                         ] 16% ETA 0:12:33      32.4MiB [=======>                                        ] 17% ETA 0:12:28      32.7MiB [=======>                                        ] 17% ETA 0:12:25      32.9MiB [=======>                                        ] 17% ETA 0:12:24      33.1MiB [=======>                                        ] 17% ETA 0:12:25      33.3MiB [=======>                                        ] 17% ETA 0:12:23      33.3MiB [=======>                                        ] 17% ETA 0:12:28      33.5MiB [=======>                                        ] 17% ETA 0:12:26      33.8MiB [=======>                                        ] 17% ETA 0:12:25      34.0MiB [=======>                                        ] 17% ETA 0:12:2334.1MiB [=======>                                        ] 18% ETA 0:12:26  34.3MiB [=======>                                        ] 18% ETA 0:12:23      34.4MiB [=======>                                        ] 18% ETA 0:12:25      34.7MiB [=======>                                        ] 18% ETA 0:12:23      34.8MiB [=======>                                        ] 18% ETA 0:12:2934.8MiB [=======>                                        ] 18% ETA 0:12:29  34.9MiB [=======>                                        ] 18% ETA 0:12:30      35.0MiB [=======>                                        ] 18% ETA 0:12:31      35.3MiB [=======>                                        ] 18% ETA 0:12:29      35.4MiB [=======>                                        ] 18% ETA 0:12:3535.4MiB [=======>                                        ] 18% ETA 0:12:35  35.7MiB [=======>                                        ] 18% ETA 0:12:31      36.0MiB [========>                                       ] 19% ETA 0:12:29      36.1MiB [========>                                       ] 19% ETA 0:12:30      36.2MiB [========>                                       ] 19% ETA 0:12:31      36.4MiB [========>                                       ] 19% ETA 0:12:3436.4MiB [========>                                       ] 19% ETA 0:12:34  36.6MiB [========>                                       ] 19% ETA 0:12:34      36.8MiB [========>                                       ] 19% ETA 0:12:33      36.9MiB [========>                                       ] 19% ETA 0:12:33      37.0MiB [========>                                       ] 19% ETA 0:12:35      37.1MiB [========>                                       ] 19% ETA 0:12:36      37.2MiB [========>                                       ] 19% ETA 0:12:38      37.5MiB [========>                                       ] 19% ETA 0:12:35      37.8MiB [========>                                       ] 19% ETA 0:12:32      37.8MiB [========>                                       ] 20% ETA 0:12:35      38.2MiB [========>                                       ] 20% ETA 0:12:3538.2MiB [========>                                       ] 20% ETA 0:12:35  38.5MiB [========>                                       ] 20% ETA 0:12:30      38.7MiB [========>                                       ] 20% ETA 0:12:3338.7MiB [========>                                       ] 20% ETA 0:12:33  39.1MiB [========>                                       ] 20% ETA 0:12:3239.1MiB [========>                                       ] 20% ETA 0:12:32  39.5MiB [========>                                       ] 20% ETA 0:12:30      39.7MiB [========>                                       ] 20% ETA 0:12:25      40.3MiB [=========>                                      ] 21% ETA 0:12:18      40.7MiB [=========>                                      ] 21% ETA 0:12:13      40.9MiB [=========>                                      ] 21% ETA 0:12:09      41.1MiB [=========>                                      ] 21% ETA 0:12:10      41.3MiB [=========>                                      ] 21% ETA 0:12:07      41.5MiB [=========>                                      ] 21% ETA 0:12:08      41.8MiB [=========>                                      ] 22% ETA 0:12:0641.8MiB [=========>                                      ] 22% ETA 0:12:05  42.1MiB [=========>                                      ] 22% ETA 0:12:05      42.3MiB [=========>                                      ] 22% ETA 0:12:05      42.5MiB [=========>                                      ] 22% ETA 0:12:03      42.6MiB [=========>                                      ] 22% ETA 0:12:04      43.7MiB [==========>                                     ] 23% ETA 0:11:45      44.2MiB [==========>                                     ] 23% ETA 0:11:35      44.4MiB [==========>                                     ] 23% ETA 0:11:37      44.7MiB [==========>                                     ] 23% ETA 0:11:35      44.8MiB [==========>                                     ] 23% ETA 0:11:36      45.0MiB [==========>                                     ] 23% ETA 0:11:34      45.5MiB [==========>                                     ] 24% ETA 0:11:28      46.1MiB [==========>                                     ] 24% ETA 0:11:19      46.6MiB [==========>                                     ] 24% ETA 0:11:13      46.7MiB [==========>                                     ] 24% ETA 0:11:10      46.8MiB [==========>                                     ] 24% ETA 0:11:11      47.0MiB [==========>                                     ] 24% ETA 0:11:14      47.1MiB [==========>                                     ] 24% ETA 0:11:14      47.3MiB [===========>                                    ] 25% ETA 0:11:14      47.5MiB [===========>                                    ] 25% ETA 0:11:14      47.7MiB [===========>                                    ] 25% ETA 0:11:1247.7MiB [===========>                                    ] 25% ETA 0:11:12  48.0MiB [===========>                                    ] 25% ETA 0:11:13      48.2MiB [===========>                                    ] 25% ETA 0:11:11      48.6MiB [===========>                                    ] 25% ETA 0:11:06      49.1MiB [===========>                                    ] 25% ETA 0:11:01      49.5MiB [===========>                                    ] 26% ETA 0:10:57      49.7MiB [===========>                                    ] 26% ETA 0:10:55      50.0MiB [===========>                                    ] 26% ETA 0:10:53      50.3MiB [===========>                                    ] 26% ETA 0:10:51      50.6MiB [===========>                                    ] 26% ETA 0:10:48      50.9MiB [===========>                                    ] 26% ETA 0:10:46      51.0MiB [===========>                                    ] 26% ETA 0:10:46      51.2MiB [===========>                                    ] 27% ETA 0:10:46      51.4MiB [===========>                                    ] 27% ETA 0:10:45      51.5MiB [===========>                                    ] 27% ETA 0:10:45      51.8MiB [===========>                                    ] 27% ETA 0:10:44      51.9MiB [===========>                                    ] 27% ETA 0:10:45      52.0MiB [===========>                                    ] 27% ETA 0:10:45      52.1MiB [===========>                                    ] 27% ETA 0:10:46      52.2MiB [===========>                                    ] 27% ETA 0:10:47      52.3MiB [===========>                                    ] 27% ETA 0:10:48      52.5MiB [===========>                                    ] 27% ETA 0:10:44      52.7MiB [===========>                                    ] 27% ETA 0:10:47      52.9MiB [===========>                                    ] 27% ETA 0:10:46      53.1MiB [============>                                   ] 28% ETA 0:10:43      53.2MiB [============>                                   ] 28% ETA 0:10:46      53.5MiB [============>                                   ] 28% ETA 0:10:43      53.7MiB [============>                                   ] 28% ETA 0:10:42      53.8MiB [============>                                   ] 28% ETA 0:10:43      54.0MiB [============>                                   ] 28% ETA 0:10:41      54.1MiB [============>                                   ] 28% ETA 0:10:42      54.4MiB [============>                                   ] 28% ETA 0:10:40      54.6MiB [============>                                   ] 28% ETA 0:10:40      54.7MiB [============>                                   ] 28% ETA 0:10:41      55.0MiB [============>                                   ] 29% ETA 0:10:39      55.1MiB [============>                                   ] 29% ETA 0:10:39      55.3MiB [============>                                   ] 29% ETA 0:10:36      55.5MiB [============>                                   ] 29% ETA 0:10:38      55.6MiB [============>                                   ] 29% ETA 0:10:38      55.7MiB [============>                                   ] 29% ETA 0:10:39      55.9MiB [============>                                   ] 29% ETA 0:10:38      56.2MiB [============>                                   ] 29% ETA 0:10:3856.2MiB [============>                                   ] 29% ETA 0:10:38  56.6MiB [============>                                   ] 29% ETA 0:10:34      56.8MiB [=============>                                  ] 30% ETA 0:10:34      56.9MiB [=============>                                  ] 30% ETA 0:10:34      57.0MiB [=============>                                  ] 30% ETA 0:10:34      57.2MiB [=============>                                  ] 30% ETA 0:10:34      57.3MiB [=============>                                  ] 30% ETA 0:10:37      57.4MiB [=============>                                  ] 30% ETA 0:10:38      57.4MiB [=============>                                  ] 30% ETA 0:10:37      57.5MiB [=============>                                  ] 30% ETA 0:10:38      57.6MiB [=============>                                  ] 30% ETA 0:10:38      57.7MiB [=============>                                  ] 30% ETA 0:10:4157.7MiB [=============>                                  ] 30% ETA 0:10:41  58.1MiB [=============>                                  ] 30% ETA 0:10:38      58.2MiB [=============>                                  ] 30% ETA 0:10:38      58.3MiB [=============>                                  ] 30% ETA 0:10:39      58.5MiB [=============>                                  ] 30% ETA 0:10:38      58.6MiB [=============>                                  ] 31% ETA 0:10:38      58.8MiB [=============>                                  ] 31% ETA 0:10:38      59.0MiB [=============>                                  ] 31% ETA 0:10:37      59.2MiB [=============>                                  ] 31% ETA 0:10:35      59.3MiB [=============>                                  ] 31% ETA 0:10:36      59.6MiB [=============>                                  ] 31% ETA 0:10:34      59.7MiB [=============>                                  ] 31% ETA 0:10:34      59.9MiB [=============>                                  ] 31% ETA 0:10:34      60.0MiB [=============>                                  ] 31% ETA 0:10:3660.1MiB [=============>                                  ] 31% ETA 0:10:35  60.2MiB [=============>                                  ] 31% ETA 0:10:36      60.3MiB [=============>                                  ] 31% ETA 0:10:36      60.4MiB [=============>                                  ] 31% ETA 0:10:36      60.6MiB [==============>                                 ] 32% ETA 0:10:35      60.8MiB [==============>                                 ] 32% ETA 0:10:35      60.9MiB [==============>                                 ] 32% ETA 0:10:35      61.0MiB [==============>                                 ] 32% ETA 0:10:37      61.2MiB [==============>                                 ] 32% ETA 0:10:37      61.3MiB [==============>                                 ] 32% ETA 0:10:35      61.4MiB [==============>                                 ] 32% ETA 0:10:36      61.5MiB [==============>                                 ] 32% ETA 0:10:36      61.8MiB [==============>                                 ] 32% ETA 0:10:34      61.9MiB [==============>                                 ] 32% ETA 0:10:36      62.0MiB [==============>                                 ] 32% ETA 0:10:3662.1MiB [==============>                                 ] 32% ETA 0:10:36  62.2MiB [==============>                                 ] 32% ETA 0:10:36      62.4MiB [==============>                                 ] 33% ETA 0:10:34      62.5MiB [==============>                                 ] 33% ETA 0:10:35      62.7MiB [==============>                                 ] 33% ETA 0:10:34      62.8MiB [==============>                                 ] 33% ETA 0:10:35      62.9MiB [==============>                                 ] 33% ETA 0:10:36      63.0MiB [==============>                                 ] 33% ETA 0:10:3863.0MiB [==============>                                 ] 33% ETA 0:10:37  63.1MiB [==============>                                 ] 33% ETA 0:10:38      63.5MiB [==============>                                 ] 33% ETA 0:10:36      63.6MiB [==============>                                 ] 33% ETA 0:10:35      63.7MiB [==============>                                 ] 33% ETA 0:10:37      63.8MiB [==============>                                 ] 33% ETA 0:10:3763.8MiB [==============>                                 ] 33% ETA 0:10:37  63.9MiB [==============>                                 ] 33% ETA 0:10:40      64.0MiB [==============>                                 ] 33% ETA 0:10:40      64.3MiB [==============>                                 ] 33% ETA 0:10:39      64.4MiB [===============>                                ] 34% ETA 0:10:37      64.5MiB [===============>                                ] 34% ETA 0:10:39      64.7MiB [===============>                                ] 34% ETA 0:10:37      64.9MiB [===============>                                ] 34% ETA 0:10:37      65.0MiB [===============>                                ] 34% ETA 0:10:35      65.1MiB [===============>                                ] 34% ETA 0:10:37      65.2MiB [===============>                                ] 34% ETA 0:10:37      65.3MiB [===============>                                ] 34% ETA 0:10:4065.3MiB [===============>                                ] 34% ETA 0:10:40  65.6MiB [===============>                                ] 34% ETA 0:10:37      65.8MiB [===============>                                ] 34% ETA 0:10:36      65.9MiB [===============>                                ] 34% ETA 0:10:36      66.2MiB [===============>                                ] 35% ETA 0:10:34      66.3MiB [===============>                                ] 35% ETA 0:10:34      66.4MiB [===============>                                ] 35% ETA 0:10:35      66.7MiB [===============>                                ] 35% ETA 0:10:33      66.8MiB [===============>                                ] 35% ETA 0:10:33      67.1MiB [===============>                                ] 35% ETA 0:10:31      67.2MiB [===============>                                ] 35% ETA 0:10:31      67.4MiB [===============>                                ] 35% ETA 0:10:29      67.5MiB [===============>                                ] 35% ETA 0:10:29      67.7MiB [===============>                                ] 35% ETA 0:10:29      67.9MiB [===============>                                ] 35% ETA 0:10:28      68.1MiB [================>                               ] 36% ETA 0:10:27      68.3MiB [================>                               ] 36% ETA 0:10:26      68.5MiB [================>                               ] 36% ETA 0:10:24      68.6MiB [================>                               ] 36% ETA 0:10:24      68.8MiB [================>                               ] 36% ETA 0:10:2368.9MiB [================>                               ] 36% ETA 0:10:24  69.1MiB [================>                               ] 36% ETA 0:10:23      69.2MiB [================>                               ] 36% ETA 0:10:23      69.3MiB [================>                               ] 36% ETA 0:10:23      69.4MiB [================>                               ] 36% ETA 0:10:23      69.6MiB [================>                               ] 36% ETA 0:10:23      69.7MiB [================>                               ] 36% ETA 0:10:23      69.8MiB [================>                               ] 36% ETA 0:10:23      69.9MiB [================>                               ] 36% ETA 0:10:23      70.1MiB [================>                               ] 37% ETA 0:10:2570.1MiB [================>                               ] 37% ETA 0:10:24  70.2MiB [================>                               ] 37% ETA 0:10:25      70.4MiB [================>                               ] 37% ETA 0:10:23      70.5MiB [================>                               ] 37% ETA 0:10:23      70.6MiB [================>                               ] 37% ETA 0:10:23      70.9MiB [================>                               ] 37% ETA 0:10:22      71.0MiB [================>                               ] 37% ETA 0:10:22      71.2MiB [================>                               ] 37% ETA 0:10:20      71.4MiB [================>                               ] 37% ETA 0:10:19      71.6MiB [================>                               ] 37% ETA 0:10:18      71.7MiB [================>                               ] 37% ETA 0:10:18      72.0MiB [=================>                              ] 38% ETA 0:10:16      72.1MiB [=================>                              ] 38% ETA 0:10:15      72.4MiB [=================>                              ] 38% ETA 0:10:14      72.5MiB [=================>                              ] 38% ETA 0:10:14      72.6MiB [=================>                              ] 38% ETA 0:10:13      72.8MiB [=================>                              ] 38% ETA 0:10:13      72.9MiB [=================>                              ] 38% ETA 0:10:13      73.0MiB [=================>                              ] 38% ETA 0:10:13      73.1MiB [=================>                              ] 38% ETA 0:10:14      73.1MiB [=================>                              ] 38% ETA 0:10:15      73.3MiB [=================>                              ] 38% ETA 0:10:14      73.6MiB [=================>                              ] 38% ETA 0:10:12      73.7MiB [=================>                              ] 38% ETA 0:10:12      73.8MiB [=================>                              ] 39% ETA 0:10:11      74.0MiB [=================>                              ] 39% ETA 0:10:11      74.2MiB [=================>                              ] 39% ETA 0:10:09      74.3MiB [=================>                              ] 39% ETA 0:10:09      74.6MiB [=================>                              ] 39% ETA 0:10:08      74.7MiB [=================>                              ] 39% ETA 0:10:07      74.9MiB [=================>                              ] 39% ETA 0:10:06      75.0MiB [=================>                              ] 39% ETA 0:10:06      75.3MiB [=================>                              ] 39% ETA 0:10:04      75.4MiB [=================>                              ] 39% ETA 0:10:04      75.5MiB [=================>                              ] 39% ETA 0:10:04      75.7MiB [==================>                             ] 40% ETA 0:10:03      75.9MiB [==================>                             ] 40% ETA 0:10:03      76.1MiB [==================>                             ] 40% ETA 0:10:01      76.2MiB [==================>                             ] 40% ETA 0:10:01      76.3MiB [==================>                             ] 40% ETA 0:10:01      76.6MiB [==================>                             ] 40% ETA 0:09:59      76.7MiB [==================>                             ] 40% ETA 0:09:59      76.8MiB [==================>                             ] 40% ETA 0:09:58      77.1MiB [==================>                             ] 40% ETA 0:09:56      77.3MiB [==================>                             ] 40% ETA 0:09:57      77.3MiB [==================>                             ] 40% ETA 0:09:56      77.6MiB [==================>                             ] 41% ETA 0:09:54      77.8MiB [==================>                             ] 41% ETA 0:09:53      78.0MiB [==================>                             ] 41% ETA 0:09:52      78.1MiB [==================>                             ] 41% ETA 0:09:52      78.4MiB [==================>                             ] 41% ETA 0:09:50      78.6MiB [==================>                             ] 41% ETA 0:09:49      78.7MiB [==================>                             ] 41% ETA 0:09:5078.7MiB [==================>                             ] 41% ETA 0:09:50  79.1MiB [==================>                             ] 41% ETA 0:09:46      79.2MiB [==================>                             ] 41% ETA 0:09:46      79.4MiB [==================>                             ] 41% ETA 0:09:46      79.5MiB [===================>                            ] 42% ETA 0:09:45      79.6MiB [===================>                            ] 42% ETA 0:09:47      79.6MiB [===================>                            ] 42% ETA 0:09:46      79.7MiB [===================>                            ] 42% ETA 0:09:47      80.1MiB [===================>                            ] 42% ETA 0:09:43      81.2MiB [===================>                            ] 42% ETA 0:09:32      82.2MiB [===================>                            ] 43% ETA 0:09:20      83.4MiB [====================>                           ] 44% ETA 0:09:07      84.6MiB [====================>                           ] 44% ETA 0:08:55      86.0MiB [====================>                           ] 45% ETA 0:08:39      86.6MiB [====================>                           ] 45% ETA 0:08:34      86.9MiB [====================>                           ] 45% ETA 0:08:32      87.8MiB [=====================>                          ] 46% ETA 0:08:24      87.9MiB [=====================>                          ] 46% ETA 0:08:23      88.2MiB [=====================>                          ] 46% ETA 0:08:22      88.4MiB [=====================>                          ] 46% ETA 0:08:20      88.6MiB [=====================>                          ] 46% ETA 0:08:21      88.9MiB [=====================>                          ] 46% ETA 0:08:18      89.1MiB [=====================>                          ] 47% ETA 0:08:16      90.0MiB [=====================>                          ] 47% ETA 0:08:09      90.2MiB [=====================>                          ] 47% ETA 0:08:08      90.3MiB [=====================>                          ] 47% ETA 0:08:08      90.8MiB [======================>                         ] 48% ETA 0:08:04      91.3MiB [======================>                         ] 48% ETA 0:07:59      91.9MiB [======================>                         ] 48% ETA 0:07:55      92.1MiB [======================>                         ] 48% ETA 0:07:54      92.2MiB [======================>                         ] 48% ETA 0:07:54      92.3MiB [======================>                         ] 48% ETA 0:07:53      92.6MiB [======================>                         ] 48% ETA 0:07:51      92.8MiB [======================>                         ] 49% ETA 0:07:51      92.9MiB [======================>                         ] 49% ETA 0:07:51      93.0MiB [======================>                         ] 49% ETA 0:07:51      93.2MiB [======================>                         ] 49% ETA 0:07:50      93.3MiB [======================>                         ] 49% ETA 0:07:49      93.5MiB [======================>                         ] 49% ETA 0:07:49      93.7MiB [======================>                         ] 49% ETA 0:07:47      93.9MiB [======================>                         ] 49% ETA 0:07:47      94.1MiB [======================>                         ] 49% ETA 0:07:46      94.2MiB [======================>                         ] 49% ETA 0:07:46      94.4MiB [======================>                         ] 49% ETA 0:07:44      95.5MiB [=======================>                        ] 50% ETA 0:07:35      96.1MiB [=======================>                        ] 50% ETA 0:07:31      96.7MiB [=======================>                        ] 51% ETA 0:07:25      97.3MiB [=======================>                        ] 51% ETA 0:07:21      97.7MiB [=======================>                        ] 51% ETA 0:07:18      98.8MiB [=======================>                        ] 52% ETA 0:07:09      99.3MiB [=======================>                        ] 52% ETA 0:07:06      100MiB [=======================>                        ] 52% ETA 0:06:59       100MiB [========================>                       ] 53% ETA 0:06:57       100MiB [========================>                       ] 53% ETA 0:06:56       100MiB [========================>                       ] 53% ETA 0:06:54       101MiB [========================>                       ] 53% ETA 0:06:54       101MiB [========================>                       ] 53% ETA 0:06:49       102MiB [========================>                       ] 54% ETA 0:06:45       102MiB [========================>                       ] 54% ETA 0:06:42       103MiB [========================>                       ] 54% ETA 0:06:33 103MiB [========================>                       ] 54% ETA 0:06:33  105MiB [=========================>                      ] 55% ETA 0:06:19       107MiB [=========================>                      ] 56% ETA 0:06:06       109MiB [==========================>                     ] 57% ETA 0:05:52       111MiB [==========================>                     ] 58% ETA 0:05:37       112MiB [===========================>                    ] 59% ETA 0:05:33       112MiB [===========================>                    ] 59% ETA 0:05:32       112MiB [===========================>                    ] 59% ETA 0:05:29       113MiB [===========================>                    ] 60% ETA 0:05:25       114MiB [===========================>                    ] 60% ETA 0:05:18       115MiB [===========================>                    ] 60% ETA 0:05:15       115MiB [============================>                   ] 61% ETA 0:05:14       116MiB [============================>                   ] 61% ETA 0:05:08       117MiB [============================>                   ] 62% ETA 0:05:02       118MiB [============================>                   ] 62% ETA 0:04:54       119MiB [=============================>                  ] 63% ETA 0:04:49       120MiB [=============================>                  ] 63% ETA 0:04:45       120MiB [=============================>                  ] 63% ETA 0:04:40       121MiB [=============================>                  ] 64% ETA 0:04:34       123MiB [==============================>                 ] 65% ETA 0:04:26       124MiB [==============================>                 ] 65% ETA 0:04:21 124MiB [==============================>                 ] 65% ETA 0:04:21  125MiB [==============================>                 ] 66% ETA 0:04:15       126MiB [===============================>                ] 67% ETA 0:04:07       127MiB [===============================>                ] 67% ETA 0:04:04       127MiB [===============================>                ] 67% ETA 0:04:03       128MiB [===============================>                ] 67% ETA 0:03:59 128MiB [===============================>                ] 67% ETA 0:03:59  129MiB [===============================>                ] 68% ETA 0:03:52       130MiB [================================>               ] 69% ETA 0:03:47       131MiB [================================>               ] 69% ETA 0:03:41       133MiB [================================>               ] 70% ETA 0:03:33       134MiB [================================>               ] 70% ETA 0:03:30       134MiB [=================================>              ] 71% ETA 0:03:29       134MiB [=================================>              ] 71% ETA 0:03:26       134MiB [=================================>              ] 71% ETA 0:03:26       136MiB [=================================>              ] 72% ETA 0:03:20       138MiB [==================================>             ] 73% ETA 0:03:09       140MiB [==================================>             ] 74% ETA 0:03:00       142MiB [===================================>            ] 75% ETA 0:02:49       144MiB [===================================>            ] 76% ETA 0:02:40       146MiB [===================================>            ] 77% ETA 0:02:34       146MiB [===================================>            ] 77% ETA 0:02:30       147MiB [====================================>           ] 78% ETA 0:02:27       148MiB [====================================>           ] 78% ETA 0:02:22       149MiB [====================================>           ] 79% ETA 0:02:18       151MiB [====================================>           ] 79% ETA 0:02:12       152MiB [=====================================>          ] 80% ETA 0:02:08       153MiB [=====================================>          ] 80% ETA 0:02:04       154MiB [=====================================>          ] 81% ETA 0:02:00       154MiB [=====================================>          ] 81% ETA 0:01:57 154MiB [=====================================>          ] 81% ETA 0:01:57  155MiB [======================================>         ] 82% ETA 0:01:53       156MiB [======================================>         ] 82% ETA 0:01:50       157MiB [======================================>         ] 83% ETA 0:01:47       157MiB [======================================>         ] 83% ETA 0:01:46       158MiB [======================================>         ] 83% ETA 0:01:44       158MiB [======================================>         ] 83% ETA 0:01:43       158MiB [======================================>         ] 83% ETA 0:01:42       159MiB [=======================================>        ] 84% ETA 0:01:39       160MiB [=======================================>        ] 84% ETA 0:01:37       160MiB [=======================================>        ] 84% ETA 0:01:36       161MiB [=======================================>        ] 85% ETA 0:01:33       162MiB [=======================================>        ] 85% ETA 0:01:29       162MiB [========================================>       ] 86% ETA 0:01:28       163MiB [========================================>       ] 86% ETA 0:01:27       163MiB [========================================>       ] 86% ETA 0:01:27 163MiB [========================================>       ] 86% ETA 0:01:26  164MiB [========================================>       ] 86% ETA 0:01:23       164MiB [========================================>       ] 87% ETA 0:01:20       165MiB [========================================>       ] 87% ETA 0:01:18       165MiB [========================================>       ] 87% ETA 0:01:17       166MiB [========================================>       ] 87% ETA 0:01:16       166MiB [========================================>       ] 87% ETA 0:01:16       166MiB [========================================>       ] 87% ETA 0:01:16       166MiB [=========================================>      ] 88% ETA 0:01:15       166MiB [=========================================>      ] 88% ETA 0:01:15       167MiB [=========================================>      ] 88% ETA 0:01:12       168MiB [=========================================>      ] 88% ETA 0:01:09       169MiB [=========================================>      ] 89% ETA 0:01:05       169MiB [=========================================>      ] 89% ETA 0:01:04       169MiB [=========================================>      ] 89% ETA 0:01:04       169MiB [=========================================>      ] 89% ETA 0:01:03       169MiB [=========================================>      ] 89% ETA 0:01:03 169MiB [=========================================>      ] 89% ETA 0:01:03  171MiB [==========================================>     ] 90% ETA 0:00:58       172MiB [==========================================>     ] 91% ETA 0:00:55       172MiB [==========================================>     ] 91% ETA 0:00:54       172MiB [==========================================>     ] 91% ETA 0:00:53       173MiB [==========================================>     ] 91% ETA 0:00:51 173MiB [==========================================>     ] 91% ETA 0:00:51  174MiB [===========================================>    ] 92% ETA 0:00:46       175MiB [===========================================>    ] 92% ETA 0:00:44       176MiB [===========================================>    ] 93% ETA 0:00:40       177MiB [============================================>   ] 94% ETA 0:00:36       178MiB [============================================>   ] 94% ETA 0:00:33       180MiB [============================================>   ] 95% ETA 0:00:27       181MiB [============================================>   ] 95% ETA 0:00:25       182MiB [=============================================>  ] 96% ETA 0:00:21       183MiB [=============================================>  ] 97% ETA 0:00:17       185MiB [==============================================> ] 98% ETA 0:00:10       186MiB [==============================================> ] 98% ETA 0:00:06       188MiB [==============================================> ] 99% ETA 0:00:00       189MiB [==============================================>] 100%                   /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 586.280 seconds.
+  | 
+  | Pairs:               	5022783
+  | Joined:              	2210278   	44.005%
+  | Ambiguous:           	2764601   	55.041%
+  | No Solution:         	47904   	0.954%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	106.0
+  | Standard Deviation:  	1.7
+  | Mode:                	106
+  | 
+  | Insert range:        	41 - 208
+  | 90th percentile:     	106
+  | 75th percentile:     	106
+  | 50th percentile:     	106
+  | 25th percentile:     	106
+  | 10th percentile:     	106
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 5022783 reads; of these:
+  |   2812505 (55.99%) were paired; of these:
+  |     1839292 (65.40%) aligned concordantly 0 times
+  |     973075 (34.60%) aligned concordantly exactly 1 time
+  |     138 (0.00%) aligned concordantly >1 times
+  |     ----
+  |     1839292 pairs aligned concordantly 0 times; of these:
+  |       65309 (3.55%) aligned discordantly 1 time
+  |     ----
+  |     1773983 pairs aligned 0 times concordantly or discordantly; of these:
+  |       3547966 mates make up the pairs; of these:
+  |         2492891 (70.26%) aligned 0 times
+  |         1055073 (29.74%) aligned exactly 1 time
+  |         2 (0.00%) aligned >1 times
+  |   2210278 (44.01%) were unpaired; of these:
+  |     2003 (0.09%) aligned 0 times
+  |     2208224 (99.91%) aligned exactly 1 time
+  |     51 (0.00%) aligned >1 times
+  | 68.16% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 060_fourU_WT65c_b_6_m) (sample: Modified) output message: 
+  |---------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.034135
+  | [50,99]	0.965865
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.941822
+  | 1	0.055970
+  | 2	0.002135
+  | 3	0.000051
+  | 4	0.000005
+  | 5	0.000002
+  | 6	0.000002
+  | 7	0.000001
+  | 8	0.000000
+  | 9	0.000001
+  | 10	0.000002
+  | 11	0.000001
+  | 12	0.000001
+  | 13	0.000003
+  | 14	0.000002
+  | 15	0.000001
+  | 16	0.000001
+  | 17	0.000001
+  | 18	0.000001
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 060_fourU_WT65c_b_6_m) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------ 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.034135
+  | [50,99]	0.965865
+  | [100,149]	0.000000
+  | [150,199]	0.000000
+  | [200,249]	0.000000
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.995024
+  | 1	0.004912
+  | 2	0.000031
+  | 3	0.000011
+  | 4	0.000004
+  | 5	0.000002
+  | 6	0.000002
+  | 7	0.000001
+  | 8	0.000000
+  | 9	0.000001
+  | 10	0.000002
+  | 11	0.000001
+  | 12	0.000001
+  | 13	0.000003
+  | 14	0.000002
+  | 15	0.000001
+  | 16	0.000001
+  | 17	0.000001
+  | 18	0.000001
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 17:34:08
+Running CalcProfile at 2025-10-14 17:34:08 . . .
+. . . done at 2025-10-14 17:34:08
+Running NormProfile at 2025-10-14 17:34:08 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 060_fourU_WT65c_b_6_m) output message: 
+|-------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': 0.00257, 'C': 0.00319475, 'U': 0.004815, 'G': 0.0056455}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:34:09
+Running CalcProfile at 2025-10-14 17:34:09 . . .
+. . . done at 2025-10-14 17:34:09
+Running NormProfile at 2025-10-14 17:34:09 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 060_fourU_WT65c_b_6_m) output message: 
+|-------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.0008465, 'GPUR': 0.0007045, 'GPYR': 0.001083846153846154}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:34:09
+Running TabToShape at 2025-10-14 17:34:09 . . .
+. . . done at 2025-10-14 17:34:09
+Running RenderFigures at 2025-10-14 17:34:09 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 060_fourU_WT65c_b_6_m) output message: 
+|---------------------------------------------------------- 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 76.9% (10/13) nucleotides meet the minimum read depth of 5000
+| FAIL: Read depths are too low for accurate reactivity profile creation.
+|       Check alignment stats to see the amount of target sequence present
+|       in each sample. Better target enrichment or recovery and/or
+|       additional sequencing could help solve this problem.
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (2/2) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (13/13) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 83.3% (10/12) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: True
+|         U: True
+|         G: True
+| 
+| 
+|       A and/or C FAILURE: Possible causes:
+|        - low sequencing depth
+|        - DNA contamination
+|        - poor mixing of chemical reagents and RNA and/or poor
+|          reagent diffusion (if modifying in cells), resulting
+|          in low modification rates
+|        - expired reagents, resulting in low modification rates
+|        - poor reverse transcription conditions, resulting in
+|          low adduct read-through
+|        - extremely highly structured RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:34:12
+Running RenderMappedDepths at 2025-10-14 17:34:12 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 060_fourU_WT65c_b_6_m) output message: 
+|--------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGTGTAAGGGTGAAGTGTA           0       18      CTTCACCTTCATTACCTTTA          60      79      4M     
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 17:34:14
+ShapeMapper run completed at 2025-10-14 17:34:14.
+WARNING: This RNA has a possible poor quality reactivity profile: 060_fourU_WT65c_b_6_m
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.

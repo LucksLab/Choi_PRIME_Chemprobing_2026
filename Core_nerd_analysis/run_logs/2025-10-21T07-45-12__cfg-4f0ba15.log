@@ -1,0 +1,25 @@
+2025-10-21 07:45:12,725 - nerd.db.api - INFO - Database schema initialized successfully.
+2025-10-21 07:45:12,726 - nerd.utils.paths - INFO - Created run directory: manuscript_pipeline/04_probe_tc_kinetics/probe_timecourse/probe_timecourse___cfg-4f0ba15
+2025-10-21 07:45:12,726 - nerd.pipeline.tasks.base - INFO - Executing task 'probe_timecourse' in run directory: manuscript_pipeline/04_probe_tc_kinetics/probe_timecourse/probe_timecourse___cfg-4f0ba15
+2025-10-21 07:45:12,727 - nerd.db.api - INFO - Began task 'probe_timecourse' (ID: 222) for rg:20 (cfg=4f0ba151345cdab3aaa8cd9e7293e0d72717eff183716e5d49b06f9cbdb2d509)
+2025-10-21 07:45:12,727 - nerd.pipeline.tasks.base - INFO - Command completed successfully. Consuming outputs.
+2025-10-21 07:45:12,736 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=20 valtype=modrate: No timecourse data found for rg_id=20 with done_by=['ekc'].
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 199, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 468, in _load_rg_dataset
+    raise ValueError(f"No timecourse data found for rg_id={rg_id} with done_by={done_by_values}.")
+ValueError: No timecourse data found for rg_id=20 with done_by=['ekc'].
+2025-10-21 07:45:12,782 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=20 valtype=GAmodrate: No timecourse data found for rg_id=20 with done_by=['ekc'].
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 199, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 468, in _load_rg_dataset
+    raise ValueError(f"No timecourse data found for rg_id={rg_id} with done_by={done_by_values}.")
+ValueError: No timecourse data found for rg_id=20 with done_by=['ekc'].
+2025-10-21 07:45:12,806 - nerd.pipeline.tasks.timecourse - WARNING - No series loaded for rg_id=20 across valtypes ['modrate', 'GAmodrate']; skipping.
+2025-10-21 07:45:12,806 - nerd.db.api - INFO - Finished task ID 222 with state 'completed'
+2025-10-21 07:45:12,807 - nerd.pipeline.tasks.base - INFO - Task 'probe_timecourse' (ID: 222) completed successfully.
+2025-10-21 07:45:12,807 - nerd.utils.paths - INFO - Updated 'latest' symlink for task 'probe_timecourse' to point to /Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/manuscript_pipeline/04_probe_tc_kinetics/probe_timecourse/probe_timecourse___cfg-4f0ba15

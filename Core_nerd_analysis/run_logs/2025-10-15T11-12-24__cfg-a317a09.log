@@ -1,0 +1,17 @@
+2025-10-15 11:12:24,079 - nerd.db.api - INFO - Database schema initialized successfully.
+2025-10-15 11:12:24,079 - nerd.utils.paths - INFO - Created run directory: manuscript_pipeline/04_probe_tc_kinetics/probe_timecourse/probe_timecourse___cfg-a317a09
+2025-10-15 11:12:24,080 - nerd.pipeline.tasks.base - INFO - Executing task 'probe_timecourse' in run directory: manuscript_pipeline/04_probe_tc_kinetics/probe_timecourse/probe_timecourse___cfg-a317a09
+2025-10-15 11:12:24,080 - nerd.db.api - INFO - Began task 'probe_timecourse' (ID: 142) for rg:11 (cfg=a317a09247f74e5c36a7c276d56ba6540d97d8152b3add997e898be8433f523f)
+2025-10-15 11:12:24,081 - nerd.pipeline.tasks.base - INFO - Command completed successfully. Consuming outputs.
+2025-10-15 11:12:24,090 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=11: No item with that key
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 154, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 312, in _load_rg_dataset
+    valtype = str(row["valtype"]) if row["valtype"] is not None else None
+                                     ~~~^^^^^^^^^^^
+IndexError: No item with that key
+2025-10-15 11:12:24,119 - nerd.db.api - INFO - Finished task ID 142 with state 'completed'
+2025-10-15 11:12:24,119 - nerd.pipeline.tasks.base - INFO - Task 'probe_timecourse' (ID: 142) completed successfully.
+2025-10-15 11:12:24,119 - nerd.utils.paths - INFO - Updated 'latest' symlink for task 'probe_timecourse' to point to /Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/manuscript_pipeline/04_probe_tc_kinetics/probe_timecourse/probe_timecourse___cfg-a317a09

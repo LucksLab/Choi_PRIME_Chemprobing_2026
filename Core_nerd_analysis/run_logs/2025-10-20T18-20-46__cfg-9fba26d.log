@@ -1,0 +1,13 @@
+2025-10-20 18:20:46,348 - nerd.db.api - INFO - Database schema initialized successfully.
+2025-10-20 18:20:46,349 - nerd.utils.paths - INFO - Created run directory: manuscript_pipeline/XX_drop_bad_samples/drop/drop___cfg-9fba26d
+2025-10-20 18:20:46,349 - nerd.pipeline.tasks.base - INFO - Executing task 'drop' in run directory: manuscript_pipeline/XX_drop_bad_samples/drop/drop___cfg-9fba26d
+2025-10-20 18:20:46,350 - nerd.db.api - INFO - Began task 'drop' (ID: 151) for global:None (cfg=9fba26df0774aab497e00abfa4d4b268c266d919fb1b1d26a1d537c9802f230c)
+2025-10-20 18:20:46,350 - nerd.pipeline.tasks.base - INFO - Command completed successfully. Consuming outputs.
+2025-10-20 18:20:46,357 - nerd.pipeline.tasks.drop - INFO - drop task updated to_drop=1 for 88 sequencing_samples (names provided: 253).
+2025-10-20 18:20:46,358 - nerd.pipeline.tasks.drop - WARNING - 165 sample(s) not found in sequencing_samples. First entries: 001-EKC-fourUnew-WT-25C-dms-MaP-6_S1, 002-EKC-fourUnew-WT-25C-dms-MaP-25_S2, 003-EKC-fourUnew-WT-25C-dms-MaP-60_S3, 004-EKC-fourUnew-WT-25C-dms-MaP-120_S4, 005-EKC-fourUnew-WT-25C-dms-MaP-180_S5, 006-EKC-fourUnew-WT-25C-dms-MaP-240_S6, 006-HIV-UUCG-ES-25c-a-6-p_S6, 007-EKC-fourUnew-A8C-25C-dms-MaP-6_S7, 007-EKC-fourUnew-A8C-25C-dms-stop-6_S7, 008-EKC-fourUnew-A8C-25C-dms-MaP-25_S8
+2025-10-20 18:20:46,358 - nerd.pipeline.tasks.drop - INFO - Wrote drop summary to manuscript_pipeline/XX_drop_bad_samples/drop/drop___cfg-9fba26d/drop_summary.txt
+2025-10-20 18:20:46,359 - nerd.pipeline.tasks.drop - INFO - Listed 88 samples marked to_drop=1 in manuscript_pipeline/XX_drop_bad_samples/drop/drop___cfg-9fba26d/samples_marked_to_drop.txt
+2025-10-20 18:20:46,359 - nerd.pipeline.tasks.drop - INFO - Listed 165 samples not found in manuscript_pipeline/XX_drop_bad_samples/drop/drop___cfg-9fba26d/samples_not_found.txt
+2025-10-20 18:20:46,359 - nerd.db.api - INFO - Finished task ID 151 with state 'completed'
+2025-10-20 18:20:46,360 - nerd.pipeline.tasks.base - INFO - Task 'drop' (ID: 151) completed successfully.
+2025-10-20 18:20:46,360 - nerd.utils.paths - INFO - Updated 'latest' symlink for task 'drop' to point to /Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/manuscript_pipeline/XX_drop_bad_samples/drop/drop___cfg-9fba26d

@@ -1,0 +1,127 @@
+2025-10-21 06:38:42,542 - nerd.db.api - INFO - Database schema initialized successfully.
+2025-10-21 06:38:42,542 - nerd.utils.paths - INFO - Created run directory: manuscript_pipeline/04_probe_tc_kinetics/probe_timecourse/probe_timecourse___cfg-113e11d
+2025-10-21 06:38:42,543 - nerd.pipeline.tasks.base - INFO - Executing task 'probe_timecourse' in run directory: manuscript_pipeline/04_probe_tc_kinetics/probe_timecourse/probe_timecourse___cfg-113e11d
+2025-10-21 06:38:42,543 - nerd.db.api - INFO - Began task 'probe_timecourse' (ID: 163) for rg_batch:None (cfg=113e11d37356414b54c15e2d0eeff246244464340ffd33a190bb0972e9b4d56b)
+2025-10-21 06:38:42,543 - nerd.pipeline.tasks.base - INFO - Command completed successfully. Consuming outputs.
+2025-10-21 06:38:42,550 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=2 valtype=modrate: No timecourse data found for rg_id=2 with done_by=['ekc'].
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 185, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 434, in _load_rg_dataset
+    raise ValueError(f"No timecourse data found for rg_id={rg_id} with done_by={done_by_values}.")
+ValueError: No timecourse data found for rg_id=2 with done_by=['ekc'].
+2025-10-21 06:38:42,594 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=2 valtype=GAmodrate: No timecourse data found for rg_id=2 with done_by=['ekc'].
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 185, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 434, in _load_rg_dataset
+    raise ValueError(f"No timecourse data found for rg_id={rg_id} with done_by={done_by_values}.")
+ValueError: No timecourse data found for rg_id=2 with done_by=['ekc'].
+2025-10-21 06:38:42,617 - nerd.pipeline.tasks.timecourse - WARNING - No series loaded for rg_id=2 across valtypes ['modrate', 'GAmodrate']; skipping.
+2025-10-21 06:38:42,624 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=5 valtype=modrate: No timecourse data found for rg_id=5 with done_by=['ekc'].
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 185, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 434, in _load_rg_dataset
+    raise ValueError(f"No timecourse data found for rg_id={rg_id} with done_by={done_by_values}.")
+ValueError: No timecourse data found for rg_id=5 with done_by=['ekc'].
+2025-10-21 06:38:42,652 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=5 valtype=GAmodrate: No timecourse data found for rg_id=5 with done_by=['ekc'].
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 185, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 434, in _load_rg_dataset
+    raise ValueError(f"No timecourse data found for rg_id={rg_id} with done_by={done_by_values}.")
+ValueError: No timecourse data found for rg_id=5 with done_by=['ekc'].
+2025-10-21 06:38:42,675 - nerd.pipeline.tasks.timecourse - WARNING - No series loaded for rg_id=5 across valtypes ['modrate', 'GAmodrate']; skipping.
+2025-10-21 06:38:42,681 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=7 valtype=modrate: No timecourse data found for rg_id=7 with done_by=['ekc'].
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 185, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 434, in _load_rg_dataset
+    raise ValueError(f"No timecourse data found for rg_id={rg_id} with done_by={done_by_values}.")
+ValueError: No timecourse data found for rg_id=7 with done_by=['ekc'].
+2025-10-21 06:38:42,709 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=7 valtype=GAmodrate: No timecourse data found for rg_id=7 with done_by=['ekc'].
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 185, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 434, in _load_rg_dataset
+    raise ValueError(f"No timecourse data found for rg_id={rg_id} with done_by={done_by_values}.")
+ValueError: No timecourse data found for rg_id=7 with done_by=['ekc'].
+2025-10-21 06:38:42,732 - nerd.pipeline.tasks.timecourse - WARNING - No series loaded for rg_id=7 across valtypes ['modrate', 'GAmodrate']; skipping.
+2025-10-21 06:38:45,292 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=39 valtype=modrate: No timecourse data found for rg_id=39 with done_by=['ekc'].
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 185, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 434, in _load_rg_dataset
+    raise ValueError(f"No timecourse data found for rg_id={rg_id} with done_by={done_by_values}.")
+ValueError: No timecourse data found for rg_id=39 with done_by=['ekc'].
+2025-10-21 06:38:45,320 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=39 valtype=GAmodrate: No timecourse data found for rg_id=39 with done_by=['ekc'].
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 185, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 434, in _load_rg_dataset
+    raise ValueError(f"No timecourse data found for rg_id={rg_id} with done_by={done_by_values}.")
+ValueError: No timecourse data found for rg_id=39 with done_by=['ekc'].
+2025-10-21 06:38:45,342 - nerd.pipeline.tasks.timecourse - WARNING - No series loaded for rg_id=39 across valtypes ['modrate', 'GAmodrate']; skipping.
+2025-10-21 06:38:45,348 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=40 valtype=modrate: No timecourse data found for rg_id=40 with done_by=['ekc'].
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 185, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 434, in _load_rg_dataset
+    raise ValueError(f"No timecourse data found for rg_id={rg_id} with done_by={done_by_values}.")
+ValueError: No timecourse data found for rg_id=40 with done_by=['ekc'].
+2025-10-21 06:38:45,377 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=40 valtype=GAmodrate: No timecourse data found for rg_id=40 with done_by=['ekc'].
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 185, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 434, in _load_rg_dataset
+    raise ValueError(f"No timecourse data found for rg_id={rg_id} with done_by={done_by_values}.")
+ValueError: No timecourse data found for rg_id=40 with done_by=['ekc'].
+2025-10-21 06:38:45,399 - nerd.pipeline.tasks.timecourse - WARNING - No series loaded for rg_id=40 across valtypes ['modrate', 'GAmodrate']; skipping.
+2025-10-21 06:38:45,405 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=41 valtype=modrate: No timecourse data found for rg_id=41 with done_by=['ekc'].
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 185, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 434, in _load_rg_dataset
+    raise ValueError(f"No timecourse data found for rg_id={rg_id} with done_by={done_by_values}.")
+ValueError: No timecourse data found for rg_id=41 with done_by=['ekc'].
+2025-10-21 06:38:45,433 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=41 valtype=GAmodrate: No timecourse data found for rg_id=41 with done_by=['ekc'].
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 185, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 434, in _load_rg_dataset
+    raise ValueError(f"No timecourse data found for rg_id={rg_id} with done_by={done_by_values}.")
+ValueError: No timecourse data found for rg_id=41 with done_by=['ekc'].
+2025-10-21 06:38:45,455 - nerd.pipeline.tasks.timecourse - WARNING - No series loaded for rg_id=41 across valtypes ['modrate', 'GAmodrate']; skipping.
+2025-10-21 06:38:48,543 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=71 valtype=modrate: No nucleotides met inclusion criteria for rg_id=71.
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 185, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 530, in _load_rg_dataset
+    raise ValueError(f"No nucleotides met inclusion criteria for rg_id={rg_id}.")
+ValueError: No nucleotides met inclusion criteria for rg_id=71.
+2025-10-21 06:38:48,575 - nerd.pipeline.tasks.timecourse - ERROR - Failed to load timecourse data for rg_id=71 valtype=GAmodrate: No nucleotides met inclusion criteria for rg_id=71.
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 185, in consume_outputs
+    series, rg_meta = self._load_rg_dataset(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 530, in _load_rg_dataset
+    raise ValueError(f"No nucleotides met inclusion criteria for rg_id={rg_id}.")
+ValueError: No nucleotides met inclusion criteria for rg_id=71.
+2025-10-21 06:38:48,603 - nerd.pipeline.tasks.timecourse - WARNING - No series loaded for rg_id=71 across valtypes ['modrate', 'GAmodrate']; skipping.
+2025-10-21 06:38:49,339 - nerd.db.api - INFO - Finished task ID 163 with state 'completed'
+2025-10-21 06:38:49,340 - nerd.pipeline.tasks.base - INFO - Task 'probe_timecourse' (ID: 163) completed successfully.
+2025-10-21 06:38:49,340 - nerd.utils.paths - INFO - Updated 'latest' symlink for task 'probe_timecourse' to point to /Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/manuscript_pipeline/04_probe_tc_kinetics/probe_timecourse/probe_timecourse___cfg-113e11d

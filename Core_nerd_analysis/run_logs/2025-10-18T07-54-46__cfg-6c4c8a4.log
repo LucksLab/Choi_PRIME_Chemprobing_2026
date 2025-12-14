@@ -1,0 +1,17 @@
+2025-10-18 07:54:46,434 - nerd.db.api - INFO - Database schema initialized successfully.
+2025-10-18 07:54:46,435 - nerd.utils.paths - INFO - Created run directory: manuscript_pipeline/02_nmr_kinetics/nmr_deg_kinetics/nmr_deg_kinetics___cfg-6c4c8a4
+2025-10-18 07:54:46,435 - nerd.pipeline.tasks.base - INFO - Executing task 'nmr_deg_kinetics' in run directory: manuscript_pipeline/02_nmr_kinetics/nmr_deg_kinetics/nmr_deg_kinetics___cfg-6c4c8a4
+2025-10-18 07:54:46,436 - nerd.db.api - INFO - Began task 'nmr_deg_kinetics' (ID: 138) for nmr_batch:None (cfg=6c4c8a4c46fc2c6f91889284c15341c823c7a4a47101a2276f7ec3cfa0d3de1b)
+2025-10-18 07:54:46,436 - nerd.pipeline.tasks.base - INFO - Command completed successfully. Consuming outputs.
+2025-10-18 07:54:46,437 - nerd.cli - ERROR - Failed to execute task 'nmr_deg_kinetics': Missing trace role 'decay_trace' for reaction_id=1.
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/cli.py", line 132, in run
+    task.exec(conn, cfg, verbose=state["verbose"])
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/base.py", line 264, in exec
+    self.consume_outputs(ctx, inputs, params, run_dir, task_id=task_id)
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/nmr_deg_kinetics.py", line 93, in consume_outputs
+    prepared = prepare_reaction_inputs(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/_nmr_common.py", line 70, in prepare_reaction_inputs
+    raise ValueError(f"Missing trace role '{db_role}' for reaction_id={reaction['id']}.")
+ValueError: Missing trace role 'decay_trace' for reaction_id=1.

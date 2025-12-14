@@ -1,0 +1,2577 @@
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-rw-r-- 1 ekc5108 b1044 832K Feb  9  2025 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p_S8_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 ekc5108 b1044 991K Feb  9  2025 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p_S8_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p
+ggataatccaaaacaacaaccAAAGGAATTGCGGGAAAGGGGTCAACAGCCGTTCAGTACCAAGTCTCAGGGGAAACTTTGAGATGGCCTTGCAAAGGGTATGGTAATAAGCTGACGGACATGGTCCTAACCACGCAGCCAAGTCCTAAGTCAACAGATCTTCTGTTGATATGGATGCAGTTCAACCAAATCAccaaaccaaagaaacaacc
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p --target artifacts/008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p/target.fa --out artifacts/008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p_S8_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p_S8_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 13:56:30
+Output will be logged to 008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-2cf8202
+args:  --name 008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p --target artifacts/008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p/target.fa --out artifacts/008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/008_P4P6_... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/008_P4P6_... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 13:56:30
+Running PrimerLocator at 2025-10-14 13:56:30 . . .
+. . . done at 2025-10-14 13:56:30
+Running FastaFormatChecker at 2025-10-14 13:56:30 . . .
+. . . done at 2025-10-14 13:56:30
+Running BowtieIndexBuilder at 2025-10-14 13:56:30 . . .
+. . . done at 2025-10-14 13:56:30
+Running process group 4 at 2025-10-14 13:56:30 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 13:56:30
+    QualityTrimmer1 . . . started at 2025-10-14 13:56:31
+    QualityTrimmer2 . . . started at 2025-10-14 13:56:31
+    Interleaver . . . started at 2025-10-14 13:56:31
+    Merger . . . started at 2025-10-14 13:56:31
+    Tab6Interleaver . . . started at 2025-10-14 13:56:31
+    BowtieAligner . . . started at 2025-10-14 13:56:31
+    MutationParser_Modified . . . started at 2025-10-14 13:56:31
+    MutationParserGA_Modified . . . started at 2025-10-14 13:56:31
+    MutationCounter_Modified . . . started at 2025-10-14 13:56:31
+    MutationCounterGA_Modified . . . started at 2025-10-14 13:56:31
+  548KiB [==============================>                 ] 65% ETA 0:00:02 556KiB [==============================>                 ] 66% ETA 0:00:01  692KiB [======================================>         ] 83% ETA 0:00:01 700KiB [=======================================>        ] 84% ETA 0:00:01  828KiB [==============================================> ] 99% ETA 0:00:00 831KiB [==============================================>] 100% ETA 0:00:00 831KiB [==============================================>] 100%  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 17.538 seconds.
+  | 
+  | Pairs:               	32019
+  | Joined:              	29281   	91.449%
+  | Ambiguous:           	2726       	8.514%
+  | No Solution:         	12       	0.037%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	237.7
+  | Standard Deviation:  	7.4
+  | Mode:                	238
+  | 
+  | Insert range:        	44 - 280
+  | 90th percentile:     	238
+  | 75th percentile:     	238
+  | 50th percentile:     	238
+  | 25th percentile:     	238
+  | 10th percentile:     	238
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 32019 reads; of these:
+  |   2738 (8.55%) were paired; of these:
+  |     764 (27.90%) aligned concordantly 0 times
+  |     1974 (72.10%) aligned concordantly exactly 1 time
+  |     0 (0.00%) aligned concordantly >1 times
+  |     ----
+  |     764 pairs aligned concordantly 0 times; of these:
+  |       0 (0.00%) aligned discordantly 1 time
+  |     ----
+  |     764 pairs aligned 0 times concordantly or discordantly; of these:
+  |       1528 mates make up the pairs; of these:
+  |         845 (55.30%) aligned 0 times
+  |         683 (44.70%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   29281 (91.45%) were unpaired; of these:
+  |     44 (0.15%) aligned 0 times
+  |     29237 (99.85%) aligned exactly 1 time
+  |     0 (0.00%) aligned >1 times
+  | 97.44% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------------------ 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000815
+  | [50,99]	0.001254
+  | [100,149]	0.019345
+  | [150,199]	0.000031
+  | [200,249]	0.978554
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.620399
+  | 1	0.286762
+  | 2	0.077664
+  | 3	0.013796
+  | 4	0.001191
+  | 5	0.000157
+  | 6	0.000031
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p) (sample: Modified) output message: 
+  |-------------------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000815
+  | [50,99]	0.001254
+  | [100,149]	0.019345
+  | [150,199]	0.000031
+  | [200,249]	0.978554
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.936602
+  | 1	0.058788
+  | 2	0.004295
+  | 3	0.000314
+  | 4	0.000000
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 13:56:48
+Running CalcProfile at 2025-10-14 13:56:48 . . .
+. . . done at 2025-10-14 13:56:49
+Running NormProfile at 2025-10-14 13:56:49 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p) output message: 
+|---------------------------------------------------------------------- 
+| 
+| Signal for G = 0.001 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.016819, 'C': 0.008977, 'U': 0.0030845, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:56:49
+Running CalcProfile at 2025-10-14 13:56:49 . . .
+. . . done at 2025-10-14 13:56:49
+Running NormProfile at 2025-10-14 13:56:49 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p) output message: 
+|---------------------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.00194, 'GPUR': 0.0016460000000000001, 'GPYR': 0.002253}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:56:49
+Running TabToShape at 2025-10-14 13:56:49 . . .
+. . . done at 2025-10-14 13:56:50
+Running RenderFigures at 2025-10-14 13:56:50 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p) output message: 
+|------------------------------------------------------------------------ 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 94.3% (50/53) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/50) nucleotides have high modification rates (>0.05)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 97.2% (35/36) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/35) nucleotides have high modification rates (>0.05)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 97.3% (36/37) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/36) nucleotides have high modification rates (>0.01)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (45/45) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/45) nucleotides have high modification rates (>0.002)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: False
+|         U: False
+|         G: False
+| 
+| 
+|       A and/or C FAILURE: Possible causes:
+|        - low sequencing depth
+|        - DNA contamination
+|        - poor mixing of chemical reagents and RNA and/or poor
+|          reagent diffusion (if modifying in cells), resulting
+|          in low modification rates
+|        - expired reagents, resulting in low modification rates
+|        - poor reverse transcription conditions, resulting in
+|          low adduct read-through
+|        - extremely highly structured RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:56:53
+Running RenderMappedDepths at 2025-10-14 13:56:53 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p) output message: 
+|----------------------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGATAATCCAAAACAACAACC         0       20      GGTTGTTTCTTTGGTTTGG           193     211     32k    
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:56:54
+ShapeMapper run completed at 2025-10-14 13:56:54.
+WARNING: This RNA has a possible poor quality reactivity profile: 008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-rw-r-- 1 ekc5108 b1044 790K Feb  9  2025 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p_S9_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 ekc5108 b1044 876K Feb  9  2025 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p_S9_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p
+ggataatccaaaacaacaaccAAAGGAATTGCGGGAAAGGGGTCAACAGCCGTTCAGTACCAAGTCTCAGGGGAAACTTTGAGATGGCCTTGCAAAGGGTATGGTAATAAGCTGACGGACATGGTCCTAACCACGCAGCCAAGTCCTAAGTCAACAGATCTTCTGTTGATATGGATGCAGTTCAACCAAATCAccaaaccaaagaaacaacc
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p --target artifacts/009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p/target.fa --out artifacts/009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p_S9_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p_S9_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 13:56:55
+Output will be logged to 009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-2cf8202
+args:  --name 009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p --target artifacts/009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p/target.fa --out artifacts/009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/009_P4P6_... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/009_P4P6_... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 13:56:55
+Running PrimerLocator at 2025-10-14 13:56:55 . . .
+. . . done at 2025-10-14 13:56:56
+Running FastaFormatChecker at 2025-10-14 13:56:56 . . .
+. . . done at 2025-10-14 13:56:56
+Running BowtieIndexBuilder at 2025-10-14 13:56:56 . . .
+. . . done at 2025-10-14 13:56:56
+Running process group 4 at 2025-10-14 13:56:56 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 13:56:56
+    QualityTrimmer1 . . . started at 2025-10-14 13:56:56
+    QualityTrimmer2 . . . started at 2025-10-14 13:56:56
+    Interleaver . . . started at 2025-10-14 13:56:56
+    Merger . . . started at 2025-10-14 13:56:56
+    Tab6Interleaver . . . started at 2025-10-14 13:56:56
+    BowtieAligner . . . started at 2025-10-14 13:56:56
+    MutationParser_Modified . . . started at 2025-10-14 13:56:56
+    MutationParserGA_Modified . . . started at 2025-10-14 13:56:56
+    MutationCounter_Modified . . . started at 2025-10-14 13:56:56
+    MutationCounterGA_Modified . . . started at 2025-10-14 13:56:56
+  548KiB [================================>               ] 69% ETA 0:00:01 556KiB [================================>               ] 70% ETA 0:00:01  684KiB [========================================>       ] 86% ETA 0:00:01 692KiB [========================================>       ] 87% ETA 0:00:00  789KiB [==============================================>] 100%                   /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 15.990 seconds.
+  | 
+  | Pairs:               	30726
+  | Joined:              	28679   	93.338%
+  | Ambiguous:           	2035       	6.623%
+  | No Solution:         	12       	0.039%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	237.9
+  | Standard Deviation:  	2.6
+  | Mode:                	238
+  | 
+  | Insert range:        	44 - 275
+  | 90th percentile:     	238
+  | 75th percentile:     	238
+  | 50th percentile:     	238
+  | 25th percentile:     	238
+  | 10th percentile:     	238
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 30726 reads; of these:
+  |   2047 (6.66%) were paired; of these:
+  |     608 (29.70%) aligned concordantly 0 times
+  |     1438 (70.25%) aligned concordantly exactly 1 time
+  |     1 (0.05%) aligned concordantly >1 times
+  |     ----
+  |     608 pairs aligned concordantly 0 times; of these:
+  |       0 (0.00%) aligned discordantly 1 time
+  |     ----
+  |     608 pairs aligned 0 times concordantly or discordantly; of these:
+  |       1216 mates make up the pairs; of these:
+  |         691 (56.83%) aligned 0 times
+  |         525 (43.17%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   28679 (93.34%) were unpaired; of these:
+  |     4 (0.01%) aligned 0 times
+  |     28674 (99.98%) aligned exactly 1 time
+  |     1 (0.00%) aligned >1 times
+  | 97.88% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------------------ 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000947
+  | [50,99]	0.000816
+  | [100,149]	0.015503
+  | [150,199]	0.000033
+  | [200,249]	0.982702
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.491661
+  | 1	0.336108
+  | 2	0.132152
+  | 3	0.032769
+  | 4	0.006462
+  | 5	0.000751
+  | 6	0.000098
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p) (sample: Modified) output message: 
+  |-------------------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000947
+  | [50,99]	0.000816
+  | [100,149]	0.015503
+  | [150,199]	0.000033
+  | [200,249]	0.982702
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.950162
+  | 1	0.047782
+  | 2	0.001958
+  | 3	0.000033
+  | 4	0.000033
+  | 5	0.000033
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 13:57:13
+Running CalcProfile at 2025-10-14 13:57:13 . . .
+. . . done at 2025-10-14 13:57:13
+Running NormProfile at 2025-10-14 13:57:13 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p) output message: 
+|---------------------------------------------------------------------- 
+| 
+| Signal for G = 0.001 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.027576999999999997, 'C': 0.014316, 'U': 0.003687, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:57:13
+Running CalcProfile at 2025-10-14 13:57:13 . . .
+. . . done at 2025-10-14 13:57:13
+Running NormProfile at 2025-10-14 13:57:13 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p) output message: 
+|---------------------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.00146, 'GPUR': 0.0012535, 'GPYR': 0.0018915}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:57:14
+Running TabToShape at 2025-10-14 13:57:14 . . .
+. . . done at 2025-10-14 13:57:14
+Running RenderFigures at 2025-10-14 13:57:14 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p) output message: 
+|------------------------------------------------------------------------ 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 94.3% (50/53) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 2.0% (1/50) nucleotides have high modification rates (>0.05)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 97.2% (35/36) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/35) nucleotides have high modification rates (>0.05)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 97.3% (36/37) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/36) nucleotides have high modification rates (>0.01)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (45/45) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/45) nucleotides have high modification rates (>0.002)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: False
+|         U: False
+|         G: False
+| 
+| 
+|       A and/or C FAILURE: Possible causes:
+|        - low sequencing depth
+|        - DNA contamination
+|        - poor mixing of chemical reagents and RNA and/or poor
+|          reagent diffusion (if modifying in cells), resulting
+|          in low modification rates
+|        - expired reagents, resulting in low modification rates
+|        - poor reverse transcription conditions, resulting in
+|          low adduct read-through
+|        - extremely highly structured RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:57:17
+Running RenderMappedDepths at 2025-10-14 13:57:17 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p) output message: 
+|----------------------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGATAATCCAAAACAACAACC         0       20      GGTTGTTTCTTTGGTTTGG           193     211     31k    
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:57:18
+ShapeMapper run completed at 2025-10-14 13:57:18.
+WARNING: This RNA has a possible poor quality reactivity profile: 009_P4P6_WT_nobc_5mMMgMRTpH83_tp2_p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-rw-r-- 1 ekc5108 b1044 1.2M Feb  9  2025 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p_S10_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 ekc5108 b1044 1.3M Feb  9  2025 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p_S10_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p
+ggataatccaaaacaacaaccAAAGGAATTGCGGGAAAGGGGTCAACAGCCGTTCAGTACCAAGTCTCAGGGGAAACTTTGAGATGGCCTTGCAAAGGGTATGGTAATAAGCTGACGGACATGGTCCTAACCACGCAGCCAAGTCCTAAGTCAACAGATCTTCTGTTGATATGGATGCAGTTCAACCAAATCAccaaaccaaagaaacaacc
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p --target artifacts/010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p/target.fa --out artifacts/010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p_S10_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p_S10_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 13:57:19
+Output will be logged to 010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-2cf8202
+args:  --name 010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p --target artifacts/010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p/target.fa --out artifacts/010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/010_P4P6_... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/010_P4P6_... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 13:57:19
+Running PrimerLocator at 2025-10-14 13:57:19 . . .
+. . . done at 2025-10-14 13:57:20
+Running FastaFormatChecker at 2025-10-14 13:57:20 . . .
+. . . done at 2025-10-14 13:57:20
+Running BowtieIndexBuilder at 2025-10-14 13:57:20 . . .
+. . . done at 2025-10-14 13:57:20
+Running process group 4 at 2025-10-14 13:57:20 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 13:57:20
+    QualityTrimmer1 . . . started at 2025-10-14 13:57:20
+    QualityTrimmer2 . . . started at 2025-10-14 13:57:20
+    Interleaver . . . started at 2025-10-14 13:57:20
+    Merger . . . started at 2025-10-14 13:57:20
+    Tab6Interleaver . . . started at 2025-10-14 13:57:20
+    BowtieAligner . . . started at 2025-10-14 13:57:20
+    MutationParser_Modified . . . started at 2025-10-14 13:57:20
+    MutationParserGA_Modified . . . started at 2025-10-14 13:57:20
+    MutationCounter_Modified . . . started at 2025-10-14 13:57:20
+    MutationCounterGA_Modified . . . started at 2025-10-14 13:57:20
+  564KiB [=====================>                          ] 47% ETA 0:00:04 572KiB [=====================>                          ] 47% ETA 0:00:04  716KiB [===========================>                    ] 59% ETA 0:00:05 724KiB [===========================>                    ] 60% ETA 0:00:05  860KiB [=================================>              ] 71% ETA 0:00:04 868KiB [=================================>              ] 72% ETA 0:00:04  996KiB [======================================>         ] 83% ETA 0:00:021004KiB [======================================>         ] 83% ETA 0:00:02  1.12MiB [=============================================>  ] 96% ETA 0:00:001.13MiB [=============================================>  ] 96% ETA 0:00:001.17MiB [==============================================>] 100%  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 24.307 seconds.
+  | 
+  | Pairs:               	45496
+  | Joined:              	42404   	93.204%
+  | Ambiguous:           	3066       	6.739%
+  | No Solution:         	26       	0.057%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	237.9
+  | Standard Deviation:  	4.2
+  | Mode:                	238
+  | 
+  | Insert range:        	44 - 272
+  | 90th percentile:     	238
+  | 75th percentile:     	238
+  | 50th percentile:     	238
+  | 25th percentile:     	238
+  | 10th percentile:     	238
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 45496 reads; of these:
+  |   3092 (6.80%) were paired; of these:
+  |     885 (28.62%) aligned concordantly 0 times
+  |     2201 (71.18%) aligned concordantly exactly 1 time
+  |     6 (0.19%) aligned concordantly >1 times
+  |     ----
+  |     885 pairs aligned concordantly 0 times; of these:
+  |       0 (0.00%) aligned discordantly 1 time
+  |     ----
+  |     885 pairs aligned 0 times concordantly or discordantly; of these:
+  |       1770 mates make up the pairs; of these:
+  |         1099 (62.09%) aligned 0 times
+  |         671 (37.91%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   42404 (93.20%) were unpaired; of these:
+  |     19 (0.04%) aligned 0 times
+  |     42385 (99.96%) aligned exactly 1 time
+  |     0 (0.00%) aligned >1 times
+  | 97.70% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------------------ 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000795
+  | [50,99]	0.000928
+  | [100,149]	0.013167
+  | [150,199]	0.000066
+  | [200,249]	0.985043
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.447319
+  | 1	0.345337
+  | 2	0.152266
+  | 3	0.044650
+  | 4	0.008815
+  | 5	0.001392
+  | 6	0.000221
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p) (sample: Modified) output message: 
+  |-------------------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000795
+  | [50,99]	0.000928
+  | [100,149]	0.013167
+  | [150,199]	0.000066
+  | [200,249]	0.985043
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.948810
+  | 1	0.049577
+  | 2	0.001569
+  | 3	0.000044
+  | 4	0.000000
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 13:57:45
+Running CalcProfile at 2025-10-14 13:57:45 . . .
+. . . done at 2025-10-14 13:57:45
+Running NormProfile at 2025-10-14 13:57:45 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p) output message: 
+|---------------------------------------------------------------------- 
+| 
+| Signal for G = 0.001 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.0323745, 'C': 0.015539, 'U': 0.0039935, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:57:45
+Running CalcProfile at 2025-10-14 13:57:45 . . .
+. . . done at 2025-10-14 13:57:46
+Running NormProfile at 2025-10-14 13:57:46 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p) output message: 
+|---------------------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.001555, 'GPUR': 0.0010495, 'GPYR': 0.00249}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:57:46
+Running TabToShape at 2025-10-14 13:57:46 . . .
+. . . done at 2025-10-14 13:57:46
+Running RenderFigures at 2025-10-14 13:57:46 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p) output message: 
+|------------------------------------------------------------------------ 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 94.3% (50/53) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 4.0% (2/50) nucleotides have high modification rates (>0.05)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 97.2% (35/36) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/35) nucleotides have high modification rates (>0.05)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 97.3% (36/37) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/36) nucleotides have high modification rates (>0.01)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (45/45) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/45) nucleotides have high modification rates (>0.002)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: False
+|         U: False
+|         G: False
+| 
+| 
+|       A and/or C FAILURE: Possible causes:
+|        - low sequencing depth
+|        - DNA contamination
+|        - poor mixing of chemical reagents and RNA and/or poor
+|          reagent diffusion (if modifying in cells), resulting
+|          in low modification rates
+|        - expired reagents, resulting in low modification rates
+|        - poor reverse transcription conditions, resulting in
+|          low adduct read-through
+|        - extremely highly structured RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:57:50
+Running RenderMappedDepths at 2025-10-14 13:57:50 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p) output message: 
+|----------------------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGATAATCCAAAACAACAACC         0       20      GGTTGTTTCTTTGGTTTGG           193     211     45k    
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:57:51
+ShapeMapper run completed at 2025-10-14 13:57:51.
+WARNING: This RNA has a possible poor quality reactivity profile: 010_P4P6_WT_nobc_5mMMgMRTpH83_tp3_p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-rw-r-- 1 ekc5108 b1044 2.4M Feb  9  2025 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p_S11_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 ekc5108 b1044 2.8M Feb  9  2025 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p_S11_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p
+ggataatccaaaacaacaaccAAAGGAATTGCGGGAAAGGGGTCAACAGCCGTTCAGTACCAAGTCTCAGGGGAAACTTTGAGATGGCCTTGCAAAGGGTATGGTAATAAGCTGACGGACATGGTCCTAACCACGCAGCCAAGTCCTAAGTCAACAGATCTTCTGTTGATATGGATGCAGTTCAACCAAATCAccaaaccaaagaaacaacc
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p --target artifacts/011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p/target.fa --out artifacts/011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p_S11_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p_S11_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 13:57:52
+Output will be logged to 011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-2cf8202
+args:  --name 011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p --target artifacts/011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p/target.fa --out artifacts/011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/011_P4P6_... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/011_P4P6_... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 13:57:52
+Running PrimerLocator at 2025-10-14 13:57:52 . . .
+. . . done at 2025-10-14 13:57:53
+Running FastaFormatChecker at 2025-10-14 13:57:53 . . .
+. . . done at 2025-10-14 13:57:53
+Running BowtieIndexBuilder at 2025-10-14 13:57:53 . . .
+. . . done at 2025-10-14 13:57:53
+Running process group 4 at 2025-10-14 13:57:53 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 13:57:53
+    QualityTrimmer1 . . . started at 2025-10-14 13:57:53
+    QualityTrimmer2 . . . started at 2025-10-14 13:57:53
+    Interleaver . . . started at 2025-10-14 13:57:53
+    Merger . . . started at 2025-10-14 13:57:53
+    Tab6Interleaver . . . started at 2025-10-14 13:57:53
+    BowtieAligner . . . started at 2025-10-14 13:57:53
+    MutationParser_Modified . . . started at 2025-10-14 13:57:53
+    MutationParserGA_Modified . . . started at 2025-10-14 13:57:53
+    MutationCounter_Modified . . . started at 2025-10-14 13:57:53
+    MutationCounterGA_Modified . . . started at 2025-10-14 13:57:53
+  556KiB [==========>                                     ] 23% ETA 0:00:16 564KiB [==========>                                     ] 23% ETA 0:00:16  732KiB [=============>                                  ] 30% ETA 0:00:20 740KiB [=============>                                  ] 30% ETA 0:00:20  900KiB [================>                               ] 37% ETA 0:00:21 908KiB [================>                               ] 37% ETA 0:00:21  1.04MiB [===================>                            ] 43% ETA 0:00:201.04MiB [====================>                           ] 44% ETA 0:00:20  1.18MiB [=======================>                        ] 50% ETA 0:00:201.19MiB [=======================>                        ] 50% ETA 0:00:20  1.33MiB [=========================>                      ] 56% ETA 0:00:171.34MiB [=========================>                      ] 56% ETA 0:00:17  1.46MiB [============================>                   ] 62% ETA 0:00:171.47MiB [============================>                   ] 62% ETA 0:00:16  1.75MiB [==================================>             ] 73% ETA 0:00:111.75MiB [==================================>             ] 74% ETA 0:00:11  1.89MiB [====================================>           ] 79% ETA 0:00:081.89MiB [=====================================>          ] 80% ETA 0:00:08  2.04MiB [========================================>       ] 86% ETA 0:00:062.04MiB [========================================>       ] 86% ETA 0:00:06  2.18MiB [===========================================>    ] 92% ETA 0:00:032.18MiB [===========================================>    ] 92% ETA 0:00:03  2.36MiB [==============================================>] 100%                  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 51.529 seconds.
+  | 
+  | Pairs:               	91532
+  | Joined:              	84943   	92.801%
+  | Ambiguous:           	6562       	7.169%
+  | No Solution:         	27       	0.029%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	237.9
+  | Standard Deviation:  	2.7
+  | Mode:                	238
+  | 
+  | Insert range:        	44 - 281
+  | 90th percentile:     	238
+  | 75th percentile:     	238
+  | 50th percentile:     	238
+  | 25th percentile:     	238
+  | 10th percentile:     	238
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 91532 reads; of these:
+  |   6589 (7.20%) were paired; of these:
+  |     1823 (27.67%) aligned concordantly 0 times
+  |     4759 (72.23%) aligned concordantly exactly 1 time
+  |     7 (0.11%) aligned concordantly >1 times
+  |     ----
+  |     1823 pairs aligned concordantly 0 times; of these:
+  |       0 (0.00%) aligned discordantly 1 time
+  |     ----
+  |     1823 pairs aligned 0 times concordantly or discordantly; of these:
+  |       3646 mates make up the pairs; of these:
+  |         2064 (56.61%) aligned 0 times
+  |         1582 (43.39%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   84943 (92.80%) were unpaired; of these:
+  |     12 (0.01%) aligned 0 times
+  |     84925 (99.98%) aligned exactly 1 time
+  |     6 (0.01%) aligned >1 times
+  | 97.88% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------------------ 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000844
+  | [50,99]	0.000811
+  | [100,149]	0.015721
+  | [150,199]	0.000077
+  | [200,249]	0.982548
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.435029
+  | 1	0.343179
+  | 2	0.160387
+  | 3	0.049792
+  | 4	0.010101
+  | 5	0.001358
+  | 6	0.000121
+  | 7	0.000033
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p) (sample: Modified) output message: 
+  |-------------------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000844
+  | [50,99]	0.000811
+  | [100,149]	0.015721
+  | [150,199]	0.000077
+  | [200,249]	0.982548
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.948159
+  | 1	0.050483
+  | 2	0.001304
+  | 3	0.000022
+  | 4	0.000033
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 13:58:45
+Running CalcProfile at 2025-10-14 13:58:45 . . .
+. . . done at 2025-10-14 13:58:45
+Running NormProfile at 2025-10-14 13:58:45 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p) output message: 
+|---------------------------------------------------------------------- 
+| 
+| Signal for G = 0.001 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.0322915, 'C': 0.018034, 'U': 0.004254, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:58:45
+Running CalcProfile at 2025-10-14 13:58:45 . . .
+. . . done at 2025-10-14 13:58:46
+Running NormProfile at 2025-10-14 13:58:46 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p) output message: 
+|---------------------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.001646, 'GPUR': 0.00099625, 'GPYR': 0.00197}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:58:46
+Running TabToShape at 2025-10-14 13:58:46 . . .
+. . . done at 2025-10-14 13:58:46
+Running RenderFigures at 2025-10-14 13:58:46 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p) output message: 
+|------------------------------------------------------------------------ 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 94.3% (50/53) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 4.0% (2/50) nucleotides have high modification rates (>0.05)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 97.2% (35/36) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/35) nucleotides have high modification rates (>0.05)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 97.3% (36/37) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/36) nucleotides have high modification rates (>0.01)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (45/45) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/45) nucleotides have high modification rates (>0.002)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: False
+|         U: False
+|         G: False
+| 
+| 
+|       A and/or C FAILURE: Possible causes:
+|        - low sequencing depth
+|        - DNA contamination
+|        - poor mixing of chemical reagents and RNA and/or poor
+|          reagent diffusion (if modifying in cells), resulting
+|          in low modification rates
+|        - expired reagents, resulting in low modification rates
+|        - poor reverse transcription conditions, resulting in
+|          low adduct read-through
+|        - extremely highly structured RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:58:50
+Running RenderMappedDepths at 2025-10-14 13:58:50 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p) output message: 
+|----------------------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGATAATCCAAAACAACAACC         0       20      GGTTGTTTCTTTGGTTTGG           193     211     91k    
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:58:51
+ShapeMapper run completed at 2025-10-14 13:58:51.
+WARNING: This RNA has a possible poor quality reactivity profile: 011_P4P6_WT_nobc_5mMMgMRTpH83_tp4_p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-rw-r-- 1 ekc5108 b1044 2.6M Feb  9  2025 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p_S12_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 ekc5108 b1044 2.8M Feb  9  2025 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p_S12_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p
+ggataatccaaaacaacaaccAAAGGAATTGCGGGAAAGGGGTCAACAGCCGTTCAGTACCAAGTCTCAGGGGAAACTTTGAGATGGCCTTGCAAAGGGTATGGTAATAAGCTGACGGACATGGTCCTAACCACGCAGCCAAGTCCTAAGTCAACAGATCTTCTGTTGATATGGATGCAGTTCAACCAAATCAccaaaccaaagaaacaacc
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p --target artifacts/012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p/target.fa --out artifacts/012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p_S12_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p_S12_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 13:58:52
+Output will be logged to 012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-2cf8202
+args:  --name 012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p --target artifacts/012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p/target.fa --out artifacts/012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/012_P4P6_... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/012_P4P6_... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 13:58:52
+Running PrimerLocator at 2025-10-14 13:58:52 . . .
+. . . done at 2025-10-14 13:58:52
+Running FastaFormatChecker at 2025-10-14 13:58:52 . . .
+. . . done at 2025-10-14 13:58:52
+Running BowtieIndexBuilder at 2025-10-14 13:58:52 . . .
+. . . done at 2025-10-14 13:58:53
+Running process group 4 at 2025-10-14 13:58:53 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 13:58:53
+    QualityTrimmer1 . . . started at 2025-10-14 13:58:53
+    QualityTrimmer2 . . . started at 2025-10-14 13:58:53
+    Interleaver . . . started at 2025-10-14 13:58:53
+    Merger . . . started at 2025-10-14 13:58:53
+    Tab6Interleaver . . . started at 2025-10-14 13:58:53
+    BowtieAligner . . . started at 2025-10-14 13:58:53
+    MutationParser_Modified . . . started at 2025-10-14 13:58:53
+    MutationParserGA_Modified . . . started at 2025-10-14 13:58:53
+    MutationCounter_Modified . . . started at 2025-10-14 13:58:53
+    MutationCounterGA_Modified . . . started at 2025-10-14 13:58:53
+  548KiB [=========>                                      ] 21% ETA 0:00:14 556KiB [=========>                                      ] 21% ETA 0:00:14  724KiB [============>                                   ] 28% ETA 0:00:23 732KiB [============>                                   ] 28% ETA 0:00:22  884KiB [===============>                                ] 34% ETA 0:00:23 892KiB [===============>                                ] 34% ETA 0:00:22  1.04MiB [==================>                             ] 41% ETA 0:00:251.04MiB [==================>                             ] 41% ETA 0:00:25  1.18MiB [=====================>                          ] 46% ETA 0:00:241.18MiB [=====================>                          ] 46% ETA 0:00:23  1.32MiB [=======================>                        ] 52% ETA 0:00:221.33MiB [=======================>                        ] 52% ETA 0:00:22  1.46MiB [==========================>                     ] 58% ETA 0:00:191.47MiB [==========================>                     ] 58% ETA 0:00:19  1.59MiB [============================>                   ] 62% ETA 0:00:181.60MiB [=============================>                  ] 63% ETA 0:00:17  1.74MiB [===============================>                ] 68% ETA 0:00:141.75MiB [================================>               ] 69% ETA 0:00:14  1.87MiB [==================================>             ] 74% ETA 0:00:131.88MiB [==================================>             ] 74% ETA 0:00:13  2.01MiB [====================================>           ] 79% ETA 0:00:10      2.08MiB [======================================>         ] 82% ETA 0:00:08      2.15MiB [=======================================>        ] 85% ETA 0:00:07      2.29MiB [==========================================>     ] 90% ETA 0:00:042.30MiB [==========================================>     ] 91% ETA 0:00:04  2.43MiB [=============================================>  ] 96% ETA 0:00:012.43MiB [=============================================>  ] 96% ETA 0:00:01  2.52MiB [==============================================>] 100%                  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 57.079 seconds.
+  | 
+  | Pairs:               	99211
+  | Joined:              	92601   	93.337%
+  | Ambiguous:           	6581       	6.633%
+  | No Solution:         	29       	0.029%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	237.8
+  | Standard Deviation:  	4.0
+  | Mode:                	238
+  | 
+  | Insert range:        	47 - 281
+  | 90th percentile:     	238
+  | 75th percentile:     	238
+  | 50th percentile:     	238
+  | 25th percentile:     	238
+  | 10th percentile:     	238
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 99211 reads; of these:
+  |   6610 (6.66%) were paired; of these:
+  |     1806 (27.32%) aligned concordantly 0 times
+  |     4800 (72.62%) aligned concordantly exactly 1 time
+  |     4 (0.06%) aligned concordantly >1 times
+  |     ----
+  |     1806 pairs aligned concordantly 0 times; of these:
+  |       0 (0.00%) aligned discordantly 1 time
+  |     ----
+  |     1806 pairs aligned 0 times concordantly or discordantly; of these:
+  |       3612 mates make up the pairs; of these:
+  |         2060 (57.03%) aligned 0 times
+  |         1552 (42.97%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   92601 (93.34%) were unpaired; of these:
+  |     37 (0.04%) aligned 0 times
+  |     92552 (99.95%) aligned exactly 1 time
+  |     12 (0.01%) aligned >1 times
+  | 98.02% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------------------ 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000778
+  | [50,99]	0.000859
+  | [100,149]	0.014244
+  | [150,199]	0.000061
+  | [200,249]	0.984058
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.407804
+  | 1	0.348534
+  | 2	0.171431
+  | 3	0.056328
+  | 4	0.013192
+  | 5	0.002315
+  | 6	0.000334
+  | 7	0.000061
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p) (sample: Modified) output message: 
+  |-------------------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000778
+  | [50,99]	0.000859
+  | [100,149]	0.014244
+  | [150,199]	0.000061
+  | [200,249]	0.984058
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.946128
+  | 1	0.052325
+  | 2	0.001466
+  | 3	0.000061
+  | 4	0.000020
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 13:59:51
+Running CalcProfile at 2025-10-14 13:59:51 . . .
+. . . done at 2025-10-14 13:59:51
+Running NormProfile at 2025-10-14 13:59:51 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p) output message: 
+|---------------------------------------------------------------------- 
+| 
+| Signal for G = 0.001 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.034906, 'C': 0.016031, 'U': 0.0048000000000000004, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:59:51
+Running CalcProfile at 2025-10-14 13:59:51 . . .
+. . . done at 2025-10-14 13:59:51
+Running NormProfile at 2025-10-14 13:59:51 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p) output message: 
+|---------------------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.00145, 'GPUR': 0.0010222500000000002, 'GPYR': 0.0022375}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:59:52
+Running TabToShape at 2025-10-14 13:59:52 . . .
+. . . done at 2025-10-14 13:59:52
+Running RenderFigures at 2025-10-14 13:59:52 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p) output message: 
+|------------------------------------------------------------------------ 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 94.3% (50/53) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 4.0% (2/50) nucleotides have high modification rates (>0.05)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 97.2% (35/36) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/35) nucleotides have high modification rates (>0.05)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 97.3% (36/37) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/36) nucleotides have high modification rates (>0.01)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (45/45) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/45) nucleotides have high modification rates (>0.002)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: False
+|         U: False
+|         G: False
+| 
+| 
+|       A and/or C FAILURE: Possible causes:
+|        - low sequencing depth
+|        - DNA contamination
+|        - poor mixing of chemical reagents and RNA and/or poor
+|          reagent diffusion (if modifying in cells), resulting
+|          in low modification rates
+|        - expired reagents, resulting in low modification rates
+|        - poor reverse transcription conditions, resulting in
+|          low adduct read-through
+|        - extremely highly structured RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:59:55
+Running RenderMappedDepths at 2025-10-14 13:59:55 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p) output message: 
+|----------------------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGATAATCCAAAACAACAACC         0       20      GGTTGTTTCTTTGGTTTGG           193     211     99k    
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 13:59:56
+ShapeMapper run completed at 2025-10-14 13:59:56.
+WARNING: This RNA has a possible poor quality reactivity profile: 012_P4P6_WT_nobc_5mMMgMRTpH83_tp5_p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-rw-r-- 1 ekc5108 b1044 2.7M Feb  9  2025 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p_S13_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 ekc5108 b1044 3.0M Feb  9  2025 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p_S13_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p
+ggataatccaaaacaacaaccAAAGGAATTGCGGGAAAGGGGTCAACAGCCGTTCAGTACCAAGTCTCAGGGGAAACTTTGAGATGGCCTTGCAAAGGGTATGGTAATAAGCTGACGGACATGGTCCTAACCACGCAGCCAAGTCCTAAGTCAACAGATCTTCTGTTGATATGGATGCAGTTCAACCAAATCAccaaaccaaagaaacaacc
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p --target artifacts/013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p/target.fa --out artifacts/013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p_S13_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p_S13_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 13:59:58
+Output will be logged to 013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-2cf8202
+args:  --name 013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p --target artifacts/013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p/target.fa --out artifacts/013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/013_P4P6_... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/013_P4P6_... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 13:59:58
+Running PrimerLocator at 2025-10-14 13:59:58 . . .
+. . . done at 2025-10-14 13:59:58
+Running FastaFormatChecker at 2025-10-14 13:59:58 . . .
+. . . done at 2025-10-14 13:59:58
+Running BowtieIndexBuilder at 2025-10-14 13:59:58 . . .
+. . . done at 2025-10-14 13:59:58
+Running process group 4 at 2025-10-14 13:59:58 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 13:59:58
+    QualityTrimmer1 . . . started at 2025-10-14 13:59:58
+    QualityTrimmer2 . . . started at 2025-10-14 13:59:58
+    Interleaver . . . started at 2025-10-14 13:59:58
+    Merger . . . started at 2025-10-14 13:59:58
+    Tab6Interleaver . . . started at 2025-10-14 13:59:58
+    BowtieAligner . . . started at 2025-10-14 13:59:58
+    MutationParser_Modified . . . started at 2025-10-14 13:59:58
+    MutationParserGA_Modified . . . started at 2025-10-14 13:59:58
+    MutationCounter_Modified . . . started at 2025-10-14 13:59:58
+    MutationCounterGA_Modified . . . started at 2025-10-14 13:59:58
+  556KiB [========>                                       ] 20% ETA 0:00:11 564KiB [=========>                                      ] 21% ETA 0:00:11  708KiB [===========>                                    ] 26% ETA 0:00:22 716KiB [===========>                                    ] 26% ETA 0:00:21  876KiB [==============>                                 ] 32% ETA 0:00:22 884KiB [==============>                                 ] 32% ETA 0:00:22  1.02MiB [=================>                              ] 38% ETA 0:00:231.03MiB [=================>                              ] 39% ETA 0:00:23  1.16MiB [====================>                           ] 44% ETA 0:00:251.17MiB [====================>                           ] 44% ETA 0:00:24  1.32MiB [=======================>                        ] 50% ETA 0:00:211.32MiB [=======================>                        ] 50% ETA 0:00:21  1.46MiB [=========================>                      ] 55% ETA 0:00:221.46MiB [=========================>                      ] 55% ETA 0:00:22  1.73MiB [==============================>                 ] 66% ETA 0:00:16      1.74MiB [==============================>                 ] 66% ETA 0:00:16      1.87MiB [=================================>              ] 71% ETA 0:00:131.88MiB [=================================>              ] 71% ETA 0:00:13  2.00MiB [===================================>            ] 76% ETA 0:00:112.01MiB [===================================>            ] 76% ETA 0:00:11  2.14MiB [=====================================>          ] 81% ETA 0:00:092.15MiB [======================================>         ] 82% ETA 0:00:08  2.29MiB [========================================>       ] 87% ETA 0:00:062.29MiB [========================================>       ] 87% ETA 0:00:06  2.43MiB [===========================================>    ] 92% ETA 0:00:032.43MiB [===========================================>    ] 92% ETA 0:00:03  2.57MiB [==============================================> ] 98% ETA 0:00:002.57MiB [==============================================> ] 98% ETA 0:00:002.62MiB [==============================================>] 100%  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 57.235 seconds.
+  | 
+  | Pairs:               	103209
+  | Joined:              	96232   	93.240%
+  | Ambiguous:           	6938       	6.722%
+  | No Solution:         	39       	0.038%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	237.9
+  | Standard Deviation:  	2.0
+  | Mode:                	238
+  | 
+  | Insert range:        	44 - 283
+  | 90th percentile:     	238
+  | 75th percentile:     	238
+  | 50th percentile:     	238
+  | 25th percentile:     	238
+  | 10th percentile:     	238
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 103209 reads; of these:
+  |   6977 (6.76%) were paired; of these:
+  |     1824 (26.14%) aligned concordantly 0 times
+  |     5148 (73.79%) aligned concordantly exactly 1 time
+  |     5 (0.07%) aligned concordantly >1 times
+  |     ----
+  |     1824 pairs aligned concordantly 0 times; of these:
+  |       0 (0.00%) aligned discordantly 1 time
+  |     ----
+  |     1824 pairs aligned 0 times concordantly or discordantly; of these:
+  |       3648 mates make up the pairs; of these:
+  |         2041 (55.95%) aligned 0 times
+  |         1607 (44.05%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   96232 (93.24%) were unpaired; of these:
+  |     7 (0.01%) aligned 0 times
+  |     96224 (99.99%) aligned exactly 1 time
+  |     1 (0.00%) aligned >1 times
+  | 98.14% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------------------ 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000757
+  | [50,99]	0.000884
+  | [100,149]	0.013992
+  | [150,199]	0.000058
+  | [200,249]	0.984308
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.426703
+  | 1	0.346546
+  | 2	0.162664
+  | 3	0.050172
+  | 4	0.011846
+  | 5	0.001767
+  | 6	0.000282
+  | 7	0.000019
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p) (sample: Modified) output message: 
+  |-------------------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000757
+  | [50,99]	0.000884
+  | [100,149]	0.013992
+  | [150,199]	0.000058
+  | [200,249]	0.984308
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.942788
+  | 1	0.053396
+  | 2	0.003602
+  | 3	0.000214
+  | 4	0.000000
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 14:00:56
+Running CalcProfile at 2025-10-14 14:00:56 . . .
+. . . done at 2025-10-14 14:00:57
+Running NormProfile at 2025-10-14 14:00:57 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p) output message: 
+|---------------------------------------------------------------------- 
+| 
+| Signal for G = 0.001 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': 0.0343275, 'C': 0.016701, 'U': 0.0041635000000000005, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 14:00:58
+Running CalcProfile at 2025-10-14 14:00:58 . . .
+. . . done at 2025-10-14 14:00:58
+Running NormProfile at 2025-10-14 14:00:58 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p) output message: 
+|---------------------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.001628, 'GPUR': 0.0010872500000000001, 'GPYR': 0.0021825}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 14:00:58
+Running TabToShape at 2025-10-14 14:00:58 . . .
+. . . done at 2025-10-14 14:00:58
+Running RenderFigures at 2025-10-14 14:00:58 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p) output message: 
+|------------------------------------------------------------------------ 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 94.3% (50/53) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 4.0% (2/50) nucleotides have high modification rates (>0.05)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 97.2% (35/36) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 2.9% (1/35) nucleotides have high modification rates (>0.05)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 97.3% (36/37) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/36) nucleotides have high modification rates (>0.01)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| PASS: Finite normalized rates present.
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (45/45) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/45) nucleotides have high modification rates (>0.002)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: False
+|         U: False
+|         G: False
+| 
+| 
+|       A and/or C FAILURE: Possible causes:
+|        - low sequencing depth
+|        - DNA contamination
+|        - poor mixing of chemical reagents and RNA and/or poor
+|          reagent diffusion (if modifying in cells), resulting
+|          in low modification rates
+|        - expired reagents, resulting in low modification rates
+|        - poor reverse transcription conditions, resulting in
+|          low adduct read-through
+|        - extremely highly structured RNA
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 14:01:04
+Running RenderMappedDepths at 2025-10-14 14:01:04 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p) output message: 
+|----------------------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGATAATCCAAAACAACAACC         0       20      GGTTGTTTCTTTGGTTTGG           193     211     103k   
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 14:01:06
+ShapeMapper run completed at 2025-10-14 14:01:06.
+WARNING: This RNA has a possible poor quality reactivity profile: 013_P4P6_WT_nobc_5mMMgMRTpH83_tp6_p
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.
+################################################################################
+# 3 - Verify FASTQ inputs
+################################################################################
+-rw-rw-r-- 1 ekc5108 b1044 1.3M Feb  9  2025 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m_S14_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 ekc5108 b1044 1.5M Feb  9  2025 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m_S14_L001_R2_001.fastq.gz
+################################################################################
+# 4 - Verify created FASTA
+################################################################################
+>014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m
+ggataatccaaaacaacaaccAAAGGAATTGCGGGAAAGGGGTCAACAGCCGTTCAGTACCAAGTCTCAGGGGAAACTTTGAGATGGCCTTGCAAAGGGTATGGTAATAAGCTGACGGACATGGTCCTAACCACGCAGCCAAGTCCTAAGTCAACAGATCTTCTGTTGATATGGATGCAGTTCAACCAAATCAccaaaccaaagaaacaacc
+################################################################################
+# 5 - Create shapemapper
+################################################################################
+Command: /projects/b1044/Software/shapemapper2-2.3/shapemapper --name 014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m --target artifacts/014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m/target.fa --out artifacts/014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m_S14_L001_R1_001.fastq.gz --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m_S14_L001_R2_001.fastq.gz --amplicon --dms --N7 --bypass_filters --per-read-histograms
+################################################################################
+# 6 - Run shapemapper
+################################################################################
+
+################################################################################
+
+Started ShapeMapper v2.3.0 at 2025-10-14 14:01:07
+Output will be logged to 014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m_shapemapper_log.txt
+Running from directory: /gpfs/projects/b1044/Computational_Output/EKC/EKC.01_SHAPE_standardization/EKC.01.065.refactoring_data_analysis/nerd/examples/all_mutcounts/mut_count/mut_count___cfg-2cf8202
+args:  --name 014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m --target artifacts/014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m/target.fa --out artifacts/014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m --modified --R1 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/014_P4P6_... --R2 /projects/b1044/Sequencing/SHAPE-Seq/EKC/250208_VH01990_20_AAGN23LM5/fastq_output/EKC_P4P6/014_P4P6_... --amplicon --dms --N7 --bypass_filters --per-read-histograms
+--bypass_filters flag passed - ignoring low N7 reactivity and setting per-NT threshold to 1.
+Using default DMS max-bg of 0.02
+	You can manually override using the max-bg flag
+Created pipeline at 2025-10-14 14:01:07
+Running PrimerLocator at 2025-10-14 14:01:07 . . .
+. . . done at 2025-10-14 14:01:07
+Running FastaFormatChecker at 2025-10-14 14:01:07 . . .
+. . . done at 2025-10-14 14:01:07
+Running BowtieIndexBuilder at 2025-10-14 14:01:07 . . .
+. . . done at 2025-10-14 14:01:08
+Running process group 4 at 2025-10-14 14:01:08 . . .
+  Including these components:
+    ProgressMonitor . . . started at 2025-10-14 14:01:08
+    QualityTrimmer1 . . . started at 2025-10-14 14:01:08
+    QualityTrimmer2 . . . started at 2025-10-14 14:01:08
+    Interleaver . . . started at 2025-10-14 14:01:08
+    Merger . . . started at 2025-10-14 14:01:08
+    Tab6Interleaver . . . started at 2025-10-14 14:01:08
+    BowtieAligner . . . started at 2025-10-14 14:01:08
+    MutationParser_Modified . . . started at 2025-10-14 14:01:08
+    MutationParserGA_Modified . . . started at 2025-10-14 14:01:08
+    MutationCounter_Modified . . . started at 2025-10-14 14:01:08
+    MutationCounterGA_Modified . . . started at 2025-10-14 14:01:08
+  508KiB [=================>                              ] 38% ETA 0:00:06 516KiB [=================>                              ] 39% ETA 0:00:06  660KiB [=======================>                        ] 50% ETA 0:00:06 668KiB [=======================>                        ] 51% ETA 0:00:06  812KiB [============================>                   ] 62% ETA 0:00:06 820KiB [============================>                   ] 62% ETA 0:00:06  940KiB [=================================>              ] 71% ETA 0:00:06 948KiB [=================================>              ] 72% ETA 0:00:06  1.05MiB [======================================>         ] 82% ETA 0:00:041.06MiB [======================================>         ] 82% ETA 0:00:03  1.18MiB [===========================================>    ] 92% ETA 0:00:011.19MiB [===========================================>    ] 93% ETA 0:00:011.28MiB [==============================================>] 100%  /`````````````````````````````````````````````````````````````````````````````
+  |Merger (sample: Modified) output message: 
+  |----------------------------------------- 
+  | 
+  | java -Djava.library.path=/gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/jni/ -ea -Xmx1000m -Xmx1000m -cp /gpfs/projects/b1044/Software/shapemapper2-2.3/internals/thirdparty/miniconda/envs/shapemapper_make/opt/bbmap-37.78/current/ jgi.BBMerge vstrict=t in=stdin out=stdout outu=stdout interleaved=t usejni=t t=4
+  | Executing jgi.BBMerge [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | Version 37.78 [vstrict=t, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Revised arguments: [maxbad=4, margin=3, minqo=8, qualiters=2, ratiomode=t, flatmode=f, minentropy=52, minoverlap=12, minoverlap0=4, maxratio=0.05, ratiomargin=12, ratiooffset=0.5, ratiominoverlapreduction=4, efilter=2, pfilter=0.008, minsecondratio=0.16, minapproxoverlap=22, in=stdin, out=stdout, outu=stdout, interleaved=t, usejni=t, t=4]
+  | 
+  | Set INTERLEAVED to true
+  | Set threads to 4
+  | Writing mergable reads merged.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Unspecified format for output stdout; defaulting to fastq.
+  | Started output threads.
+  | Unspecified format for input stdin; defaulting to fastq.
+  | Total time: 31.611 seconds.
+  | 
+  | Pairs:               	53409
+  | Joined:              	49018   	91.779%
+  | Ambiguous:           	4371       	8.184%
+  | No Solution:         	20       	0.037%
+  | Too Short:           	0       	0.000%
+  | 
+  | Avg Insert:          	237.9
+  | Standard Deviation:  	2.0
+  | Mode:                	238
+  | 
+  | Insert range:        	47 - 283
+  | 90th percentile:     	238
+  | 75th percentile:     	238
+  | 50th percentile:     	238
+  | 25th percentile:     	238
+  | 10th percentile:     	238
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |BowtieAligner (sample: Modified) output message: 
+  |------------------------------------------------ 
+  | 
+  | 53409 reads; of these:
+  |   4391 (8.22%) were paired; of these:
+  |     1012 (23.05%) aligned concordantly 0 times
+  |     3372 (76.79%) aligned concordantly exactly 1 time
+  |     7 (0.16%) aligned concordantly >1 times
+  |     ----
+  |     1012 pairs aligned concordantly 0 times; of these:
+  |       0 (0.00%) aligned discordantly 1 time
+  |     ----
+  |     1012 pairs aligned 0 times concordantly or discordantly; of these:
+  |       2024 mates make up the pairs; of these:
+  |         1100 (54.35%) aligned 0 times
+  |         924 (45.65%) aligned exactly 1 time
+  |         0 (0.00%) aligned >1 times
+  |   49018 (91.78%) were unpaired; of these:
+  |     3 (0.01%) aligned 0 times
+  |     49015 (99.99%) aligned exactly 1 time
+  |     0 (0.00%) aligned >1 times
+  | 98.09% overall alignment rate
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounter_Modified (RNA: 014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m) (sample: Modified) output message: 
+  |------------------------------------------------------------------------------------------------------ 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000788
+  | [50,99]	0.000563
+  | [100,149]	0.015961
+  | [150,199]	0.000075
+  | [200,249]	0.982614
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.928898
+  | 1	0.067576
+  | 2	0.003395
+  | 3	0.000113
+  | 4	0.000019
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+  /`````````````````````````````````````````````````````````````````````````````
+  |MutationCounterGA_Modified (RNA: 014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m) (sample: Modified) output message: 
+  |-------------------------------------------------------------------------------------------------------- 
+  | 
+  | Read lengths
+  | --------------------
+  | bin_range	frequency
+  | [0,49]	0.000788
+  | [50,99]	0.000563
+  | [100,149]	0.015961
+  | [150,199]	0.000075
+  | [200,249]	0.982614
+  | [250,299]	0.000000
+  | [300,349]	0.000000
+  | [350,399]	0.000000
+  | [400,449]	0.000000
+  | [450,499]	0.000000
+  | [500,549]	0.000000
+  | [550,599]	0.000000
+  | [600,649]	0.000000
+  | [650,699]	0.000000
+  | [700,749]	0.000000
+  | [750,799]	0.000000
+  | [800,849]	0.000000
+  | [850,899]	0.000000
+  | [900,949]	0.000000
+  | [950,999]	0.000000
+  | >=1000	0.000000
+  | --------------------
+  | 
+  | Mutations per read
+  | --------------------
+  | bin_left	frequency
+  | 0	0.982014
+  | 1	0.017574
+  | 2	0.000413
+  | 3	0.000000
+  | 4	0.000000
+  | 5	0.000000
+  | 6	0.000000
+  | 7	0.000000
+  | 8	0.000000
+  | 9	0.000000
+  | 10	0.000000
+  | 11	0.000000
+  | 12	0.000000
+  | 13	0.000000
+  | 14	0.000000
+  | 15	0.000000
+  | 16	0.000000
+  | 17	0.000000
+  | 18	0.000000
+  | 19	0.000000
+  | 20	0.000000
+  | --------------------
+  \_____________________________________________________________________________
+. . . done at 2025-10-14 14:01:40
+Running CalcProfile at 2025-10-14 14:01:40 . . .
+. . . done at 2025-10-14 14:01:40
+Running NormProfile at 2025-10-14 14:01:40 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m) output message: 
+|---------------------------------------------------------------------- 
+| 
+| Signal for A = 0.001 is below acceptable level. All A nts ignored
+| Signal for C = 0.001 is below acceptable level. All C nts ignored
+| Signal for U = 0.001 is below acceptable level. All U nts ignored
+| Signal for G = 0.000 is below acceptable level. All G nts ignored
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': nan}
+\_______________________________________________________________________________
+. . . done at 2025-10-14 14:01:40
+Running CalcProfile at 2025-10-14 14:01:40 . . .
+. . . done at 2025-10-14 14:01:41
+Running NormProfile at 2025-10-14 14:01:41 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|NormProfile (RNA: 014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m) output message: 
+|---------------------------------------------------------------------- 
+| 
+| calculated normalization factor: {'A': nan, 'C': nan, 'U': nan, 'G': 0.000558, 'GPUR': 0.00051775, 'GPYR': 0.0005705}
+| ignoring n7 quality check.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 14:01:41
+Running TabToShape at 2025-10-14 14:01:41 . . .
+. . . done at 2025-10-14 14:01:41
+Running RenderFigures at 2025-10-14 14:01:41 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderFigures (RNA: 014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m) output message: 
+|------------------------------------------------------------------------ 
+| 
+| 
+| DMS mode quality control checks:
+| --------------------------------
+| 
+| ***************
+| *   Nt = A    *
+| ***************
+| 
+| Read depth check:
+| 94.3% (50/53) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/50) nucleotides have high modification rates (>0.05)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| ***************
+| *   Nt = C    *
+| ***************
+| 
+| Read depth check:
+| 97.2% (35/36) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/35) nucleotides have high modification rates (>0.05)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| ***************
+| *   Nt = U    *
+| ***************
+| 
+| Read depth check:
+| 97.3% (36/37) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/36) nucleotides have high modification rates (>0.01)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| ***************
+| *   Nt = G    *
+| ***************
+| 
+| Read depth check:
+| 100.0% (45/45) nucleotides meet the minimum read depth of 5000
+| PASS
+| 
+| Number highly reactive check:
+| 0.0% (0/45) nucleotides have high modification rates (>0.002)
+| FAIL:  Lower than expected reactivity
+| 
+| Normalized rate check:
+| FAIL: No finite normalized rates present.
+|       This is either due to the nucleotide failing to
+|       pass the normalization factor cutoff of at least
+|       0.002 or due to the nucleotide having less than
+|       20 nucleotides with quality reactivity information.
+|       Please refer to the NormProfile section of this log
+|       file for clarification
+| 
+| 
+| -----------------------------------------------------------------
+| 
+|       Nucleotide passes all quality control checks: 
+|         A: False
+|         C: False
+|         U: False
+|         G: False
+| 
+| 
+|       A and/or C FAILURE: Possible causes:
+|        - low sequencing depth
+|        - DNA contamination
+|        - poor mixing of chemical reagents and RNA and/or poor
+|          reagent diffusion (if modifying in cells), resulting
+|          in low modification rates
+|        - expired reagents, resulting in low modification rates
+|        - poor reverse transcription conditions, resulting in
+|          low adduct read-through
+|        - extremely highly structured RNA
+| 
+| Reactivity is none.
+\_______________________________________________________________________________
+. . . done at 2025-10-14 14:01:44
+Running RenderMappedDepths at 2025-10-14 14:01:44 . . .
+/```````````````````````````````````````````````````````````````````````````````
+|RenderMappedDepths (RNA: 014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m) output message: 
+|----------------------------------------------------------------------------- 
+| 
+| Approximate maximum read depth for reads mapping near each amplicon primer pair
+| (See *_mapped_depths.pdf for plots)
+| (See *_per-amplicon_abundance.txt for exact numbers)
+| 
+| Modified:
+|   pair forward                       left    right   reverse                       left    right   depth  
+|   ---- ----------------------------- ------- ------- ----------------------------- ------- ------- ------ 
+|   1    GGATAATCCAAAACAACAACC         0       20      GGTTGTTTCTTTGGTTTGG           193     211     53k    
+| 
+\_______________________________________________________________________________
+. . . done at 2025-10-14 14:01:45
+ShapeMapper run completed at 2025-10-14 14:01:45.
+WARNING: This RNA has a possible poor quality reactivity profile: 014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m
+See quality control checks above for details.
+Deleting temp files. Use --output-temp to retain temp files.

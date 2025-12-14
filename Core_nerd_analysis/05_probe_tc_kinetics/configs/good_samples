@@ -1,0 +1,111 @@
+run:
+  label: 04_probe_tc_kinetics
+  output_dir: manuscript_pipeline
+  backend: local
+  threads: 4
+  time: "00:39:00"
+
+# Demonstrates the migrated probe timecourse fitting engine.
+probe_timecourse:
+  engine: python_baseline
+  rounds:
+    - round1_free
+    - round2_global
+    - round3_constrained
+
+  # Reaction groups pulled from examples/nerd.sqlite
+  rg_ids:
+      - 3
+      - 10
+      - 11
+      - 16
+      - 17
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 32
+      - 33
+      - 43
+      - 44
+      - 45
+      - 47
+      - 48
+      - 49
+      - 50
+      - 51
+      - 52
+      - 53
+      - 54
+      - 55
+      - 56
+      - 75
+      - 76
+      - 77
+      - 78
+      - 79
+      - 80
+      - 81
+      - 81
+
+# A8C
+    - 7
+    - 9
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
+    - 31
+    - 34
+    - 37
+    - 39
+    - 40
+    - 41
+    - 42
+    - 57
+    - 58
+    - 59
+    - 60
+    - 61  
+    - 62
+    - 63
+    - 64
+    - 65
+    - 66
+    - 67
+    - 68
+    - 69
+    - 70
+    - 71
+    - 72
+    - 73
+    - 74
+
+  # The example database stores probing timecourse amplitudes under multiple value types.
+  valtype:
+    - modrate
+    - GAmodrate
+
+  # Specify experimenter (only 1 currently supported).
+  done_by: EKC
+  
+  min_points: 3
+  overwrite: true
+
+  # Optional nucleotide filter. Uncomment to focus on specific sites.
+  # nt_ids:
+  #   - 390  # site indexing comes from meta_nucleotides.id
+
+  # Forward knobs into the engine to tune selection and initial guesses.
+  engine_options:
+    global_selection: ac_only  # acceptable values: ac_only, acg_only, all
+    global_filters:
+      r2_threshold: 0.5
+    initialize_kdeg_arrhenius: nmr:deg:dms:Schwalbe_bistris 
+
+  # Metadata mirrored into result artifacts for provenance.
+  global_metadata:
+    experiment_id: ekc.01.0xx
+    notes: "Baseline python engine demo using examples/nerd.sqlite"

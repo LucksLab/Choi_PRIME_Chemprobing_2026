@@ -1,0 +1,37 @@
+run:
+  label: 05_probe_tempgrad_fit
+  output_dir: manuscript_pipeline
+  backend: local
+
+# Two-state melt fit on probe timecourse kinetics (all temperatures)
+tempgrad_fit:
+  fit_name: two_state_kobs_free_4U_A
+  mode: two_state_melt
+  model: free_kadd           # global upper baseline shared across grouped sites
+  data_source: probe_tc
+  engine: two_state_melt
+  overwrite: true
+  use_probe_tc: true
+
+  filters:
+    construct: 4U_wt
+    buffer: Schwalbe_bistris
+    probe: dms
+    rt_protocol: MRT
+    base: A
+    valtype: modrate
+    fit_kind: round3_constrained
+
+  engine_options:
+    weighted: false
+    group_by:
+      - buffer
+      - base
+
+    outliers:
+     - rg_id:20     # 80 °C run outlier
+     - rg_id:47
+     - rg_nt_id:10:397
+
+  metadata:
+    description: "Two-state melt (4U_wt), A-base nucleotides with shared upper baseline"

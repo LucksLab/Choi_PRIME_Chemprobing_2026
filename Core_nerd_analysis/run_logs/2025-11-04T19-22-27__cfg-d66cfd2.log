@@ -1,0 +1,14 @@
+2025-11-04 19:22:27,127 - nerd.db.api - INFO - Database schema initialized successfully.
+2025-11-04 19:22:27,128 - nerd.utils.paths - INFO - Created run directory: manuscript_pipeline/05_probe_tempgrad_fit/tempgrad_fit/tempgrad_fit___cfg-d66cfd2
+2025-11-04 19:22:27,128 - nerd.pipeline.tasks.base - INFO - Executing task 'tempgrad_fit' in run directory: manuscript_pipeline/05_probe_tempgrad_fit/tempgrad_fit/tempgrad_fit___cfg-d66cfd2
+2025-11-04 19:22:27,128 - nerd.db.api - INFO - Began task 'tempgrad_fit' (ID: 445) for global:None (cfg=d66cfd2746b5a26a5201389622fb2a4f71b3242980c7dfec3c4cfacbf6c2f25c)
+2025-11-04 19:22:27,129 - nerd.pipeline.tasks.base - INFO - Command completed successfully. Consuming outputs.
+2025-11-04 19:22:27,235 - nerd.cli - ERROR - Failed to execute task 'tempgrad_fit': No input series available for tempgrad fitting.
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/cli.py", line 132, in run
+    task.exec(conn, cfg, verbose=state["verbose"])
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/base.py", line 264, in exec
+    self.consume_outputs(ctx, inputs, params, run_dir, task_id=task_id)
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/tempgrad_fit.py", line 126, in consume_outputs
+    raise ValueError("No input series available for tempgrad fitting.")
+ValueError: No input series available for tempgrad fitting.
