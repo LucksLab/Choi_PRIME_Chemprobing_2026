@@ -13,21 +13,22 @@
   - `Figure3_EnergyValidation`
   - `Figure4_DynamicEnsemble`
   - `Figure5_TertiaryContacts`
-  - `08_dG_barplots` - TOUPDATE (CONTAINS 4U, HIV, P4P6)
-  - `09_dG_correlations` - TOUPDATE (CONTAINS 4U, HIV, P4P6)
-  - `18_color_coded_structures` - TOUPDATE (CONTAINS 4U, HIV, P4P6)
-  - `Methods_Construct_design_code`
+  - `08_dG_barplots`
+  - `09_dG_correlations`
+  - `18_color_coded_structures`
+  - `Methods_ConstructDesign`
   - `SFig1_ODEvAnalytical`
   - `SFig3_MutsPerRead`
-  - `SFig4_MeltConvergence`
-  - `SFig5_ReplicateReproducibility`
-  - `SFig6_NmrDegValidation`
-  - `SFig7_NmrAddValidation`
-  - `SFig9_EnergyCorrelations`
-  - `SFig10_HivAllVariants`
-  - `SFig11_CorrCalcThreshold`
-  - `SFig12_P4p6OtherContexts`
-  - `SFig13_UnifiedEnergyScale`
+  - `SFig4_DegGlobal`
+  - `SFig5_TempgradQuality`
+  - `SFig7_NmrDegValidation`
+  - `SFig8_NmrAddValidation`
+  - `SFig9_ReplicateReproducibility`
+  - `SFig11_EnergyCorrelations`
+  - `SFig12_HIV_P4P6_Qc`
+  - `SFig14_P4P6Replicates`
+  - `SFig15_P4P6OtherContexts`
+  - `SFig16_UnifiedEnergyScale`
   - `data`
   - `temp_reps`
 
