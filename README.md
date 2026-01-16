@@ -1,4 +1,4 @@
-# Choi_HDX_Chemprobing_2025
+# Choi_PRIME_Chemprobing_2026
 
 This repository accompanies the manuscript and provides all code, configurations, and Jupyter notebooks used to perform and reproduce the analyses. It contains:
 
