@@ -203,7 +203,6 @@ def get_microbe_base_headers() -> list[str]:
         "env_broad_scale",
         "env_local_scale",
         "env_medium",
-        "geo_loc_name",
         "lat_lon",
         "project_name",
     ]
