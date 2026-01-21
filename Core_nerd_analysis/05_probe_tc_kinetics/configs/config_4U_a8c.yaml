@@ -1,6 +1,6 @@
 run:
   label: 04_probe_tc_kinetics
-  output_dir: manuscript_pipeline
+  output_dir: Core_nerd_analysis
   backend: local
   threads: 4
   time: "00:39:00"
@@ -29,11 +29,9 @@ probe_timecourse:
     - 40
     - 41
     - 42
-    - 57
-    - 58
-    - 59
+    - 59 
     - 60
-    - 61  
+    - 61
     - 62
     - 63
     - 64
@@ -78,7 +76,97 @@ probe_timecourse:
     - 73:094_fourU_A8C30c_b_6_m:19_G:modrate # tp0 too high
     - 73:086_fourU_A8C_30c_b_2_p:19_G:modrate # tp2 too high
     - 73:091_fourU_A8C30c_b_6_p:19_G:modrate # tp6 too high
-      
+    - 7:YYYR-008-EKC-fourUnew-A8C-25C-dms-MaP-25:8_C:modrate # exclude 0tp for C's, too high, everything below
+    - 7:YYYR-008-EKC-fourUnew-A8C-25C-dms-MaP-25:9_C:modrate
+    - 7:YYYR-008-EKC-fourUnew-A8C-25C-dms-MaP-25:25_C:modrate
+    - 7:YYYR-009-EKC-fourUnew-A8C-25C-dms-MaP-60:8_C:modrate
+    - 7:YYYR-009-EKC-fourUnew-A8C-25C-dms-MaP-60:9_C:modrate
+    - 7:YYYR-009-EKC-fourUnew-A8C-25C-dms-MaP-60:25_C:modrate
+    - 7:YYYR-010-EKC-fourUnew-A8C-25C-dms-MaP-120:8_C:modrate
+    - 7:YYYR-010-EKC-fourUnew-A8C-25C-dms-MaP-120:9_C:modrate
+    - 7:YYYR-010-EKC-fourUnew-A8C-25C-dms-MaP-120:25_C:modrate
+    - 7:YYYR-011-EKC-fourUnew-A8C-25C-dms-MaP-180:8_C:modrate
+    - 7:YYYR-011-EKC-fourUnew-A8C-25C-dms-MaP-180:9_C:modrate
+    - 7:YYYR-011-EKC-fourUnew-A8C-25C-dms-MaP-180:25_C:modrate
+    - 7:YYYR-012-EKC-fourUnew-A8C-25C-dms-MaP-240:8_C:modrate
+    - 7:YYYR-012-EKC-fourUnew-A8C-25C-dms-MaP-240:9_C:modrate
+    - 7:YYYR-012-EKC-fourUnew-A8C-25C-dms-MaP-240:25_C:modrate
+    - 39:092-EKC-A8C-37c-b-6-m:8_C:modrate
+    - 39:067-EKC-A8C-37c-b-1-p:8_C:modrate
+    - 39:092-EKC-A8C-37c-b-6-m:9_C:modrate
+    - 39:092-EKC-A8C-37c-b-6-m:25_C:modrate
+    - 59:049_fourU_A8C15c_a_2_p:8_C:modrate
+    - 59:049_fourU_A8C15c_a_2_p:9_C:modrate
+    - 59:049_fourU_A8C15c_a_2_p:25_C:modrate
+    - 59:052_fourU_A8C15c_a_6_m:8_C:modrate
+    - 59:052_fourU_A8C15c_a_6_m:9_C:modrate
+    - 59:052_fourU_A8C15c_a_6_m:25_C:modrate
+    - 60:051_fourU_A8C40c_a_6_m:8_C:modrate
+    - 60:051_fourU_A8C40c_a_6_m:9_C:modrate
+    - 60:051_fourU_A8C40c_a_6_m:25_C:modrate
+    - 61:055_fourU_A8C15c_b_2_p:8_C:modrate
+    - 61:055_fourU_A8C15c_b_2_p:9_C:modrate
+    - 61:055_fourU_A8C15c_b_2_p:25_C:modrate
+    - 61:058_fourU_A8C15c_b_6_m:8_C:modrate
+    - 61:058_fourU_A8C15c_b_6_m:9_C:modrate
+    - 61:058_fourU_A8C15c_b_6_m:25_C:modrate
+    - 62:057_fourU_A8C40c_b_6_m:8_C:modrate
+    - 62:057_fourU_A8C40c_b_6_m:9_C:modrate
+    - 62:057_fourU_A8C40c_b_6_m:25_C:modrate
+    - 63:061_fourU_A8C20c_a_2_p:8_C:modrate
+    - 63:061_fourU_A8C20c_a_2_p:9_C:modrate
+    - 63:061_fourU_A8C20c_a_2_p:25_C:modrate
+    - 63:064_fourU_A8C20c_a_6_m:8_C:modrate
+    - 63:064_fourU_A8C20c_a_6_m:9_C:modrate
+    - 63:064_fourU_A8C20c_a_6_m:25_C:modrate
+    - 64:063_fourU_A8C42c_a_6_m:8_C:modrate
+    - 64:063_fourU_A8C42c_a_6_m:9_C:modrate
+    - 64:063_fourU_A8C42c_a_6_m:25_C:modrate
+    - 65:067_fourU_A8C20c_b_2_p:8_C:modrate
+    - 65:067_fourU_A8C20c_b_2_p:9_C:modrate
+    - 65:067_fourU_A8C20c_b_2_p:25_C:modrate
+    - 65:070_fourU_A8C20c_b_6_m:8_C:modrate
+    - 65:070_fourU_A8C20c_b_6_m:9_C:modrate
+    - 65:070_fourU_A8C20c_b_6_m:25_C:modrate
+    - 66:069_fourU_A8C42c_b_6_m:8_C:modrate
+    - 66:069_fourU_A8C42c_b_6_m:9_C:modrate
+    - 66:069_fourU_A8C42c_b_6_m:25_C:modrate
+    - 67:073_fourU_A8C25c_a_2_p:8_C:modrate
+    - 67:073_fourU_A8C25c_a_2_p:9_C:modrate
+    - 67:073_fourU_A8C25c_a_2_p:25_C:modrate
+    - 67:076_fourU_A8C25c_a_6_m:8_C:modrate
+    - 67:076_fourU_A8C25c_a_6_m:9_C:modrate
+    - 67:076_fourU_A8C25c_a_6_m:25_C:modrate
+    - 68:075_fourU_A8C45c_a_6_m:8_C:modrate
+    - 68:075_fourU_A8C45c_a_6_m:9_C:modrate
+    - 68:075_fourU_A8C45c_a_6_m:25_C:modrate
+    - 68:075_fourU_A8C45c_a_6_m:8_C:modrate
+    - 68:075_fourU_A8C45c_a_6_m:9_C:modrate
+    - 68:075_fourU_A8C45c_a_6_m:25_C:modrate
+    - 69:079_fourU_A8C25c_b_2_p:8_C:modrate
+    - 69:079_fourU_A8C25c_b_2_p:9_C:modrate
+    - 69:079_fourU_A8C25c_b_2_p:25_C:modrate
+    - 69:082_fourU_A8C25c_b_6_m:8_C:modrate
+    - 69:082_fourU_A8C25c_b_6_m:9_C:modrate
+    - 69:082_fourU_A8C25c_b_6_m:25_C:modrate
+    - 70:081_fourU_A8C45c_b_6_m:8_C:modrate
+    - 70:081_fourU_A8C45c_b_6_m:9_C:modrate
+    - 70:081_fourU_A8C45c_b_6_m:25_C:modrate
+    - 71:088_fourU_A8C30c_a_6_m:8_C:modrate
+    - 71:088_fourU_A8C30c_a_6_m:9_C:modrate
+    - 71:088_fourU_A8C30c_a_6_m:25_C:modrate
+    - 72:087_fourU_A8C48c_a_6_m:8_C:modrate
+    - 72:087_fourU_A8C48c_a_6_m:9_C:modrate
+    - 72:087_fourU_A8C48c_a_6_m:25_C:modrate
+    - 73:094_fourU_A8C30c_b_6_m:8_C:modrate
+    - 73:094_fourU_A8C30c_b_6_m:9_C:modrate
+    - 73:094_fourU_A8C30c_b_6_m:25_C:modrate
+    - 73:091_fourU_A8C30c_b_6_p:8_C:modrate
+    - 73:091_fourU_A8C30c_b_6_p:9_C:modrate
+    - 73:091_fourU_A8C30c_b_6_p:25_C:modrate
+    - 74:093_fourU_A8C48c_b_6_m:8_C:modrate
+    - 74:093_fourU_A8C48c_b_6_m:9_C:modrate
+    - 74:093_fourU_A8C48c_b_6_m:25_C:modrate
   # The example database stores probing timecourse amplitudes under multiple value types.
   valtype:
     - modrate
