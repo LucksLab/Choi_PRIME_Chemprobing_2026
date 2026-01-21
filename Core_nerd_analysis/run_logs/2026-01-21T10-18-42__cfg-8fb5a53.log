@@ -1,0 +1,13 @@
+2026-01-21 10:18:42,367 - nerd.db.api - INFO - Database schema initialized successfully.
+2026-01-21 10:18:42,368 - nerd.utils.paths - INFO - Created run directory: Core_nerd_analysis/05_probe_tc_kinetics/probe_timecourse/probe_timecourse___cfg-8fb5a53
+2026-01-21 10:18:42,368 - nerd.pipeline.tasks.base - INFO - Executing task 'probe_timecourse' in run directory: Core_nerd_analysis/05_probe_tc_kinetics/probe_timecourse/probe_timecourse___cfg-8fb5a53
+2026-01-21 10:18:42,369 - nerd.cli - ERROR - Failed to execute task 'probe_tc_kinetics': Invalid outlier specification '124:008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p:209_C:modrate - 124:014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m:213_C:modrate'. Expected format 'rg_id:sample_name:site_base:valtype'.
+Traceback (most recent call last):
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/cli.py", line 132, in run
+    task.exec(conn, cfg, verbose=state["verbose"])
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/base.py", line 144, in exec
+    inputs, params = self.prepare(cfg)
+                     ^^^^^^^^^^^^^^^^^
+  File "/Volumes/MiniVault/LucksLab Dropbox/LucksLab/Group_Members/EKC/Projects/EKC.01_SHAPE_Standardization/Experiments/01.065.refactoring_data_analysis/nerd/pipeline/tasks/timecourse.py", line 162, in prepare
+    raise ValueError(
+ValueError: Invalid outlier specification '124:008_P4P6_WT_nobc_5mMMgMRTpH83_tp1_p:209_C:modrate - 124:014_P4P6_WT_nobc_5mMMgMRTpH83_tp6_m:213_C:modrate'. Expected format 'rg_id:sample_name:site_base:valtype'.

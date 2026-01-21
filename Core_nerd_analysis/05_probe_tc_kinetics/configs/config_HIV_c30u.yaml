@@ -1,6 +1,6 @@
 run:
-  label: 04_probe_tc_kinetics
-  output_dir: manuscript_pipeline
+  label: 05_probe_tc_kinetics
+  output_dir: Core_nerd_analysis
   backend: local
   threads: 4
   time: "00:39:00"
@@ -25,16 +25,6 @@ probe_timecourse:
     - 122
 
   outliers:
-    - 115:081-HIV-C30U-25c-a-6-m:34_G:modrate # 0tp too high
-    - 115:081-HIV-C30U-25c-a-6-m:28_G:modrate # 0tp too high
-    - 115:081-HIV-C30U-25c-a-6-m:17_G:modrate # 0tp too high
-    - 115:081-HIV-C30U-25c-a-6-m:18_G:modrate # 0tp too high
-    - 115:081-HIV-C30U-25c-a-6-m:21_G:modrate # 0tp too high
-    - 115:081-HIV-C30U-25c-a-6-m:26_G:modrate # 0tp too high
-    - 115:081-HIV-C30U-25c-a-6-m:32_G:modrate # 0tp too high
-    - 115:081-HIV-C30U-25c-a-6-m:33_G:modrate # 0tp too high
-    - 115:081-HIV-C30U-25c-a-6-m:36_G:modrate # 0tp too high
-    - 115:081-HIV-C30U-25c-a-6-m:42_G:modrate # 0tp too high
     - 119:085-HIV-C30U-75c-a-6-m:34_G:modrate # 0tp too high
     - 121:087-HIV-C30U-80c-a-6-m:34_G:modrate # 0tp too high
     - 121:087-HIV-C30U-80c-a-6-m:34_G:GAmodrate # 0tp too high
@@ -59,7 +49,7 @@ probe_timecourse:
   engine_options:
     global_selection: ac_only  # acceptable values: ac_only, acg_only, all
     global_filters:
-      r2_threshold: 0.8
+      r2_threshold: 0.92
     initialize_kdeg_arrhenius: nmr:deg:dms:Schwalbe_bistris 
 
   # Metadata mirrored into result artifacts for provenance.
