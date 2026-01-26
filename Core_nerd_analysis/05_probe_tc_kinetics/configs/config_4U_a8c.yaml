@@ -1,5 +1,5 @@
 run:
-  label: 04_probe_tc_kinetics
+  label: 05_probe_tc_kinetics
   output_dir: Core_nerd_analysis
   backend: local
   threads: 4
@@ -15,40 +15,40 @@ probe_timecourse:
 
   # Reaction groups pulled from examples/nerd.sqlite
   rg_ids:
-    - 7
-    - 9
-    - 26
-    - 27
-    - 28
-    - 29
-    - 30
-    - 31
-    - 34
-    - 37
-    - 39
-    - 40
-    - 41
-    - 42
-    - 59 
-    - 60
-    - 61
-    - 62
-    - 63
-    - 64
-    - 65
-    - 66
-    - 67
-    - 68
-    - 69
-    - 70
-    - 71
-    - 72
-    - 73
-    - 74
+    - 7   # 25C
+    - 9   # 45C - to drop
+    - 26  # 70C
+    - 27  # 70C
+    - 28  # 75C
+    - 29  # 75C
+    - 30  # 80C
+    - 31  # 80C
+    - 34  # 60C
+    - 36  # 25C
+    - 37  # 30C
+    - 39  # 37C
+    - 40  # 45C
+    - 41  # 52C
+    - 42  # 52C
+    - 59  # 15C
+    - 60  # 40C
+    - 61  # 15C
+    - 62  # 40C
+    - 63  # 20C
+    - 64  # 42C
+    - 65  # 20C
+    - 66  # 42C
+    - 67  # 25C
+    - 68  # 45C
+    - 69  # 25C
+    - 70  # 45C
+    - 71  # 30C
+    - 72  # 48C
+    - 73  # 30C
+    - 74  # 48C
     # - 2
     # - 5
     # - 35 (no fit)
-    # - 36 (no fit)
     # - 38 (wrong x-axis) -> to throw out
 
   outliers:

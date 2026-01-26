@@ -1,6 +1,6 @@
 run:
-  label: 04_probe_tc_kinetics
-  output_dir: manuscript_pipeline
+  label: 05_probe_tc_kinetics
+  output_dir: Core_nerd_analysis
   backend: local
   threads: 4
   time: "00:39:00"
@@ -18,14 +18,13 @@ probe_timecourse:
       - 83
       - 84
       - 85
+      - 86
       - 87
       - 88
       - 89
       - 90
 
   outliers:
-    - 84:050-HIV-WT-25c-b-6-m:29_C:modrate
-    - 84:050-HIV-WT-25c-b-6-m:37_C:modrate
     - 84:050-HIV-WT-25c-b-6-m:34_G:modrate # 0tp too high
     - 85:051-HIV-WT-70c-a-6-m:34_G:modrate # 0tp too high
     - 90:056-HIV-WT-80c-b-6-m:34_G:modrate # 0tp too high
@@ -56,9 +55,9 @@ probe_timecourse:
 
   # Forward knobs into the engine to tune selection and initial guesses.
   engine_options:
-    global_selection: acg_only  # acceptable values: ac_only, acg_only, all
+    global_selection: ac_only  # acceptable values: ac_only, acg_only, all
     global_filters:
-      r2_threshold: 0.9
+      r2_threshold: 0.8
     initialize_kdeg_arrhenius: nmr:deg:dms:Schwalbe_bistris 
 
   # Metadata mirrored into result artifacts for provenance.
