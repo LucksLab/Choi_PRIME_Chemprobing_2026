@@ -37,6 +37,68 @@ Each notebook corresponds to a figure or supplementary figure in the paper.
 
 ---
 
+## Code organization and figure mapping
+
+All manuscript figure code lives under `Figure_analysis/`, organized by figure or supplementary figure.  
+The authoritative figure/panel-to-script mapping is `code_figure_method_map.csv`.
+
+```
+Figure_analysis/
+├── Figure1_KineticModelForm/
+│   ├── DataCollapse/
+│   ├── FitQuality/
+│   ├── TimeCourse_Fits/
+├── Figure2_ProbeKinetics/
+│   ├── Add_Arrhenius/
+│   ├── Add_Convergence/
+│   ├── Deg_Arrhenius/
+│   ├── TimeCourse_TempGrad/
+├── Figure3_EnergyValidation/
+│   ├── 4U_2stateMelt/
+│   ├── 4U_ColoredSecStruct/
+│   ├── 4U_Energy_Correlations/
+│   ├── 4U_dG_Barplot/
+│   ├── 4U_dG_v_Temp/
+├── Figure4_DynamicEnsemble/
+│   ├── HIV_3DStruct/
+│   ├── HIV_Aggregated_Arrhenius/
+│   ├── HIV_ColoredSecStruct/
+│   ├── HIV_dG_Barplot/
+├── Figure5_TertiaryContacts/
+│   ├── P4P6_3DStruct/
+│   ├── P4P6_ColoredSecStruct/
+│   ├── P4P6_dG_Barplot/
+│   ├── P4P6_dG_ddG_SwarmPlot/
+├── Methods_ConstructDesign/
+├── SFig10_ReplicateReproducibility/
+├── SFig12_EnergyCorrelations/
+│   ├── NMR_imino/
+│   ├── pseudoenergy/
+│   ├── reactivity_and_derivatives/
+├── SFig13_HIV_P4P6_Qc/
+├── SFig15_P4P6Replicates/
+├── SFig16_P4P6OtherContexts/
+├── SFig1_ODEvAnalytical/
+├── SFig3_MutsPerRead/
+├── SFig4_DegGlobal/
+├── SFig5_fourUReproducibility/
+├── SFig6_TempgradQuality/
+├── SFig7_NmrDegValidation/
+│   ├── NMR_data/
+├── SFig8_NmrAddValidation/
+│   ├── temp_reps/
+├── SFig9_Convergence/
+└── Utilities/
+    ├── __pycache__/
+    ├── automate_secondary_structure_drawing/
+```
+
+Examples:
+- Fig2 panel D → `Figure_analysis/Figure2_ProbeKinetics/Add_Arrhenius/nmr-v-prime_kadd_analysis.ipynb`
+- Fig3 panel A → `Figure_analysis/Figure3_EnergyValidation/4U_dG_Barplot/dG_barplot.ipynb`
+
+---
+
 ## Directory Map
 
 - **`/Core_nerd_analysis`**  
