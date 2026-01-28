@@ -1,139 +1,100 @@
 # Choi_PRIME_Chemprobing_2026
 
-This repository accompanies the manuscript and provides all code, configurations, and Jupyter notebooks used to perform and reproduce the analyses. It contains:
+**Ubiquitous low-energy RNA fluctuations and energetic coupling measured by chemical probing** (2026)  
+**Authors:** Edric K. Choi, Ritwika Bose, David H. Mathews, Anthony M. Mustoe*, Julius B. Lucks*
 
-- the complete **primary analysis pipeline** (FASTQ → mutational counting → kinetic fitting → energetics) implemented with **`nerd`**,  
-- the **organized SQLite database** storing all results and metadata, and  
-- all **figure-generation notebooks** used in the manuscript.
+This repository accompanies the manuscript *“Ubiquitous low-energy RNA fluctuations and energetic coupling measured by chemical probing”* and provides all data, analysis code, and figure-generation workflows used in the study.
 
----
-
-## Nerd vs Figure Analysis
-
-### `nerd` (primary analysis)
-`nerd` is the command-line workflow used to run the full chemical-probing analysis pipeline:
-
-1. **Import sample metadata** via YAML.  
-2. **Process raw sequencing reads (FASTQ)** into mutation counts.  
-3. **Fit time-course data** to extract kinetic parameters (`k_add`, `k_deg`, `k_obs`).  
-4. **Store all results and experimental metadata** in a structured SQLite database (`nerd.sqlite`).  
-
-All primary analyses used in the manuscript were executed with `nerd`. Configuration files for each run are included for transparency and reproducibility. For installation and detailed usage, see the separate `nerd` repository.
-
-### `Figure_analysis` (manuscript figures)
-The `Figure_analysis` directory contains Jupyter notebooks that **read `nerd` outputs** (e.g., kinetic rates, fit diagnostics, per-nucleotide energetics) and perform all **downstream processing and visualization** used to generate the manuscript figures.  
-Each notebook corresponds to a figure or supplementary figure in the paper.
+The repository is organized to enable transparency, reproducibility, and reuse, from processed sequencing data through kinetic modeling and final figures.
 
 ---
 
-## Figure Analysis Quickstart
-
-1. Install required Python packages:  
-   `pandas`, `numpy`, `matplotlib`, `seaborn`, `lmfit`  
-   (`sqlite3` is included with standard Python).  
-2. Open any notebook under `/Figure_analysis`.  
-3. Set the path to the provided `nerd.sqlite` (or `new.db`) file.  
-4. Run the notebook top-to-bottom to reproduce the figure.
-
----
-
-## Code organization and figure mapping
-
-All manuscript figure code lives under `Figure_analysis/`, organized by figure or supplementary figure.  
-The authoritative figure/panel-to-script mapping is `code_figure_method_map.csv`.
-
+## Repository structure
 ```
-Figure_analysis/
-├── Figure1_KineticModelForm/
-│   ├── DataCollapse/
-│   ├── FitQuality/
-│   ├── TimeCourse_Fits/
-├── Figure2_ProbeKinetics/
-│   ├── Add_Arrhenius/
-│   ├── Add_Convergence/
-│   ├── Deg_Arrhenius/
-│   ├── TimeCourse_TempGrad/
-├── Figure3_EnergyValidation/
-│   ├── 4U_2stateMelt/
-│   ├── 4U_ColoredSecStruct/
-│   ├── 4U_Energy_Correlations/
-│   ├── 4U_dG_Barplot/
-│   ├── 4U_dG_v_Temp/
-├── Figure4_DynamicEnsemble/
-│   ├── HIV_3DStruct/
-│   ├── HIV_Aggregated_Arrhenius/
-│   ├── HIV_ColoredSecStruct/
-│   ├── HIV_dG_Barplot/
-├── Figure5_TertiaryContacts/
-│   ├── P4P6_3DStruct/
-│   ├── P4P6_ColoredSecStruct/
-│   ├── P4P6_dG_Barplot/
-│   ├── P4P6_dG_ddG_SwarmPlot/
-├── Methods_ConstructDesign/
-├── SFig10_ReplicateReproducibility/
-├── SFig12_EnergyCorrelations/
-│   ├── NMR_imino/
-│   ├── pseudoenergy/
-│   ├── reactivity_and_derivatives/
-├── SFig13_HIV_P4P6_Qc/
-├── SFig15_P4P6Replicates/
-├── SFig16_P4P6OtherContexts/
-├── SFig1_ODEvAnalytical/
-├── SFig3_MutsPerRead/
-├── SFig4_DegGlobal/
-├── SFig5_fourUReproducibility/
-├── SFig6_TempgradQuality/
-├── SFig7_NmrDegValidation/
-│   ├── NMR_data/
-├── SFig8_NmrAddValidation/
-│   ├── temp_reps/
-├── SFig9_Convergence/
-└── Utilities/
-    ├── __pycache__/
-    ├── automate_secondary_structure_drawing/
+.
+├── Core_nerd_analysis/
+├── Data_deposition/
+├── Figure_analysis/
+└── README.md
 ```
 
-Examples:
-- Fig2 panel D → `Figure_analysis/Figure2_ProbeKinetics/Add_Arrhenius/nmr-v-prime_kadd_analysis.ipynb`
-- Fig3 panel A → `Figure_analysis/Figure3_EnergyValidation/4U_dG_Barplot/dG_barplot.ipynb`
+### `Core_nerd_analysis/`
+This directory contains the primary data processing and kinetic modeling outputs generated using the `nerd` framework.
+
+- Configuration files used to run `nerd`
+- Processing from FASTQ files to mutation counts
+- Nonlinear time-course fitting to extract kinetic parameters (e.g., k_obs, k_deg)
+- All results stored in a centralized SQLite database (`nerd.sqlite`), organized by experimental metadata (construct, temperature, condition, replicate, etc.)
+
+All `nerd` analyses have been pre-run for this repository. The SQLite database at
+`Core_nerd_analysis/nerd.sqlite` serves as the single source of truth for all downstream analyses.
 
 ---
 
-## Directory Map
+### `Figure_analysis/`
+This directory contains secondary analysis and figure-generation code that operates on the processed `nerd` outputs.
 
-- **`/Core_nerd_analysis`**  
-  Primary `nerd` runs, YAML configs, and all pipeline outputs.  
-  Includes:
-  - sample definitions  
-  - mutational counting runs  
-  - time-course and temperature-gradient kinetic fits  
-  - the main databases: `nerd.sqlite` and `new.db`
+- Jupyter notebooks and scripts load data directly from `nerd.sqlite`
+- Includes all analyses used to generate:
+  - Main text figures
+  - Supplementary figures
+  - Extended data analyses
+- The file `code_figure_method_map.csv` provides an exhaustive mapping between manuscript figures/methods and the exact code used to generate them
 
-- **`/Data_deposition`**  
-  Notebooks and metadata used for preparing SRA/RMDB deposition files.
+This directory is the recommended entry point for readers interested in reproducing figures or exploring the analyses presented in the paper.
 
-- **`/Figure_analysis`**  
-  Jupyter notebooks for generating all manuscript figures:
-  - `Figure1_KineticModelForm`
-  - `Figure2_ProbeKinetics`
-  - `Figure3_EnergyValidation`
-  - `Figure4_DynamicEnsemble`
-  - `Figure5_TertiaryContacts`
-  - `Methods_ConstructDesign`
-  - `SFig1_ODEvAnalytical`
-  - `SFig3_MutsPerRead`
-  - `SFig4_DegGlobal`
-  - `SFig5_TempgradQuality`
-  - `SFig7_NmrDegValidation`
-  - `SFig8_NmrAddValidation`
-  - `SFig9_ReplicateReproducibility`
-  - `SFig11_EnergyCorrelations`
-  - `SFig12_HIV_P4P6_Qc`
-  - `SFig14_P4P6Replicates`
-  - `SFig15_P4P6OtherContexts`
-  - `SFig16_UnifiedEnergyScale`
+---
+
+### `Data_deposition/`
+This directory contains materials related to public data deposition.
+
+- CSV files listing all SRA accession numbers associated with this study
+- Metadata tables linking experimental samples to deposited sequencing runs
+- Helper scripts used during submission to NCBI SRA
+
+Raw sequencing data are publicly available through the SRA and are not duplicated in this repository.
+
+---
+
+## How to run the analyses
+
+### Recommended workflow
+All primary processing has already been completed. To reproduce figures or explore analyses:
+
+1. Clone this repository
+2. Create a Python environment and install required dependencies
+3. Run the notebooks in `Figure_analysis/`
+
+All notebooks assume access to `Core_nerd_analysis/nerd.sqlite` and do not require reprocessing
+of raw FASTQ files.
+
+---
+
+### Running `nerd` from scratch (optional)
+To rerun the full processing pipeline from raw sequencing data:
+
+- See the `nerd` documentation: `https://github.com/LucksLab/nerd`
+- Configuration files used in this study are provided in `Core_nerd_analysis/`
+
+Re-running `nerd` is not required to reproduce any analyses or figures in the manuscript.
+
+---
+
+## Software environment
+Analyses were performed in Python using standard scientific libraries (NumPy, pandas, SciPy, lmfit, matplotlib, seaborn, etc.).  
+Exact dependencies can be inferred from the notebooks and scripts in `Figure_analysis/`.
 
 ---
 
 ## License
-MIT — see `LICENSE`.
+- **Code** in this repository is released under the MIT License.
+- **Data and derived results** (including `nerd.sqlite` and CSV files) are released under the Creative Commons Attribution 4.0 International (CC-BY 4.0) License.
+
+---
+
+## Citation
+If you use data or code from this repository, please cite:
+
+Choi EK, Bose R, Mathews DH, Mustoe AM*, Lucks JB*.  
+*Ubiquitous low-energy RNA fluctuations and energetic coupling measured by chemical probing.*  
+2026.
