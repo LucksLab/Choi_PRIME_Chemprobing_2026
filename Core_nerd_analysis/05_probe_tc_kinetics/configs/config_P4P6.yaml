@@ -17,11 +17,8 @@ probe_timecourse:
   rg_ids:
     - 123 # nomg
     - 124 # 5mM Mg
-    - 129 # nomg rep2
-    - 130 # 5mM Mg rep2
 
-  outliers:
-    - 129:043_P4P6_WT_nobc_0mMMgMRTpH9_tp6_m:209_C:modrate
+  # outliers:
 
   # The example database stores probing timecourse amplitudes under multiple value types.
   valtype:
@@ -42,7 +39,7 @@ probe_timecourse:
   engine_options:
     global_selection: ac_only  # acceptable values: ac_only, acg_only, all
     global_filters:
-      r2_threshold: 0.7
+      r2_threshold: 0.8
     initialize_kdeg_arrhenius: nmr:deg:dms:Schwalbe_bistris 
 
   # Metadata mirrored into result artifacts for provenance.

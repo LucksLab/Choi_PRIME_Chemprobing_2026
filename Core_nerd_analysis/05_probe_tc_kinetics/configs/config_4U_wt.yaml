@@ -16,7 +16,6 @@ probe_timecourse:
   # Reaction groups pulled from examples/nerd.sqlite
   rg_ids:
     - 3     # 37C
-    - 10    # 25C - to drop
     - 11    # 45C
     - 16    # 60C
     - 17    # 60C
@@ -25,7 +24,6 @@ probe_timecourse:
     - 23    # 45C
     - 24    # 52C
     - 25    # 52C
-    - 32    # 25C - to drop
     - 33    # 30C
     - 43    # 65C
     - 44    # 65C
@@ -50,13 +48,6 @@ probe_timecourse:
     - 80    # 25C
     - 81    # 37C
     - 82    # 37C
-    # - 12 tofix
-    # - 13 tofix
-    # - 14 tofix
-    # - 15 tofix
-    # - 18 tofix
-    # - 19 tofix
-    # - 20 tofix TO DROP
 
   outliers:
     - 3:RRRY-022-EKC-fourUnew-WT-II-37C-dms-MaP-90:19_G:modrate # 0tp too high
@@ -109,7 +100,6 @@ probe_timecourse:
   # The example database stores probing timecourse amplitudes under multiple value types.
   valtype:
     - modrate
-    - GAmodrate
 
   # Specify experimenter (only 1 currently supported).
   done_by: EKC

@@ -56,6 +56,18 @@ Raw sequencing data are publicly available through the SRA and are not duplicate
 
 ---
 
+### For Reviewers (NCBI BioProject Access)
+All sequencing data associated with this study can be accessed through the following **private reviewer link** to the NCBI BioProject:
+
+**Reviewer BioProject link:**  
+https://dataview.ncbi.nlm.nih.gov/object/PRJNA1400640?reviewer=pm19k19g8br0n19kjdvas8p4k9
+
+For convenience and cross-referencing:
+- **CSV listing all SRA accessions used in this study:**  
+  `Data_deposition/SRA_accession_01272026.tsv`
+
+---
+
 ## How to run the analyses
 
 ### Recommended workflow
