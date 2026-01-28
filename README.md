@@ -81,8 +81,13 @@ Re-running `nerd` is not required to reproduce any analyses or figures in the ma
 ---
 
 ## Software environment
-Analyses were performed in Python using standard scientific libraries (NumPy, pandas, SciPy, lmfit, matplotlib, seaborn, etc.).  
-Exact dependencies can be inferred from the notebooks and scripts in `Figure_analysis/`.
+Analyses were performed in Python using standard scientific libraries (NumPy, pandas, SciPy, lmfit, matplotlib, seaborn, etc.).
+Exact dependencies are listed in `requirements.txt` (derived from `Figure_analysis/Utilities/setup_env.py`).
+
+To install:
+```
+python -m pip install -r requirements.txt
+```
 
 ---
 
